@@ -111,3 +111,19 @@ button:hover {
 .form-page button:hover {
     background: #0056b3;
 }
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin: 1em auto;
+  max-width: 600px;
+}
+
+.filters input,
+.filters select {
+  padding: 0.5em;
+  font-size: 1em;
+  width: 50%;
+}
+
