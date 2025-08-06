@@ -2,85 +2,184 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - TastyMart</title>
-    <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products - TastyMart</title>
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
 
 <body>
-    <header>
-        <h1>TastyMart</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="cart.html">Cart (<span id="cart-counter">0</span>)</a>
-        </nav>
-    </header>
-    <main>
-        <h2>Our Products</h2>
+  <header>
+    <h1>TastyMart</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart (<span id="cart-counter">0</span>)</a>
+    </nav>
+  </header>
 
-        <div class="filters">
-            <input type="text" id="searchBar" placeholder="Search products..." />
-            <select id="categoryFilter">
-                <option value="all">All Categories</option>
-                <!-- Categories will be injected here -->
-            </select>
-            <input type="number" id="minPrice" placeholder="Min $" min="0" />
-            <input type="number" id="maxPrice" placeholder="Max $" min="0" />
-        </div>
+  <main>
+    <h2>Our Products</h2>
 
+    <!-- Filter Section -->
+    <div class="filters">
+      <input type="text" id="searchBar" placeholder="Search products..." />
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+      </select>
+      <input type="number" id="minPrice" placeholder="Min $" min="0" />
+      <input type="number" id="maxPrice" placeholder="Max $" min="0" />
 
-        <div id="productGrid" class="product-grid">
-            <div class="product-card" data-name="Organic Apples" data-category="fruit">
-                <img src="images/product1.jpg" alt="Product 1" />
-                <h3>Organic Apples</h3>
-                <p>$4.99</p>
-                <button onclick='addToCart({name: "Organic Apples", price: 4.99})'>Add to Cart</button>
-            </div>
-            <div class="product-card" data-name="Fresh Bananas" data-category="fruit">
-                <img src="images/product2.jpg" alt="Product 2" />
-                <h3>Fresh Bananas</h3>
-                <p>$2.99</p>
-                <button onclick='addToCart({name: "Fresh Bananas", price: 2.99})'>Add to Cart</button>
-            </div>
-            <div class="product-card" data-name="Orange Juice" data-category="drink">
-                <img src="images/product3.jpg" alt="Product 3" />
-                <h3>Orange Juice</h3>
-                <p>$3.49</p>
-                <button onclick='addToCart({name: "Orange Juice", price: 3.49})'>Add to Cart</button>
-            </div>
-        </div>
-    </main>
+      <!-- Sorting Dropdown -->
+      <select id="sortFilter">
+        <option value="default">Sort By</option>
+        <option value="priceLowHigh">Price: Low to High</option>
+        <option value="priceHighLow">Price: High to Low</option>
+        <option value="nameAZ">Name: A to Z</option>
+      </select>
+    </div>
 
-    <footer>
-        <p>&copy; 2025 TastyMart. All rights reserved.</p>
-    </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const searchBar = document.getElementById("searchBar");
-            const categoryFilter = document.getElementById("categoryFilter");
-            const cards = document.querySelectorAll(".product-card");
+    <!-- Product Grid -->
+    <div id="productGrid" class="product-grid">
+      <div class="product-card" data-name="Organic Apples" data-category="fruit" data-price="4.99">
+        <img src="images/product1.jpg" alt="Organic Apples" onclick="showModal('Organic Apples', 'images/product1.jpg', 4.99)" />
+        <h3>Organic Apples</h3>
+        <p>$4.99</p>
+        <button onclick='addToCart({ name: "Organic Apples", price: 4.99 })'>Add to Cart</button>
+      </div>
+      <div class="product-card" data-name="Fresh Bananas" data-category="fruit" data-price="2.99">
+        <img src="images/product2.jpg" alt="Fresh Bananas" onclick="showModal('Fresh Bananas', 'images/product2.jpg', 2.99)" />
+        <h3>Fresh Bananas</h3>
+        <p>$2.99</p>
+        <button onclick='addToCart({ name: "Fresh Bananas", price: 2.99 })'>Add to Cart</button>
+      </div>
+      <div class="product-card" data-name="Orange Juice" data-category="drink" data-price="3.49">
+        <img src="images/product3.jpg" alt="Orange Juice" onclick="showModal('Orange Juice', 'images/product3.jpg', 3.49)" />
+        <h3>Orange Juice</h3>
+        <p>$3.49</p>
+        <button onclick='addToCart({ name: "Orange Juice", price: 3.49 })'>Add to Cart</button>
+      </div>
+    </div>
 
-            function filterProducts() {
-                const search = searchBar.value.toLowerCase();
-                const category = categoryFilter.value;
+    <!-- No Results Message -->
+    <p id="noResults" style="text-align: center; display: none; font-weight: bold; color: red;">No products found.</p>
 
-                cards.forEach(card => {
-                    const name = card.dataset.name.toLowerCase();
-                    const cat = card.dataset.category;
+    <!-- Modal Structure -->
+    <div id="productModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" src="" alt="Product Image" />
+        <h3 id="modalName"></h3>
+        <p id="modalPrice"></p>
+        <button id="modalAddToCart">Add to Cart</button>
+      </div>
+    </div>
+  </main>
 
-                    const matchSearch = name.includes(search);
-                    const matchCategory = category === "all" || cat === category;
+  <footer>
+    <p>&copy; 2025 TastyMart. All rights reserved.</p>
+  </footer>
 
-                    card.style.display = matchSearch && matchCategory ? "block" : "none";
-                });
-            }
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const searchBar = document.getElementById("searchBar");
+      const categoryFilter = document.getElementById("categoryFilter");
+      const minPrice = document.getElementById("minPrice");
+      const maxPrice = document.getElementById("maxPrice");
+      const sortFilter = document.getElementById("sortFilter");
+      const productGrid = document.getElementById("productGrid");
+      const noResults = document.getElementById("noResults");
 
-            searchBar.addEventListener("input", filterProducts);
-            categoryFilter.addEventListener("change", filterProducts);
+      let productCards = Array.from(document.querySelectorAll(".product-card"));
+
+      const categories = new Set(productCards.map(card => card.dataset.category));
+      categories.forEach(cat => {
+        const option = document.createElement("option");
+        option.value = cat;
+        option.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
+        categoryFilter.appendChild(option);
+      });
+
+      function filterProducts() {
+        const search = searchBar.value.toLowerCase();
+        const selectedCategory = categoryFilter.value;
+        const min = parseFloat(minPrice.value) || 0;
+        const max = parseFloat(maxPrice.value) || Infinity;
+
+        let visible = [];
+
+        productCards.forEach(card => {
+          const name = card.dataset.name.toLowerCase();
+          const category = card.dataset.category;
+          const price = parseFloat(card.dataset.price);
+
+          const show = name.includes(search) &&
+            (selectedCategory === "all" || category === selectedCategory) &&
+            (price >= min && price <= max);
+
+          card.style.display = show ? "block" : "none";
+          if (show) visible.push(card);
         });
-    </script>
+
+        applySorting(visible);
+        noResults.style.display = visible.length === 0 ? "block" : "none";
+      }
+
+      function applySorting(visibleCards) {
+        const sortType = sortFilter.value;
+        let sorted = visibleCards;
+
+        if (sortType === "priceLowHigh") {
+          sorted = [...visibleCards].sort((a, b) => parseFloat(a.dataset.price) - parseFloat(b.dataset.price));
+        } else if (sortType === "priceHighLow") {
+          sorted = [...visibleCards].sort((a, b) => parseFloat(b.dataset.price) - parseFloat(a.dataset.price));
+        } else if (sortType === "nameAZ") {
+          sorted = [...visibleCards].sort((a, b) => a.dataset.name.localeCompare(b.dataset.name));
+        }
+
+        productGrid.innerHTML = "";
+        sorted.forEach(card => productGrid.appendChild(card));
+      }
+
+      searchBar.addEventListener("input", filterProducts);
+      categoryFilter.addEventListener("change", filterProducts);
+      minPrice.addEventListener("input", filterProducts);
+      maxPrice.addEventListener("input", filterProducts);
+      sortFilter.addEventListener("change", filterProducts);
+    });
+
+    function addToCart(product) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push(product);
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      document.getElementById("cart-counter").textContent = cart.length;
+      alert(`${product.name} added to cart!`);
+    }
+
+    function showModal(name, imageSrc, price) {
+      const modal = document.getElementById("productModal");
+      document.getElementById("modalImage").src = imageSrc;
+      document.getElementById("modalName").textContent = name;
+      document.getElementById("modalPrice").textContent = `$${price.toFixed(2)}`;
+
+      document.getElementById("modalAddToCart").onclick = () => {
+        addToCart({ name, price });
+        closeModal();
+      };
+
+      modal.style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("productModal").style.display = "none";
+    }
+
+    window.addEventListener("load", () => {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      document.getElementById("cart-counter").textContent = cart.length;
+    });
+  </script>
 </body>
 
 </html>

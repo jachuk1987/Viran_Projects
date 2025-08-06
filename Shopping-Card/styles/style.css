@@ -114,16 +114,29 @@ button:hover {
 
 .filters {
   display: flex;
-  justify-content: center;
-  gap: 1em;
-  margin: 1em auto;
-  max-width: 600px;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
 .filters input,
 .filters select {
-  padding: 0.5em;
-  font-size: 1em;
-  width: 50%;
+  padding: 8px;
+  font-size: 14px;
 }
 
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  width: 200px;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}

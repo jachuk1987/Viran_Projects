@@ -1,4 +1,3 @@
-
 const CART_KEY = "shoppingCart";
 
 function loadCart() {
@@ -44,12 +43,12 @@ function renderCartItems() {
     cart.forEach((item, index) => {
         const div = document.createElement("div");
         div.className = "cart-item";
-        div.innerHTML = \`
-            <span>\${item.name}</span>
-            <span>Qty: <input type="number" min="1" value="\${item.qty}" data-index="\${index}" class="qty-input" /></span>
-            <span>$ \${(item.price * item.qty).toFixed(2)}</span>
-            <button data-index="\${index}" class="remove-btn">Remove</button>
-        \`;
+        div.innerHTML = `
+            <span>${item.name}</span>
+            <span>Qty: <input type="number" min="1" value="${item.qty}" data-index="${index}" class="qty-input" /></span>
+            <span>$ ${(item.price * item.qty).toFixed(2)}</span>
+            <button data-index="${index}" class="remove-btn">Remove</button>
+        `;
         container.appendChild(div);
         total += item.price * item.qty;
     });
@@ -80,8 +79,57 @@ function setupCartEvents() {
     });
 }
 
+function setupProductFilters() {
+    const searchBar = document.getElementById("searchBar");
+    const categoryFilter = document.getElementById("categoryFilter");
+    const minPrice = document.getElementById("minPrice");
+    const maxPrice = document.getElementById("maxPrice");
+    const cards = document.querySelectorAll(".product-card");
+    const noResults = document.getElementById("noResults");
+
+    const uniqueCategories = new Set();
+    cards.forEach(card => uniqueCategories.add(card.dataset.category));
+    uniqueCategories.forEach(cat => {
+        const option = document.createElement("option");
+        option.value = cat;
+        option.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
+        categoryFilter.appendChild(option);
+    });
+
+    function filterProducts() {
+        const search = searchBar.value.toLowerCase();
+        const category = categoryFilter.value;
+        const min = parseFloat(minPrice.value) || 0;
+        const max = parseFloat(maxPrice.value) || Infinity;
+
+        let anyVisible = false;
+
+        cards.forEach(card => {
+            const name = card.dataset.name.toLowerCase();
+            const cat = card.dataset.category;
+            const price = parseFloat(card.querySelector("p").textContent.replace("$", ""));
+
+            const matchSearch = name.includes(search);
+            const matchCategory = category === "all" || cat === category;
+            const matchPrice = price >= min && price <= max;
+
+            const visible = matchSearch && matchCategory && matchPrice;
+            card.style.display = visible ? "block" : "none";
+            if (visible) anyVisible = true;
+        });
+
+        noResults.style.display = anyVisible ? "none" : "block";
+    }
+
+    searchBar?.addEventListener("input", filterProducts);
+    categoryFilter?.addEventListener("change", filterProducts);
+    minPrice?.addEventListener("input", filterProducts);
+    maxPrice?.addEventListener("input", filterProducts);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     updateCartCounter();
     renderCartItems();
     setupCartEvents();
+    setupProductFilters();
 });
