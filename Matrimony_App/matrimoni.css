@@ -4,7 +4,7 @@ header{
 	width: 100%;
 	min-height: 100vh;
 	background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
-				url('img/banner.jpg');
+				url('asset/banner.jpg');
 	background-size: cover;
 	position: relative;
 }
