@@ -1,0 +1,112 @@
+/* Main stylesheet for Magic Fix Matrimony - single shared CSS */
+:root{
+  --accent: #e91e63;
+  --dark: #222;
+  --muted: #666;
+  --bg: #fafafa;
+  --card: #ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  color:var(--dark);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+}
+.info{
+  background:#111;
+  color:#fff;
+  padding:6px 12px;
+  text-align:right;
+  font-size:14px;
+}
+.info span{margin-left:14px}
+.site-header{background:linear-gradient(90deg, rgba(255,255,255,0.95), rgba(255,255,255,0.95)); box-shadow:0 1px 0 rgba(0,0,0,0.05)}
+.site-header .nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  max-width:1100px;
+  margin:0 auto;
+  padding:14px 12px;
+}
+.logo{font-weight:700; font-size:20px; display:flex; align-items:center; gap:10px}
+.menu{display:flex; gap:14px; align-items:center}
+.menu a{color:var(--dark); text-decoration:none; padding:8px 10px; border-radius:6px}
+.menu a:hover, .menu a.active{background:rgba(233,30,99,0.08)}
+.hamburger{display:none; background:none; border:0; font-size:22px; cursor:pointer}
+
+/* HERO */
+.hero{display:flex; gap:24px; align-items:stretch; max-width:1100px; margin:32px auto; padding:24px;}
+.hero-left{flex:1; padding:20px}
+.hero-left h1{font-size:38px; margin:0 0 8px}
+.hero-left h2{font-size:26px; margin:0 0 12px}
+.hero-left h2 span{color:var(--accent)}
+.hero-left p{color:var(--muted); line-height:1.6}
+.btn{display:inline-block; margin-top:12px; padding:10px 16px; background:var(--accent); color:#fff; text-decoration:none; border-radius:8px}
+
+/* signup box */
+.signup-box{width:340px; background:var(--card); padding:18px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+.signup-box h2{margin:0 0 12px; font-size:18px}
+.signup-box input[type="text"], .signup-box input[type="email"], .signup-box input[type="tel"] , .signup-box input[type="submit"]{
+  width:100%; padding:10px; margin-bottom:10px; border-radius:6px; border:1px solid #e6e6e6;
+}
+.signup-box input[type="submit"]{background:var(--accent); color:#fff; border:0; cursor:pointer}
+.small{font-size:13px; color:var(--muted); margin:8px 0}
+
+/* Main content */
+.main-content{max-width:1100px; margin:0 auto; padding:20px;}
+.features{display:flex; gap:18px; margin-top:18px}
+.feature{flex:1; background:var(--card); padding:18px; border-radius:10px; text-align:center; box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+.feature i{font-size:26px; color:var(--accent); margin-bottom:8px}
+.feature h3{margin:8px 0}
+
+/* CTA */
+.cta{background:linear-gradient(90deg, rgba(233,30,99,0.06), rgba(233,30,99,0.03)); padding:28px; border-radius:12px; margin:24px 0; text-align:center}
+
+/* forms */
+.form-section{display:flex; justify-content:center; padding:40px 18px}
+.form-container{background:var(--card); padding:22px; border-radius:10px; width:100%; max-width:420px; box-shadow:0 10px 30px rgba(0,0,0,0.05)}
+.form-container.wide{max-width:760px}
+.form-container h2{margin-top:0}
+.form-container input[type="text"], .form-container input[type="email"], .form-container input[type="tel"], .form-container input[type="password"], .form-container select{
+  width:100%; padding:12px; margin-bottom:12px; border-radius:6px; border:1px solid #eee;
+}
+.form-container input[type="submit"]{background:var(--accent); color:#fff; padding:12px; border:0; width:100%; border-radius:8px; cursor:pointer}
+.two-col{display:flex; gap:12px}
+.two-col input, .two-col select{flex:1}
+
+/* content page styles */
+.content{background:var(--card); padding:24px; border-radius:10px; box-shadow:0 8px 30px rgba(0,0,0,0.04)}
+.content h1{margin-top:0}
+.services-list{list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px}
+.services-list li{background:#fff; padding:12px; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.03); display:flex; gap:10px; align-items:center}
+.services-list i{font-size:20px; color:var(--accent)}
+
+/* stats */
+.stats-grid{display:flex; gap:14px; flex-wrap:wrap}
+.stat{flex:1; background:var(--card); padding:18px; border-radius:8px; text-align:center; box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+.stat h2{margin:0 0 8px}
+
+/* testimonials */
+.testimonial{background:var(--card); padding:18px; border-radius:8px; margin-bottom:12px; box-shadow:0 6px 18px rgba(0,0,0,0.03)}
+
+/* footer */
+.site-footer{margin-top:24px; padding:20px 0; background:#fff; border-top:1px solid #f0f0f0}
+.site-footer .footer-inner{max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:12px; padding:0 12px}
+.socials a{margin-left:8px; text-decoration:none; color:var(--muted)}
+
+/* responsive */
+@media(max-width:900px){
+  .hero{flex-direction:column}
+  .signup-box{width:100%}
+  .features{flex-direction:column}
+}
+@media(max-width:700px){
+  .menu{display:none; position:absolute; right:12px; top:70px; background:#fff; padding:12px; box-shadow:0 6px 18px rgba(0,0,0,0.08); border-radius:8px; flex-direction:column}
+  .menu.open{display:flex}
+  .hamburger{display:block}
+  .info{text-align:center}
+  .site-header .nav{padding:10px;}
+}
