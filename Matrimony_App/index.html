@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Magic Fix Matrimony — Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="info">
+            <span><i class="fa fa-phone"></i> +2(11) 434 4827</span>
+            <span><i class="fa fa-envelope"></i> info@example.com</span>
+        </div>
+        <nav class="nav">
+            <div class="logo"><i class="fa fa-gift"></i> Magic Fix</div>
+            <div class="menu">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About us</a>
+                <a href="services.html">Services</a>
+                <a href="stats.html">Stats</a>
+                <a href="testimonials.html">Testimonials</a>
+                <a href="subscribe.html">Subscribe</a>
+                <a href="register.html">Register</a>
+                <a href="login.html">Login</a>
+            </div>
+            <button class="hamburger" aria-label="toggle menu">&#9776;</button>
+        </nav>
+
+        <div class="hero">
+            <div class="hero-left">
+                <h1>Matrimonial Search.</h1>
+                <h2>Best Matching <span>Couples</span></h2>
+                <p>
+                    Onec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus semper, 
+                    vestibulum ante. Morbi at dui nisl.
+                </p>
+                <a class="btn" href="about.html">Read more</a>
+            </div>
+
+            <aside class="signup-box">
+                <h2>Register &amp; Join our Matrimony</h2>
+                <form id="quickRegister">
+                    <input type="text" name="name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="Your email id" required>
+                    <input type="tel" name="phone" placeholder="Your contact" required>
+                    <input type="text" name="interest" placeholder="Your Interest">
+                    <input type="submit" value="Get Started">
+                    <p class="small">By registering, you agree to our <span>Terms &amp; Conditions</span></p>
+                </form>
+            </aside>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="main-content">
+        <section class="features">
+            <div class="feature">
+                <i class="fa fa-heart"></i>
+                <h3>Verified Profiles</h3>
+                <p>All profiles are verified to ensure authenticity and safety.</p>
+            </div>
+            <div class="feature">
+                <i class="fa fa-users"></i>
+                <h3>Personalized Matches</h3>
+                <p>We match based on interests, values and lifestyle preferences.</p>
+            </div>
+            <div class="feature">
+                <i class="fa fa-calendar"></i>
+                <h3>Events & Meetups</h3>
+                <p>Attend community events to meet potential matches in person.</p>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>Ready to find your match?</h2>
+            <a class="btn" href="register.html">Create an Account</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>&copy; 2025 Magic Fix Matrimony. All Rights Reserved.</p>
+            <div class="socials">
+                <a href="#" aria-label="facebook"><i class="fa fa-facebook"></i></a>
+                <a href="#" aria-label="twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#" aria-label="instagram"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+<script>
+document.querySelector('.hamburger').addEventListener('click', function(){
+  document.querySelector('.menu').classList.toggle('open');
+});
+document.getElementById('quickRegister').addEventListener('submit', function(e){
+  e.preventDefault();
+  alert('Registration form submitted (demo). You can wire this to a backend later.');
+});
+</script>
+</body>
+</html>
