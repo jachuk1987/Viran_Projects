@@ -1,105 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Magic Fix Matrimony — Home</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+    <title>Magic Match</title>
+    <link rel='stylesheet' href='css/style.css'>
 </head>
+
 <body>
-    <!-- Header -->
-    <header class="site-header">
-        <div class="info">
-            <span><i class="fa fa-phone"></i> +2(11) 434 4827</span>
-            <span><i class="fa fa-envelope"></i> info@example.com</span>
+    <div class='bg-root'>
+        <div class='bg-overlay'></div>
+        <div class='container'>
+            <div class='topbar'>
+                <div class='brand'>
+                    <div class='logo'>M</div> Magic Match
+                </div>
+                <nav class='toplinks'>
+                    <a href="index.html" class="active">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="search.html">Search</a>
+                    <a href="register.html">Register</a>
+                    <a href="login.html">Login</a>
+                </nav>
+            </div>
+
+            <header class="header-hero">
+                <div class="hero-left">
+                    <div class="content-box">
+                        <h1 class="hero-title">Find the one who fits your heart.</h1>
+                        <p class="hero-sub">Smart matches, verified profiles and a warm community.</p>
+                        <div style="margin-top:12px"><a class="btn btn-primary" href="register.html">Create Account</a>
+                            <a class="btn btn-ghost" href="search.html">Browse Matches</a>
+                        </div>
+                    </div>
+                    <div style="margin-top:18px" class="content-box">
+                        <h3 style="margin-top:0;color:#2b2b2b">Featured Matches</h3>
+                        <div class="grid" id="featuredGrid"></div>
+                    </div>
+                </div>
+                <aside class="signup-card">
+                    <h3 style="color:white;margin:0 0 8px">Quick Join</h3>
+                    <p class="small" style="color:rgba(255,255,255,0.9)">Create a free account in seconds</p>
+                    <form id="quickJoin">
+                        <input class="input" name="firstName" placeholder="First name" required>
+                        <input class="input" name="email" placeholder="Email address" type="email" required>
+                        <input class="input" name="password" placeholder="Password" type="password" required>
+                        <div style="margin-top:8px"><button class="btn btn-primary" type="submit">Get Started</button>
+                        </div>
+                        <p class="small" style="color:rgba(255,255,255,0.85);margin-top:10px">By joining you accept our
+                            <a href="#" style="color:white;text-decoration:underline">Terms</a>
+                        </p>
+                    </form>
+                </aside>
+            </header>
+            <script>
+                const sample = [{ name: 'Priya, 28', tag: 'Engineer', img: 'images/profile1.png', city: 'Bengaluru' },
+                { name: 'Aisha, 26', tag: 'Designer', img: 'images/profile2.png', city: 'Mumbai' },
+                { name: 'Karan, 30', tag: 'Manager', img: 'images/profile3.png', city: 'Delhi' },
+                { name: 'Neha, 29', tag: 'Teacher', img: 'images/profile4.png', city: 'Chennai' },
+                { name: 'Vikram, 31', tag: 'Architect', img: 'images/profile5.png', city: 'Hyderabad' },
+                { name: 'Meera,27', tag: 'Doctor', img: 'images/profile6.png', city: 'Kolkata' }];
+                function renderFeatured() { const el = document.getElementById('featuredGrid'); el.innerHTML = ''; sample.forEach(s => { const card = document.createElement('div'); card.className = 'profile'; card.innerHTML = `<img src="${s.img}" alt=""><div class="body"><h5>${s.name}</h5><p class="small">${s.tag} • ${s.city}</p><div style="flex:1"></div><div style="display:flex;gap:8px"><a class="btn btn-ghost" href="search.html">View</a><a class="btn btn-primary" href="search.html">Connect</a></div></div>`; el.appendChild(card); }); }
+                renderFeatured();
+                document.getElementById('quickJoin').addEventListener('submit', function (e) { e.preventDefault(); const f = e.target; const user = { firstName: f.firstName.value, email: f.email.value, password: f.password.value }; try { APP.register(user); alert('Registered — redirecting to profile'); window.location.href = 'profile.html'; } catch (err) { alert(err.message); } });
+            </script>
+
+            <footer class='footer'>
+                <div style='display:flex;justify-content:space-between;align-items:center'>
+                    <div style='color:rgba(255,255,255,0.95)'>&copy; 2025 Magic Match</div>
+                    <nav class='footer-nav'>
+                        <a href="index.html" class="active">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="services.html">Services</a>
+                        <a href="search.html">Search</a>
+                        <a href="register.html">Register</a>
+                        <a href="login.html">Login</a>
+                    </nav>
+                </div>
+            </footer>
         </div>
-        <nav class="nav">
-            <div class="logo"><i class="fa fa-gift"></i> Magic Fix</div>
-            <div class="menu">
-                <a href="index.html" class="active">Home</a>
-                <a href="about.html">About us</a>
-                <a href="services.html">Services</a>
-                <a href="stats.html">Stats</a>
-                <a href="testimonials.html">Testimonials</a>
-                <a href="subscribe.html">Subscribe</a>
-                <a href="register.html">Register</a>
-                <a href="login.html">Login</a>
-            </div>
-            <button class="hamburger" aria-label="toggle menu">&#9776;</button>
-        </nav>
-
-        <div class="hero">
-            <div class="hero-left">
-                <h1>Matrimonial Search.</h1>
-                <h2>Best Matching <span>Couples</span></h2>
-                <p>
-                    Onec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus semper, 
-                    vestibulum ante. Morbi at dui nisl.
-                </p>
-                <a class="btn" href="about.html">Read more</a>
-            </div>
-
-            <aside class="signup-box">
-                <h2>Register &amp; Join our Matrimony</h2>
-                <form id="quickRegister">
-                    <input type="text" name="name" placeholder="Your name" required>
-                    <input type="email" name="email" placeholder="Your email id" required>
-                    <input type="tel" name="phone" placeholder="Your contact" required>
-                    <input type="text" name="interest" placeholder="Your Interest">
-                    <input type="submit" value="Get Started">
-                    <p class="small">By registering, you agree to our <span>Terms &amp; Conditions</span></p>
-                </form>
-            </aside>
-        </div>
-    </header>
-
-    <!-- Main content -->
-    <main class="main-content">
-        <section class="features">
-            <div class="feature">
-                <i class="fa fa-heart"></i>
-                <h3>Verified Profiles</h3>
-                <p>All profiles are verified to ensure authenticity and safety.</p>
-            </div>
-            <div class="feature">
-                <i class="fa fa-users"></i>
-                <h3>Personalized Matches</h3>
-                <p>We match based on interests, values and lifestyle preferences.</p>
-            </div>
-            <div class="feature">
-                <i class="fa fa-calendar"></i>
-                <h3>Events & Meetups</h3>
-                <p>Attend community events to meet potential matches in person.</p>
-            </div>
-        </section>
-
-        <section class="cta">
-            <h2>Ready to find your match?</h2>
-            <a class="btn" href="register.html">Create an Account</a>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <p>&copy; 2025 Magic Fix Matrimony. All Rights Reserved.</p>
-            <div class="socials">
-                <a href="#" aria-label="facebook"><i class="fa fa-facebook"></i></a>
-                <a href="#" aria-label="twitter"><i class="fa fa-twitter"></i></a>
-                <a href="#" aria-label="instagram"><i class="fa fa-instagram"></i></a>
-            </div>
-        </div>
-    </footer>
-
-<script>
-document.querySelector('.hamburger').addEventListener('click', function(){
-  document.querySelector('.menu').classList.toggle('open');
-});
-document.getElementById('quickRegister').addEventListener('submit', function(e){
-  e.preventDefault();
-  alert('Registration form submitted (demo). You can wire this to a backend later.');
-});
-</script>
+    </div>
+    <script src='js/app.js'></script>
 </body>
+
 </html>
