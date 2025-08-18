@@ -1,54 +1,32 @@
 <!doctype html>
 <html>
-
 <head>
-  <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width,initial-scale=1'>
-  <title>Magic Match</title>
-  <link rel='stylesheet' href='css/style.css'>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Magic Match</title>
+<link rel='stylesheet' href='css/style.css'>
 </head>
-
 <body>
-  <div class='bg-root'>
-    <div class='bg-overlay'></div>
-    <div class='container'>
-      <div class='topbar'>
-        <div class='brand'>
-          <div class='logo'>M</div> Magic Match
-        </div>
-        <nav class='toplinks'>
-          <a href="index.html">Home</a>
-          <a href="search.html">Search</a>
-          <a href="login.html">Login</a>
-          <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-        </nav>
-      </div>
-      <main style="padding:18px 0">
-        <div class="profile-page">
-          <div class="profile-card" id="profileCard"></div>
-          <div class="profile-info" id="profileInfo"></div>
-        </div>
-      </main>
-      <script>
-        (function () { const session = APP.getSession(); if (!session) { alert('You must be logged in'); window.location.href = 'login.html'; return; } const user = APP.getUserByEmail(session.email); if (!user) { alert('User not found'); APP.logout(); return; } const card = document.getElementById('profileCard'); const info = document.getElementById('profileInfo'); card.innerHTML = `<img src='images/profile1.jpg' style='width:100%;border-radius:10px;margin-bottom:12px'><h3>${user.firstName} ${user.lastName || ''}</h3><p class='small'>${user.gender || ''} • ${user.phone || ''}</p><div style='margin-top:12px'><button class='btn btn-ghost' id='edit'>Edit</button> <button class='btn btn-primary' id='logout'>Logout</button></div>`; info.innerHTML = `<h3>About</h3><p class='small'>You registered with <strong>${user.email}</strong>. This demo stores only in your browser. To switch background to original, open css/style.css and change bg-marigold-blur.jpg to bg-marigold.jpg.</p>`; document.getElementById('logout').addEventListener('click', () => { APP.logout() }); document.getElementById('edit').addEventListener('click', () => { alert('Edit profile demo — not implemented'); }); })();
-      </script>
-
-      <footer class='footer'>
-        <div style='display:flex;justify-content:space-between;align-items:center'>
-          <div style='color:rgba(255,255,255,0.95)'>&copy; 2025 Magic Match</div>
-          <nav class='footer-nav'>
-            <a href="index.html">Home</a>
-            <a href="search.html">Search</a>
-            <a href="login.html">Login</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-          </nav>
-        </div>
-      </footer>
+<div class='bg-root'>
+  <div class='bg-overlay'></div>
+  <div class='container'>
+    <div class='topbar'>
+      <div class='brand'><div class='logo'>M</div> Magic Match</div>
+      <nav class='toplinks'></nav>
     </div>
+    <main style="padding:18px 0">
+  <div class="profile-page">
+    <div class="profile-card" id="profileCard"></div>
+    <div class="profile-info" id="profileInfo"></div>
   </div>
-  <script src='js/app.js'></script>
-</body>
+</main>
+<script>
+(function(){const session=APP.getSession();if(!session){alert('You must be logged in');window.location.href='login.html';return;}const user=APP.getUserByEmail(session.email);if(!user){alert('User not found');APP.logout();return;}const card=document.getElementById('profileCard');const info=document.getElementById('profileInfo');card.innerHTML=`<img src='images/profile1.jpg' style='width:100%;border-radius:10px;margin-bottom:12px'><h3>${user.firstName} ${user.lastName||''}</h3><p class='small'>${user.gender||''} • ${user.phone||''}</p><div style='margin-top:12px'><button class='btn btn-ghost' id='edit'>Edit</button> <button class='btn btn-primary' id='logout'>Logout</button></div>`;info.innerHTML=`<h3>About</h3><p class='small'>You registered with <strong>${user.email}</strong>. This demo stores only in your browser. To switch background to original, open css/style.css and change bg-marigold-blur.jpg to bg-marigold.jpg.</p>`;document.getElementById('logout').addEventListener('click',()=>{APP.logout()});document.getElementById('edit').addEventListener('click',()=>{alert('Edit profile demo — not implemented');});})();
+</script>
 
+    <footer class='footer'><div style='display:flex;justify-content:space-between;align-items:center'><div style='color:rgba(255,255,255,0.95)'>&copy; 2025 Magic Match</div><div class='small' style='color:rgba(255,255,255,0.85)'>Marigold theme</div></div></footer>
+  </div>
+</div>
+<script src='js/app.js'></script>
+</body>
 </html>
