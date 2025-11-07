@@ -29,7 +29,6 @@ html {
     animation: fadeBg 900ms ease;
 }
 
-/* .bg-root{ background-image:url('images/bg-marigold.jpg'); } */
 @keyframes fadeBg {
     from {
         opacity: 0
