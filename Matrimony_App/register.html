@@ -58,6 +58,7 @@
           </aside>
         </div>
       </main>
+      
       <script>
         document.getElementById('registerForm').addEventListener('submit', function (e) { e.preventDefault(); const f = e.target; if (f.password.value !== f.confirm.value) { alert('Passwords do not match'); return; } const user = { firstName: f.firstName.value, lastName: f.lastName.value, email: f.email.value, phone: f.phone.value, gender: f.gender.value, password: f.password.value }; try { APP.register(user); alert('Registered — redirecting to profile'); window.location.href = 'profile.html'; } catch (err) { alert(err.message); } });
       </script>
