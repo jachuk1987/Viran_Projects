@@ -49,6 +49,7 @@
           </aside>
         </div>
       </main>
+      
       <script>
         const profiles = [{ name: 'Priya', age: 28, tag: 'Engineer', img: 'images/profile1.jpg', city: 'Bengaluru', gender: 'Female' }, { name: 'Aisha', age: 26, tag: 'Designer', img: 'images/profile2.jpg', city: 'Mumbai', gender: 'Female' }, { name: 'Karan', age: 30, tag: 'Manager', img: 'images/profile3.jpg', city: 'Delhi', gender: 'Male' }, { name: 'Neha', age: 29, tag: 'Teacher', img: 'images/profile4.jpg', city: 'Chennai', gender: 'Female' }, { name: 'Vikram', age: 31, tag: 'Architect', img: 'images/profile5.jpg', city: 'Hyderabad', gender: 'Male' }, { name: 'Meera', age: 27, tag: 'Doctor', img: 'images/profile6.jpg', city: 'Kolkata', gender: 'Female' }];
         function renderProfiles(list) { const el = document.getElementById('results'); el.innerHTML = ''; if (list.length === 0) { el.innerHTML = '<p class="small">No matches found.</p>'; return; } list.forEach(p => { const card = document.createElement('div'); card.className = 'profile'; card.innerHTML = `<img src="${p.img}" alt=""><div class="body"><h5>${p.name}, ${p.age}</h5><p class="small">${p.tag} • ${p.city}</p><div style="flex:1"></div><div style="display:flex;gap:8px"><a class="btn btn-ghost" href="#">View</a><a class="btn btn-primary" href="#">Connect</a></div></div>`; el.appendChild(card); }); }
