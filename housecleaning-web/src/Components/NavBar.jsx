@@ -1,15 +1,15 @@
-const Navbar = () => {
-  return (
-    <nav className="flex justify-between items-center p-4 shadow-md">
-      <h1 className="text-xl font-bold text-blue-600">HomeCare</h1>
-      <ul className="flex gap-6">
-        <li>Home</li>
-        <li>Services</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
-    </nav>
-  );
-};
+const Navbar = () => (
+  <nav className="flex justify-between items-center px-6 py-4 shadow">
+    <h1 className="text-2xl font-bold text-blue-600">
+      House Cleaning Solution
+    </h1>
+    <ul className="flex gap-6">
+      <li>Home</li>
+      <li>Services</li>
+      <li>Packages</li>
+      <li>Contact</li>
+    </ul>
+  </nav>
+);
 
 export default Navbar;
