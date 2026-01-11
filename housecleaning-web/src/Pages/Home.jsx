@@ -2,7 +2,7 @@ import Navbar from "../Components/NavBar";
 import Hero from "../Components/Hero";
 import Services from "../Components/ServiceCard";
 import Contact from "../Components/Contact";
-import Footer from "../Components";
+import Footer from "../Components/Footer";
 
 const Home = () => {
   return (
