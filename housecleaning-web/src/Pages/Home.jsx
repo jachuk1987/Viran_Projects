@@ -1,8 +1,8 @@
 import Navbar from "../Components/NavBar";
-import Hero from "../components/Hero";
-import Services from "../Components/Services";
-import Contact from "../components/Contact";
-import Footer from "../components/Footer";
+import Hero from "../Components/Hero";
+import Services from "../Components/ServiceCard";
+import Contact from "../Components/Contact";
+import Footer from "../Components";
 
 const Home = () => {
   return (
