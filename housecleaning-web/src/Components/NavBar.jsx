@@ -1,31 +1,24 @@
 import { useState } from "react";
 
 const NavBar = () => {
-  const [open, setOpen] = useState(false);
-
   return (
-    <nav className="flex justify-between items-center px-6 py-4 shadow">
-      <h1 className="text-2xl font-bold text-blue-600">
-        House Cleaning Solution
-      </h1>
+    <nav className="bg-white shadow-sm">
+      <div className="max-w-container mx-auto flex items-center justify-between px-4 py-4">
+        <h1 className="text-2xl font-bold text-primary">
+          House Cleaning Solution
+        </h1>
 
-      <button
-        className="md:hidden"
-        onClick={() => setOpen(!open)}
-      >
-        ☰
-      </button>
+        <ul className="hidden md:flex gap-8 text-textDark font-medium">
+          <li className="cursor-pointer hover:text-primary">Home</li>
+          <li className="cursor-pointer hover:text-primary">Services</li>
+          <li className="cursor-pointer hover:text-primary">Packages</li>
+          <li className="cursor-pointer hover:text-primary">Contact</li>
+        </ul>
 
-      <ul
-        className={`md:flex gap-6 ${
-          open ? "block" : "hidden"
-        } md:block`}
-      >
-        <li>Home</li>
-        <li>Services</li>
-        <li>Packages</li>
-        <li>Contact</li>
-      </ul>
+        <button className="hidden md:block bg-primary text-white px-6 py-2 rounded-md">
+          Book Now
+        </button>
+      </div>
     </nav>
   );
 };
