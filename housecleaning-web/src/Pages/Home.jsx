@@ -1,6 +1,6 @@
 import Navbar from "../Components/NavBar";
 import Hero from "../Components/Hero";
-import Services from "../Components/ServiceCard";
+import Services from "../Components/Services";
 import WhyChooseUs from "../Components/WhyChooseUs";
 import Packages from "../Components/Packages";
 import HowItWorks from "../Components/HowItWorks";
