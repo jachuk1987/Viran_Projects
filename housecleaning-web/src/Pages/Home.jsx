@@ -7,7 +7,8 @@ import HowItWorks from "../Components/HowItWorks";
 import Testimonials from "../Components/Testimonials";
 import Locations from "../Components/Locations";
 import Contact from "../Components/Contact";
-import Footer from "../Components/Footer"
+import Footer from "../Components/Footer";
+import FloatingCTA from "../Components/FloatingCTA";
 
 const Home = () => {
   return (
@@ -22,6 +23,8 @@ const Home = () => {
       <Locations />
       <Contact />
       <Footer />
+      <FloatingCTA />
+
     </>
   );
 };
