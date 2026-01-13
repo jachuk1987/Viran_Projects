@@ -1,3 +1,5 @@
+import "./Packages.css";
+
 const packages = [
   {
     name: "Basic Cleaning",
@@ -34,39 +36,30 @@ const packages = [
 
 const Packages = () => {
   return (
-    <section className="bg-secondary py-20">
-      <div className="max-w-container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">
-          Cleaning Packages
-        </h2>
+    <section className="section packages">
+      <div className="container">
+        <h2 className="section-title">Cleaning Packages</h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="packages-grid">
           {packages.map((pkg) => (
             <div
               key={pkg.name}
-              className={`bg-white rounded-lg shadow-md p-8 text-center ${
-                pkg.popular ? "border-2 border-primary scale-105" : ""
+              className={`package-card ${
+                pkg.popular ? "popular" : ""
               }`}
             >
-              {pkg.popular && (
-                <p className="text-primary font-semibold mb-4">
-                  Most Popular
-                </p>
-              )}
+              {pkg.popular && <span className="badge">Most Popular</span>}
 
-              <h3 className="text-xl font-semibold mb-4">{pkg.name}</h3>
+              <h3>{pkg.name}</h3>
+              <p className="price">{pkg.price}</p>
 
-              <p className="text-4xl font-bold text-primary mb-6">
-                {pkg.price}
-              </p>
-
-              <ul className="text-textLight space-y-3 mb-8">
-                {pkg.features.map((feature) => (
-                  <li key={feature}>✔ {feature}</li>
+              <ul>
+                {pkg.features.map((f) => (
+                  <li key={f}>✔ {f}</li>
                 ))}
               </ul>
 
-              <button className="bg-primary text-white px-6 py-3 rounded-md w-full">
+              <button className="btn-primary full-width">
                 Book Now
               </button>
             </div>
