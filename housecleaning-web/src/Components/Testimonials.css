@@ -17,3 +17,35 @@
   color: #6b7280;
   margin-bottom: 20px;
 }
+
+/* Tablet */
+@media (max-width: 992px) {
+  .packages-grid,
+  .testimonial-grid,
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .packages-grid,
+  .testimonial-grid,
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar-content {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
+}
