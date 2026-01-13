@@ -1,0 +1,67 @@
+.packages {
+  background: #f5f7fa;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 48px;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.package-card {
+  background: white;
+  padding: 40px 32px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.package-card h3 {
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.price {
+  font-size: 40px;
+  font-weight: 700;
+  color: #0072ce;
+  margin-bottom: 24px;
+}
+
+.package-card ul {
+  list-style: none;
+  margin-bottom: 32px;
+  color: #6b7280;
+}
+
+.package-card li {
+  margin-bottom: 10px;
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0072ce;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.popular {
+  transform: scale(1.05);
+  border: 2px solid #0072ce;
+}
+
+.full-width {
+  width: 100%;
+}
