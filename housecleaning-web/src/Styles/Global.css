@@ -1,0 +1,32 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.btn-primary {
+  background-color: #0072ce;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-outline {
+  border: 2px solid #0072ce;
+  color: #0072ce;
+  padding: 12px 24px;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
+}
