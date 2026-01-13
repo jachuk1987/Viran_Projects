@@ -1,32 +1,22 @@
+import "./Hero.css";
+
 const Hero = () => {
   return (
-    <section className="bg-secondary">
-      <div className="max-w-container mx-auto px-4 py-20 grid md:grid-cols-2 gap-12 items-center">
+    <section className="hero">
+      <div className="container hero-grid">
         <div>
-          <h2 className="text-4xl md:text-5xl font-bold text-textDark leading-tight mb-6">
-            Professional House Cleaning Services
-          </h2>
-          <p className="text-textLight mb-8">
-            Trusted home & office cleaning services with trained professionals.
+          <h2>Professional House Cleaning Services</h2>
+          <p>
+            Trusted home & office cleaning services in Bangalore and Hyderabad.
           </p>
 
-          <div className="flex gap-4">
-            <button className="bg-primary text-white px-6 py-3 rounded-md">
-              Book Cleaning
-            </button>
-            <button className="border border-primary text-primary px-6 py-3 rounded-md">
-              Call Now
-            </button>
+          <div className="hero-buttons">
+            <button className="btn-primary">Book Cleaning</button>
+            <button className="btn-outline">Call Now</button>
           </div>
         </div>
 
-        <div>
-          <img
-            src="/hero-cleaning.png"
-            alt="Cleaning Service"
-            className="w-full"
-          />
-        </div>
+        <img src="/hero-cleaning.png" alt="Cleaning" />
       </div>
     </section>
   );
