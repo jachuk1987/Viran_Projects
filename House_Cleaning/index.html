@@ -1,70 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Homecare Solutions</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta charset="UTF-8" />
+  <title>Homecare Solutions | Professional Cleaning</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- Top Header -->
-    <div class="top-header">
-        <div class="logo">
-            <img src="https://homecaresolutions.in/wp-content/uploads/2021/06/logo.png" alt="House Cleaning Solutions">
-        </div>
-        <div class="top-info">
-            <div>
-                <i class="fa-regular fa-envelope"></i>
-                <span>narasimha87narasimha@gmail.com</span>
-            </div>
-            <div>
-                <i class="fa-solid fa-phone"></i>
-                <span>8073326822</span>
-            </div>
-            <div>
-                <i class="fa-brands fa-whatsapp"></i>
-                <span>7338446560</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="navbar">
-        <ul>
-            <li>Home </li>
-            <li>About </li>
-            <li>Blog </li>
-            <li>Services +</li>
-            <li>Contact </li>
-            <li>Location +</li>
-        </ul>
-        <div class="social-icons">
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-pinterest-p"></i>
-        </div>
+<!-- HEADER -->
+<header class="header">
+  <div class="container header-flex">
+    <div class="logo">Homecare Solutions</div>
+    <nav class="nav">
+      <a href="#services">Services</a>
+      <a href="#packages">Packages</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact" class="btn">Book Now</a>
     </nav>
+  </div>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h5>HOMECARE SOLUTIONS</h5>
-            <h1>Best <span>services</span> for better life</h1>
-            <p>
-                Homecare Solutions provides world-class Home cleaning services with a flexible pricing option.
-                We have a group of certified Home cleaners in Bangalore and our main aim is to ensure your convenience.
-            </p>
-            <button>Book Now</button>
-        </div>
-    </section>
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-content">
+    <h1>Professional Home Cleaning Services</h1>
+    <p>Trusted Deep Cleaning Experts in India</p>
+    <a href="#contact" class="btn btn-large">Get Free Quote</a>
+  </div>
+</section>
 
-    <!-- Floating Buttons -->
-    <div class="enquiry-btn">Enquiry Now</div>
-    <div class="whatsapp-btn">
-        <i class="fa-brands fa-whatsapp"></i>
+<!-- SERVICES -->
+<section id="services" class="section">
+  <div class="container">
+    <h2 class="section-title">Our Services</h2>
+
+    <div class="grid services-grid">
+      <div class="card">
+        <h3>Home Deep Cleaning</h3>
+        <p>Complete top-to-bottom cleaning.</p>
+      </div>
+      <div class="card">
+        <h3>Office Cleaning</h3>
+        <p>Professional workspace cleaning.</p>
+      </div>
+      <div class="card">
+        <h3>Sofa & Carpet</h3>
+        <p>Advanced shampooing methods.</p>
+      </div>
+      <div class="card">
+        <h3>Kitchen Cleaning</h3>
+        <p>Oil & stain removal.</p>
+      </div>
     </div>
+  </div>
+</section>
 
+<!-- PACKAGES -->
+<section id="packages" class="section bg-light">
+  <div class="container">
+    <h2 class="section-title">Cleaning Packages</h2>
+
+    <div class="grid pricing-grid">
+      <div class="price-card">
+        <h3>1 BHK</h3>
+        <p class="price">₹3,540</p>
+      </div>
+      <div class="price-card highlight">
+        <h3>2 BHK</h3>
+        <p class="price">₹5,310</p>
+      </div>
+      <div class="price-card">
+        <h3>3 BHK</h3>
+        <p class="price">₹5,900</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why" class="section">
+  <div class="container">
+    <h2 class="section-title">Why Choose Us</h2>
+
+    <ul class="why-list">
+      <li>✔ Trained Professionals</li>
+      <li>✔ Eco-Friendly Products</li>
+      <li>✔ On-Time Service</li>
+      <li>✔ Affordable Pricing</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section bg-dark">
+  <div class="container">
+    <h2 class="section-title white">Contact Us</h2>
+
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="tel" placeholder="Phone" required />
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2025 Homecare Solutions. All Rights Reserved.</p>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
-
 </html>
