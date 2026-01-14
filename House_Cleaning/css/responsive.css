@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .hero {
+    height: 60vh;
+    text-align: center;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+}
