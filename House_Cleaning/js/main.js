@@ -1,5 +1,6 @@
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-  alert("Thank you! Our team will contact you soon.");
-  this.reset();
+const menuToggle = document.getElementById("menuToggle");
+const nav = document.querySelector(".nav");
+
+menuToggle.addEventListener("click", () => {
+  nav.style.display = nav.style.display === "flex" ? "none" : "flex";
 });
