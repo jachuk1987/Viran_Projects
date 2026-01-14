@@ -104,3 +104,19 @@ body {
   font-size: 26px;
   cursor: pointer;
 }
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero {
+  position: relative;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
