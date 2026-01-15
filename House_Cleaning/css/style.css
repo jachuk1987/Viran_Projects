@@ -93,3 +93,44 @@ body {
   transform: translateY(-8px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.1);
 }
+
+.pricing {
+  padding: 60px 0;
+  background: #f8f9fa;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.price-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.price {
+  font-size: 28px;
+  font-weight: 700;
+  color: #007bff;
+  margin: 15px 0;
+}
+
+.price-desc {
+  color: #666;
+}
+
+.price-card.highlight {
+  border: 2px solid #007bff;
+  transform: scale(1.05);
+}
