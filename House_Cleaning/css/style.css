@@ -158,3 +158,24 @@ body {
   transform: translateY(-6px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
+
+.testimonials {
+  padding: 60px 0;
+  background: #f8f9fa;
+}
+
+.testimonial-box {
+  max-width: 700px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.testimonial-box p {
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 15px;
+}
