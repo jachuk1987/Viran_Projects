@@ -215,3 +215,26 @@ body {
   text-align: center;
   padding: 15px;
 }
+
+/* Global spacing & polish */
+section {
+  margin-bottom: 20px;
+}
+
+h1 {
+  line-height: 1.2;
+}
+
+h2 {
+  letter-spacing: 0.5px;
+}
+
+p {
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Smooth hover everywhere */
+a, button {
+  transition: 0.3s ease;
+}
