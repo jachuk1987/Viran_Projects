@@ -47,3 +47,17 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   alert("Thank you! We will contact you shortly.");
   this.reset();
 });
+
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+  reveals.forEach(section => {
+    const top = section.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      section.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
