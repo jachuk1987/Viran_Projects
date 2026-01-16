@@ -238,3 +238,20 @@ p {
 a, button {
   transition: 0.3s ease;
 }
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: #fff;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 55px;
+  font-size: 26px;
+  z-index: 999;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
