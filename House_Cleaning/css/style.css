@@ -179,3 +179,32 @@ body {
   font-style: italic;
   margin-bottom: 15px;
 }
+
+.contact {
+  padding: 60px 0;
+  background: #222;
+}
+
+.contact .section-title {
+  color: #fff;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 100px;
+}
