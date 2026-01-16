@@ -208,3 +208,10 @@ body {
   resize: none;
   height: 100px;
 }
+
+.footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 15px;
+}
