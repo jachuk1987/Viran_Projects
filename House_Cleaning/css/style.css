@@ -9,9 +9,14 @@ body {
   margin: auto;
 }
 
-.header {
-  background: #fff;
-  border-bottom: 1px solid #eee;
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #ffffff;
+  padding: 14px 0;
+  z-index: 1000;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .header-flex {
