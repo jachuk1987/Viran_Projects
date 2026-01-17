@@ -26,6 +26,10 @@ header {
   height: 70px;
 }
 
+header.scrolled {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
 .logo {
   display: flex;
   align-items: center;
