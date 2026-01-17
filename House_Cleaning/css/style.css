@@ -41,7 +41,6 @@ header.scrolled {
 .logo img {
   height: 40px;
   width: auto;
-  display: block;
   image-rendering: -webkit-optimize-contrast;
 }
 
