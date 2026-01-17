@@ -1,73 +1,81 @@
-const toggle = document.getElementById("menuToggle");
-const nav = document.querySelector(".nav");
+// const toggle = document.getElementById("menuToggle");
+// const nav = document.querySelector(".nav");
 
-toggle.addEventListener("click", () => {
-  nav.style.display = nav.style.display === "block" ? "none" : "block";
-});
+// toggle.addEventListener("click", () => {
+//   nav.style.display = nav.style.display === "block" ? "none" : "block";
+// });
 
-const testimonials = [
-  {
-    text: "Excellent service! My home looks brand new after deep cleaning.",
-    author: "Ramesh"
-  },
-  {
-    text: "Very professional team and timely service.",
-    author: "Anita"
-  },
-  {
-    text: "Highly recommended for home and office cleaning.",
-    author: "Suresh"
-  }
-];
+// const testimonials = [
+//   {
+//     text: "Excellent service! My home looks brand new after deep cleaning.",
+//     author: "Ramesh"
+//   },
+//   {
+//     text: "Very professional team and timely service.",
+//     author: "Anita"
+//   },
+//   {
+//     text: "Highly recommended for home and office cleaning.",
+//     author: "Suresh"
+//   }
+// ];
 
-let testimonialIndex = 0;
+// let testimonialIndex = 0;
 
-setInterval(() => {
-  testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+// setInterval(() => {
+//   testimonialIndex = (testimonialIndex + 1) % testimonials.length;
 
-  document.getElementById("testimonial-text").textContent =
-    testimonials[testimonialIndex].text;
+//   document.getElementById("testimonial-text").textContent =
+//     testimonials[testimonialIndex].text;
 
-  document.getElementById("testimonial-author").textContent =
-    "– " + testimonials[testimonialIndex].author;
-}, 4000);
+//   document.getElementById("testimonial-author").textContent =
+//     "– " + testimonials[testimonialIndex].author;
+// }, 4000);
 
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault();
+// document.getElementById("contactForm").addEventListener("submit", function (e) {
+//   e.preventDefault();
 
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const phone = document.getElementById("phone").value.trim();
+//   const name = document.getElementById("name").value.trim();
+//   const email = document.getElementById("email").value.trim();
+//   const phone = document.getElementById("phone").value.trim();
 
-  if (!name || !email || !phone) {
-    alert("Please fill all required fields");
-    return;
-  }
+//   if (!name || !email || !phone) {
+//     alert("Please fill all required fields");
+//     return;
+//   }
 
-  alert("Thank you! We will contact you shortly.");
-  this.reset();
-});
+//   alert("Thank you! We will contact you shortly.");
+//   this.reset();
+// });
 
-const reveals = document.querySelectorAll(".reveal");
+// const reveals = document.querySelectorAll(".reveal");
 
-function revealOnScroll() {
-  reveals.forEach(section => {
-    const top = section.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      section.classList.add("active");
-    }
-  });
+// function revealOnScroll() {
+//   reveals.forEach(section => {
+//     const top = section.getBoundingClientRect().top;
+//     if (top < window.innerHeight - 100) {
+//       section.classList.add("active");
+//     }
+//   });
+// }
+
+// window.addEventListener("scroll", revealOnScroll);
+// revealOnScroll();
+
+// window.addEventListener("scroll", () => {
+//   const header = document.querySelector("header");
+
+//   if (window.scrollY > 50) {
+//     header.classList.add("scrolled");
+//   } else {
+//     header.classList.remove("scrolled");
+//   }
+// });
+
+function openLocation() {
+  document.getElementById("locationModal").style.display = "flex";
 }
 
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
-
-window.addEventListener("scroll", () => {
-  const header = document.querySelector("header");
-
-  if (window.scrollY > 50) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
-  }
-});
+function closeLocation() {
+  document.getElementById("locationModal").style.display = "none";
+}
