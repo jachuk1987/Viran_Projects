@@ -6,4 +6,12 @@
   .menu-toggle {
     display: block;
   }
+
+  .logo img {
+    height: 32px;
+  }
+
+  .logo span {
+    font-size: 16px;
+  }
 }
