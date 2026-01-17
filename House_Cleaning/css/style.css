@@ -35,6 +35,28 @@ body {
   margin-left: 20px;
 }
 
+.main-header {
+  background: linear-gradient(120deg, #0b66c3 75%, #f9d400 25%);
+  padding: 15px 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  gap: 25px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.menu li {
+  cursor: pointer;
+}
+
 
 .menu-toggle {
   display: none;
