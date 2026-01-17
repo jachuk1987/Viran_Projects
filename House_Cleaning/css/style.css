@@ -57,22 +57,32 @@ body {
   cursor: pointer;
 }
 
-
-.menu-toggle {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
+.hero {
+  background: #111;
+  color: #fff;
+  padding: 80px 0;
 }
 
-.hero {
-  background: #e8f0f6;
-  height: 80vh;
+.hero-content {
   display: flex;
   align-items: center;
+  gap: 50px;
 }
 
-.hero-content h1 {
-  font-size: 40px;
+.hero-text h1 {
+  font-size: 56px;
+}
+
+.hero-text span {
+  color: #f9d400;
+}
+
+.btn-yellow {
+  background: #f9d400;
+  border: none;
+  padding: 14px 30px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .btn {
