@@ -9,51 +9,32 @@ body {
   margin: auto;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #ffffff;
-  padding: 14px 0;
-  z-index: 1000;
-  transition: box-shadow 0.3s ease, background 0.3s ease;
+.top-bar {
+  background: #e0e0e0;
+  padding: 10px 0;
+  font-size: 14px;
 }
 
-.header-flex {
+.top-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
 }
 
-header.scrolled {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.logo {
+.brand {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-weight: 700;
-  font-size: 20px;
 }
 
-.logo img {
-  height: 64px;
-  width: auto;
-  object-fit: contain;
+.brand img {
+  height: 45px;
 }
 
-.logo span {
-  white-space: nowrap;
-}
-
-.nav a {
+.contact-info span {
   margin-left: 20px;
-  text-decoration: none;
-  color: #333;
-  font-weight: 600;
 }
+
 
 .menu-toggle {
   display: none;
