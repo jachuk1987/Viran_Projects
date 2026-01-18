@@ -1,17 +1,24 @@
-@media (max-width: 768px) {
-  .nav {
-    display: none;
+@media (max-width: 900px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .menu-toggle {
-    display: block;
+  .hero-text h1 {
+    font-size: 40px;
   }
 
-  .logo img {
-    height: 32px;
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .service-grid {
+    grid-template-columns: 1fr;
   }
 
-  .logo span {
-    font-size: 16px;
+  .hero-text h1 {
+    font-size: 32px;
   }
 }
