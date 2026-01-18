@@ -1,3 +1,6 @@
+/* =====================
+   GLOBAL
+===================== */
 body {
   font-family: 'Poppins', sans-serif;
   color: #333;
@@ -9,6 +12,31 @@ body {
   margin: auto;
 }
 
+section {
+  margin-bottom: 20px;
+}
+
+h1 {
+  line-height: 1.2;
+}
+
+h2 {
+  letter-spacing: 0.5px;
+}
+
+p {
+  line-height: 1.6;
+  color: #555;
+}
+
+a,
+button {
+  transition: 0.3s ease;
+}
+
+/* =====================
+   TOP BAR
+===================== */
 .top-bar {
   background: #e0e0e0;
   padding: 10px 0;
@@ -35,33 +63,35 @@ body {
   margin-left: 20px;
 }
 
+/* =====================
+   HEADER & NAV
+===================== */
 .main-header {
   background: linear-gradient(120deg, #0b66c3 75%, #f9d400 25%);
   padding: 15px 0;
 }
 
-.main-nav {
-  background: #0d6efd;
-}
-
 .main-nav ul {
   display: flex;
-  list-style: none;
   justify-content: center;
+  list-style: none;
 }
 
 .main-nav ul li a {
   color: #fff;
   padding: 15px 20px;
-  display: block;
-  text-decoration: none;
   font-weight: 600;
+  text-decoration: none;
+  display: block;
 }
 
 .main-nav ul li a:hover {
   background: #084298;
 }
 
+/* =====================
+   HERO
+===================== */
 .hero {
   position: relative;
   background: url("../images/hero-bg.jpg") center/cover no-repeat;
@@ -72,9 +102,11 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right,
-      rgba(0, 0, 0, 0.85),
-      rgba(0, 0, 0, 0.4));
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.4)
+  );
 }
 
 .hero-content {
@@ -101,7 +133,6 @@ body {
 
 .hero-text p {
   max-width: 520px;
-  line-height: 1.6;
 }
 
 .btn-yellow {
@@ -114,10 +145,44 @@ body {
   cursor: pointer;
 }
 
+/* =====================
+   FLOATING BUTTONS
+===================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  z-index: 999;
+}
+
+.enquiry-float {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: rotate(-90deg) translateY(-50%);
+  background: #0b66c3;
+  color: #fff;
+  padding: 10px 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* =====================
+   LOCATION MODAL
+===================== */
 .location-modal {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0,0,0,0.6);
   display: none;
   justify-content: center;
   align-items: center;
@@ -144,74 +209,29 @@ body {
   cursor: pointer;
 }
 
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25d366;
-  color: #fff;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 26px;
-  z-index: 999;
-}
-
-.enquiry-float {
-  position: fixed;
-  right: 0;
-  top: 50%;
-  transform: rotate(-90deg) translateY(-50%);
-  background: #0b66c3;
-  color: #fff;
-  padding: 10px 18px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.services {
-  padding: 80px 0;
-  background: #f7f7f7;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-/* SERVICES SECTION */
+/* =====================
+   SERVICES
+===================== */
 .services-section {
   padding: 80px 0;
   background: #f7f9fc;
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* SERVICE CARD */
 .service-card {
   display: flex;
   align-items: center;
   gap: 40px;
-  background: #ffffff;
+  background: #fff;
   border-radius: 20px;
   padding: 40px;
   margin-bottom: 60px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
-/* Reverse layout */
 .service-card.reverse {
   flex-direction: row-reverse;
 }
 
-/* IMAGE / VIDEO */
 .service-media {
   position: relative;
   flex: 1;
@@ -222,13 +242,12 @@ body {
   border-radius: 15px;
 }
 
-/* Play button overlay */
 .play-btn {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #007bff;
+  background: #0b66c3;
   color: #fff;
   font-size: 22px;
   width: 60px;
@@ -237,17 +256,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
 }
 
-/* CONTENT */
 .service-content {
   flex: 1;
 }
 
 .service-content h2 {
   font-size: 32px;
-  line-height: 1.3;
   margin-bottom: 20px;
 }
 
@@ -255,13 +271,6 @@ body {
   color: #f4c400;
 }
 
-.service-content p {
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 15px;
-}
-
-/* BUTTONS */
 .service-buttons {
   margin-top: 25px;
   display: flex;
@@ -273,7 +282,6 @@ body {
   border-radius: 6px;
   font-weight: 600;
   text-decoration: none;
-  display: inline-block;
 }
 
 .btn.yellow {
@@ -286,18 +294,9 @@ body {
   color: #fff;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .service-card,
-  .service-card.reverse {
-    flex-direction: column;
-  }
-
-  .service-content h2 {
-    font-size: 26px;
-  }
-}
-
+/* =====================
+   PRICING
+===================== */
 .pricing {
   padding: 60px 0;
   background: #f8f9fa;
@@ -305,64 +304,63 @@ body {
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
   gap: 25px;
 }
 
 .price-card {
   background: #fff;
-  border: 1px solid #ddd;
-  padding: 30px 20px;
-  text-align: center;
+  padding: 30px;
   border-radius: 8px;
+  text-align: center;
   transition: 0.3s ease;
 }
 
 .price-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
 }
 
 .price {
   font-size: 28px;
   font-weight: 700;
-  color: #007bff;
-  margin: 15px 0;
-}
-
-.price-desc {
-  color: #666;
+  color: #0b66c3;
 }
 
 .price-card.highlight {
-  border: 2px solid #007bff;
+  border: 2px solid #0b66c3;
   transform: scale(1.05);
 }
 
+/* =====================
+   WHY US
+===================== */
 .why-us {
   padding: 60px 0;
 }
 
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
   gap: 25px;
 }
 
 .why-card {
-  text-align: center;
-  padding: 25px;
-  border: 1px solid #eee;
-  border-radius: 6px;
   background: #fff;
+  padding: 25px;
+  border-radius: 6px;
+  text-align: center;
   transition: 0.3s ease;
 }
 
 .why-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
+/* =====================
+   TESTIMONIALS
+===================== */
 .testimonials {
   padding: 60px 0;
   background: #f8f9fa;
@@ -375,15 +373,11 @@ body {
   padding: 30px;
   border-radius: 8px;
   text-align: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-.testimonial-box p {
-  font-size: 18px;
-  font-style: italic;
-  margin-bottom: 15px;
-}
-
+/* =====================
+   CONTACT
+===================== */
 .contact {
   padding: 60px 0;
   background: #222;
@@ -405,14 +399,11 @@ body {
   margin-bottom: 15px;
   border-radius: 4px;
   border: none;
-  outline: none;
 }
 
-.contact-form textarea {
-  resize: none;
-  height: 100px;
-}
-
+/* =====================
+   FOOTER
+===================== */
 .footer {
   background: #0b5ed7;
   color: #fff;
@@ -421,20 +412,8 @@ body {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
   gap: 30px;
-}
-
-.footer h3, .footer h4 {
-  margin-bottom: 15px;
-}
-
-.footer ul {
-  list-style: none;
-}
-
-.footer ul li {
-  margin-bottom: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
 }
 
 .footer-bottom {
@@ -444,26 +423,21 @@ body {
   margin-top: 40px;
 }
 
-/* Global spacing & polish */
-section {
-  margin-bottom: 20px;
-}
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+  .hero-content,
+  .service-card,
+  .service-card.reverse {
+    flex-direction: column;
+  }
 
-h1 {
-  line-height: 1.2;
-}
+  .hero-text h1 {
+    font-size: 38px;
+  }
 
-h2 {
-  letter-spacing: 0.5px;
-}
-
-p {
-  line-height: 1.6;
-  color: #555;
-}
-
-/* Smooth hover everywhere */
-a,
-button {
-  transition: 0.3s ease;
+  .service-content h2 {
+    font-size: 26px;
+  }
 }
