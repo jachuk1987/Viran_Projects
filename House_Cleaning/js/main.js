@@ -1,11 +1,3 @@
-// function openLocation() {
-//   document.getElementById("locationModal").style.display = "flex";
-// }
-
-// function closeLocation() {
-//   document.getElementById("locationModal").style.display = "none";
-// }
-
 const locationBtn = document.getElementById("locationBtn");
 const locationMenu = document.getElementById("locationMenu");
 const selectedCity = document.getElementById("selectedCity");
@@ -28,3 +20,17 @@ document.addEventListener("click", (e) => {
   }
 });
 
+function openLocation() {
+  document.getElementById("locationModal").style.display = "flex";
+}
+
+function closeLocation() {
+  document.getElementById("locationModal").style.display = "none";
+}
+
+window.onclick = function (e) {
+  const modal = document.getElementById("locationModal");
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+};

@@ -38,9 +38,9 @@ button {
    TOP BAR
 ===================== */
 .top-bar {
-  background: #e0e0e0;
-  padding: 10px 0;
-  font-size: 14px;
+  background: #f3f3f3;
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
 }
 
 .top-content {
@@ -52,15 +52,37 @@ button {
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
 }
 
-.brand img {
-  height: 45px;
+.logo-box {
+  background: #000;
+  padding: 6px;
+  border-radius: 6px;
 }
 
-.contact-info span {
-  margin-left: 20px;
+.logo-box img {
+  height: 55px;
+  width: auto;
+}
+
+.brand-text h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+}
+
+.brand-text small {
+  font-size: 13px;
+  color: #555;
+}
+
+.contact-info {
+  display: flex;
+  gap: 25px;
+  font-size: 14px;
+  color: #333;
 }
 
 /* =====================
@@ -68,21 +90,27 @@ button {
 ===================== */
 .main-header {
   background: linear-gradient(120deg, #0b66c3 75%, #f9d400 25%);
-  padding: 15px 0;
+}
+
+.main-nav {
+  background: transparent;
 }
 
 .main-nav ul {
   display: flex;
   justify-content: center;
+  align-items: center;
   list-style: none;
+  min-height: 64px;
 }
 
 .main-nav ul li a {
   color: #fff;
-  padding: 15px 20px;
-  font-weight: 600;
-  text-decoration: none;
+  padding: 20px 24px;
   display: block;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
 }
 
 .main-nav ul li a:hover {
@@ -102,11 +130,9 @@ button {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.85),
-    rgba(0, 0, 0, 0.4)
-  );
+  background: linear-gradient(to right,
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.4));
 }
 
 .hero-content {
@@ -227,7 +253,7 @@ button {
   border-radius: 20px;
   padding: 40px;
   margin-bottom: 60px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .service-card.reverse {
@@ -306,7 +332,7 @@ button {
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
 }
 
@@ -320,7 +346,7 @@ button {
 
 .price-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
 .price {
@@ -343,7 +369,7 @@ button {
 
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 25px;
 }
 
@@ -357,7 +383,7 @@ button {
 
 .why-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
 /* =====================
@@ -415,7 +441,7 @@ button {
 .footer-grid {
   display: grid;
   gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .footer-bottom {
@@ -429,6 +455,7 @@ button {
    RESPONSIVE
 ===================== */
 @media (max-width: 768px) {
+
   .hero-content,
   .service-card,
   .service-card.reverse {
