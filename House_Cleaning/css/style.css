@@ -414,10 +414,34 @@ body {
 }
 
 .footer {
-  background: #111;
-  color: #aaa;
+  background: #0b5ed7;
+  color: #fff;
+  padding: 60px 0 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 30px;
+}
+
+.footer h3, .footer h4 {
+  margin-bottom: 15px;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer ul li {
+  margin-bottom: 8px;
+}
+
+.footer-bottom {
   text-align: center;
   padding: 15px;
+  background: #084298;
+  margin-top: 40px;
 }
 
 /* Global spacing & polish */
