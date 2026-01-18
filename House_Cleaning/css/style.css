@@ -195,7 +195,34 @@ body {
 .service-card:hover {
   transform: translateY(-8px);
 }
+.services {
+  padding: 80px 0;
+  background: #f7f7f7;
+}
 
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.service-card {
+  background: #fff;
+  padding: 30px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
 
 .pricing {
   padding: 60px 0;
@@ -341,32 +368,4 @@ p {
 a,
 button {
   transition: 0.3s ease;
-}
-
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25d366;
-  color: #fff;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 26px;
-  z-index: 999;
-}
-
-.enquiry-float {
-  position: fixed;
-  right: 0;
-  top: 50%;
-  transform: rotate(-90deg) translateY(-50%);
-  background: #0b66c3;
-  color: #fff;
-  padding: 10px 18px;
-  font-weight: 600;
-  cursor: pointer;
 }
