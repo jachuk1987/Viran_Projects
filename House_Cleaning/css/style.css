@@ -136,6 +136,31 @@ button {
   background: #084298;
 }
 
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 18px;
+  padding-right: 10px;
+}
+
+.social-icons a {
+  color: #000; /* good contrast on yellow */
+  font-size: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #0b66c3;
+}
+
+
 /* =====================
    HERO
 ===================== */
