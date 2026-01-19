@@ -145,12 +145,12 @@ button {
 /* Social Icons */
 .social-icons {
   display: flex;
-  gap: 18px;
+  gap: 22px;
   padding-right: 10px;
 }
 
 .social-icons a {
-  color: #000; /* good contrast on yellow */
+  color: #000;
   font-size: 20px;
   transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -159,7 +159,6 @@ button {
   transform: scale(1.2);
   color: #0b66c3;
 }
-
 
 /* =====================
    HERO
