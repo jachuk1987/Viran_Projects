@@ -41,6 +41,9 @@ button {
   background: #f3f3f3;
   padding: 6px 0;
   border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .top-content {
@@ -103,6 +106,7 @@ button {
 ===================== */
 .main-header {
   background: linear-gradient(120deg, #0b66c3 75%, #f9d400 25%);
+  
 }
 
 .main-nav {
