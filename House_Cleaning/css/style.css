@@ -106,7 +106,9 @@ button {
 ===================== */
 .main-header {
   background: linear-gradient(120deg, #0b66c3 75%, #f9d400 25%);
-  
+  position: sticky;
+  top: 97px; /* height of top-bar (adjust if needed) */
+  z-index: 999;
 }
 
 .main-nav {
