@@ -39,7 +39,7 @@ button {
 ===================== */
 .top-bar {
   background: #f3f3f3;
-  padding: 12px 0;
+  padding: 6px 0;
   border-bottom: 1px solid #ddd;
 }
 
@@ -52,17 +52,16 @@ button {
 .brand {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 6px;
 }
 
-.logo-box {
-  background: #000;
+/* .logo-box {
   padding: 6px;
   border-radius: 6px;
-}
+} */
 
 .logo-box img {
-  height: 55px;
+  height: 85px;
   width: auto;
 }
 
@@ -80,9 +79,28 @@ button {
 
 .contact-info {
   display: flex;
-  gap: 25px;
+  gap: 30px;
+  align-items: center;
   font-size: 14px;
-  color: #333;
+}
+
+.contact-info span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-info i {
+  font-size: 32px;
+}
+
+.contact-info .fa-envelope,
+.contact-info .fa-phone {
+  color: #0d6efd;
+}
+
+.contact-info .fa-whatsapp {
+  color: #25d366;
 }
 
 /* =====================
