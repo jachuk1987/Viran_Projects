@@ -105,7 +105,7 @@ button {
    HEADER & NAV
 ===================== */
 .main-header {
-  background: linear-gradient(120deg, #0b66c3 70%, #f9d400 30%);
+  background: linear-gradient(120deg, #0b66c3 75%, #f9d400 25%);
   position: sticky;
   top: 97px;
   z-index: 999;
