@@ -217,8 +217,6 @@ button {
 /* =====================
    FLOATING BUTTONS
 ===================== */
-/* ================= FLOAT BUTTONS ================= */
-
 .whatsapp-float {
   position: fixed;
   bottom: 25px;
