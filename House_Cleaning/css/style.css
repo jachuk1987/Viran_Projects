@@ -254,13 +254,6 @@ button {
   font-size: 14px;
 }
 
-/* Rotate icon correctly */
-.enquiry-float i {
-  transform: rotate(90deg);
-  font-size: 16px;
-}
-
-
 /* =====================
    LOCATION MODAL
 ===================== */
