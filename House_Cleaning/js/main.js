@@ -46,3 +46,18 @@ window.addEventListener('scroll', () => {
   }
   lastScrollY = window.scrollY;
 });
+
+function changeLocation() {
+  const city = document.getElementById("citySelect").value;
+  const map = document.getElementById("mapFrame");
+
+  if (city === "bangalore") {
+    map.src = "https://maps.google.com/maps?q=Bangalore&t=&z=13&output=embed";
+  }
+  if (city === "hyderabad") {
+    map.src = "https://maps.google.com/maps?q=Hyderabad&t=&z=13&output=embed";
+  }
+  if (city === "chennai") {
+    map.src = "https://maps.google.com/maps?q=Chennai&t=&z=13&output=embed";
+  }
+}
