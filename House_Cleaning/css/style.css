@@ -237,7 +237,7 @@ button {
 
 .enquiry-float {
   position: fixed;
-  right: 0;                 /* fully inside screen */
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
   background: #0d6efd;
@@ -248,7 +248,7 @@ button {
   align-items: center;
   gap: 10px;
   z-index: 999;
-  writing-mode: vertical-rl;  /* vertical text */
+  writing-mode: vertical-rl;
   text-orientation: mixed;
   font-weight: 600;
   font-size: 14px;
