@@ -217,47 +217,59 @@ button {
 /* =====================
    FLOATING BUTTONS
 ===================== */
-/* WhatsApp Floating Button */
+/* ================= FLOAT BUTTONS ================= */
+
 .whatsapp-float {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 55px;
-  height: 55px;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
   background: #25d366;
   color: #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
-  z-index: 1000;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  font-size: 28px;
+  z-index: 999;
+  animation: pulse 2s infinite;
 }
 
-/* Enquiry Call Button */
 .enquiry-float {
   position: fixed;
-  right: 0;
+  right: -115px;
   top: 50%;
   transform: translateY(-50%);
   background: #0d6efd;
   color: #fff;
-  padding: 14px 16px;
-  font-size: 15px;
+  padding: 12px 18px;
+  border-radius: 8px 0 0 8px;
   font-weight: 600;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
   display: flex;
   align-items: center;
-  gap: 6px;
-  text-decoration: none;
-  z-index: 1000;
+  gap: 10px;
+  cursor: pointer;
+  z-index: 998;
+  transition: 0.3s ease;
+  animation: pulse-call 2.5s infinite;
 }
 
-/* Call Icon */
-.enquiry-float i {
-  font-size: 18px;
+.enquiry-float:hover {
+  right: 0;
+}
+
+/* Pulse animations */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+
+@keyframes pulse-call {
+  0% { box-shadow: 0 0 0 0 rgba(13,110,253,0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(13,110,253,0); }
+  100% { box-shadow: 0 0 0 0 rgba(13,110,253,0); }
 }
 
 /* =====================
