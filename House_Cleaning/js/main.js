@@ -34,3 +34,15 @@ window.onclick = function (e) {
     modal.style.display = "none";
   }
 };
+
+let lastScrollY = window.scrollY;
+const enquiryBtn = document.querySelector('.enquiry-float');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > lastScrollY) {
+    enquiryBtn.style.opacity = '0';
+  } else {
+    enquiryBtn.style.opacity = '1';
+  }
+  lastScrollY = window.scrollY;
+});
