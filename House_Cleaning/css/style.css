@@ -400,8 +400,14 @@ button {
   text-align: center;
 }
 
-.page-banner h1 { font-size: 36px; margin-bottom: 6px; }
-.page-banner p { font-size: 16px; }
+.page-banner h1 {
+  font-size: 36px;
+  margin-bottom: 6px;
+}
+
+.page-banner p {
+  font-size: 16px;
+}
 
 /* =====================
    ABOUT PAGE
@@ -416,12 +422,14 @@ button {
   list-style: disc inside;
 }
 
-.about-list li { margin: 8px 0; }
+.about-list li {
+  margin: 8px 0;
+}
 
 /* mini why cards on about */
 .why-grid-small {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
   margin: 30px 0;
 }
@@ -446,7 +454,7 @@ button {
   padding: 24px;
   margin-bottom: 30px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .blog-card h3 {
@@ -460,7 +468,9 @@ button {
   margin-bottom: 12px;
 }
 
-.blog-card p { margin-bottom: 12px; }
+.blog-card p {
+  margin-bottom: 12px;
+}
 
 /* =====================
    SERVICES LIST
@@ -471,7 +481,7 @@ button {
 
 .services-grid-full {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
@@ -479,7 +489,7 @@ button {
   background: #fff;
   border-radius: 8px;
   padding: 22px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   text-align: center;
 }
 
@@ -492,7 +502,9 @@ button {
   gap: 30px;
 }
 
-.contact-info-large p { margin-bottom: 10px; }
+.contact-info-large p {
+  margin-bottom: 10px;
+}
 
 .contact-form-large {
   display: flex;
@@ -500,7 +512,9 @@ button {
   gap: 12px;
 }
 
-.btn-block { width: 100%; }
+.btn-block {
+  width: 100%;
+}
 
 /* =====================
    LOCATION
@@ -511,7 +525,7 @@ button {
 
 .location-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 22px;
 }
 
@@ -520,7 +534,6 @@ button {
   height: 250px;
   border: 0;
 }
-
 
 /* =====================
    RESPONSIVE
