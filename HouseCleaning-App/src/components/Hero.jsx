@@ -8,7 +8,7 @@ const Hero = () => {
                 <Row className="align-items-center">
                     <Col lg={6} className="mb-4 mb-lg-0">
                         <h1 className="display-4 fw-bold mb-3 text-dark">
-                            Professional <span className="text-primary">Home Cleaning</span> Services
+                            Professional <span className="text-primary">House Cleaning</span> Solutions
                         </h1>
                         <p className="lead text-secondary mb-4">
                             Experience the joy of a spotless home. We provide top-tier cleaning solutions tailored to your needs. Fast, reliable, and thorough.
