@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  /* Changed to Poppins to match ref */
   line-height: 1.5;
   font-weight: 400;
 }
@@ -12,4 +13,145 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  /* Bootstrap adds underline by default sometimes */
+  color: inherit;
+  transition: 0.3s ease;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* =====================
+   TOP BAR
+===================== */
+.top-bar {
+  background: #f3f3f3;
+  padding: 6px 0;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.top-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo-box img {
+  height: 85px;
+  width: auto;
+  /* Ensure aspect ratio */
+}
+
+.brand-text h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.brand-text small {
+  font-size: 13px;
+  color: #555;
+  display: block;
+}
+
+.contact-info {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  font-size: 14px;
+}
+
+.contact-info span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-info i {
+  font-size: 20px;
+  /* Reduced from 32px for better fit, or match ref if intended big */
+}
+
+.fa-envelope,
+.fa-phone {
+  color: #0d6efd;
+}
+
+.fa-whatsapp {
+  color: #25d366;
+}
+
+/* =====================
+   HEADER & NAV
+===================== */
+.main-header {
+  background: linear-gradient(120deg, #0b66c3 75%, #f9d400 25%);
+  position: sticky;
+  top: 97px;
+  /* approx height of topbar */
+  z-index: 999;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 64px;
+}
+
+/* Override Bootstrap Nav Link styles */
+.main-nav .nav-link {
+  color: #fff !important;
+  padding: 20px 24px !important;
+  font-weight: 600;
+  border-radius: 0;
+}
+
+.main-nav .nav-link:hover {
+  background: #084298;
+  color: #fff !important;
+}
+
+/* Social */
+.social-icons {
+  display: flex;
+  gap: 22px;
+}
+
+.social-icons a {
+  color: #000;
+  /* Original black, might want white on this bg? No, bg is yellow part */
+  font-size: 20px;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #0b66c3;
+}
+
+/* Fix for mobile toggle */
+.navbar-light .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler-icon {
+  /* filter: invert(1); if needed for dark bg */
 }
