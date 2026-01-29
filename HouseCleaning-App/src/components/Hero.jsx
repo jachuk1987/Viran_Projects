@@ -45,11 +45,26 @@ const Hero = () => {
             </Col>
           </Row>
         </Container>
+
+        {/* Scroll Indicator */}
+        <div className="scroll-indicator">
+          <span></span>
+        </div>
       </section>
 
-      {/* Sticky Enquiry Button */}
+      {/* Sticky Enquiry */}
       <a href="#contact" className="enquiry-btn">
         Enquiry Now
+      </a>
+
+      {/* WhatsApp Button */}
+      <a
+        href="https://wa.me/919999999999"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="whatsapp-btn"
+      >
+        WhatsApp
       </a>
     </>
   );
