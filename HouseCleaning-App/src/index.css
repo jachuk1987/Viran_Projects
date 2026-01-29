@@ -155,3 +155,48 @@ ul {
 .navbar-toggler-icon {
   /* filter: invert(1); if needed for dark bg */
 }
+
+/* HERO SECTION */
+.hero-section {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 60px 0;
+}
+
+/* Overlay for text readability */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+/* Keep content above overlay */
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Buttons spacing */
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .hero-section {
+    background-position: center;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
