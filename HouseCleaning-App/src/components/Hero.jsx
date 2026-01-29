@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Button, Image } from 'react-bootstrap';
+import hero from '../assets/images/hero.png';
 
 const Hero = () => {
     return (
@@ -20,7 +21,7 @@ const Hero = () => {
                     </Col>
                     <Col lg={6}>
                         <Image
-                            src="https://images.unsplash.com/photo-1581578731117-104f8a3d46a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                            src={hero}
                             fluid
                             className="rounded-4 shadow-lg"
                             alt="Cleaning Service"
