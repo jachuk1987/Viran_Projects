@@ -1,42 +1,42 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import {
-  HouseDoor,
-  Building,
-  Tools,
-  Brush,
-  Droplet,
-  ShieldCheck,
-} from 'react-bootstrap-icons';
+  FaHome,
+  FaBuilding,
+  FaTools,
+  FaBroom,
+  FaBath,
+  FaCouch,
+} from 'react-icons/fa';
 
 const services = [
   {
-    icon: <HouseDoor />,
+    icon: <FaHome />,
     title: 'Home Cleaning',
     text: 'Complete home cleaning solutions for apartments and independent houses.',
   },
   {
-    icon: <Building />,
+    icon: <FaBuilding />,
     title: 'Office Cleaning',
     text: 'Professional office cleaning for a hygienic and productive workspace.',
   },
   {
-    icon: <Brush />,
+    icon: <FaBroom />,
     title: 'Deep Cleaning',
     text: 'Intensive deep cleaning for kitchens, bathrooms, and living areas.',
   },
   {
-    icon: <Tools />,
+    icon: <FaTools />,
     title: 'Post Construction',
     text: 'Dust and debris removal after construction or renovation work.',
   },
   {
-    icon: <Droplet />,
+    icon: <FaBath />,
     title: 'Bathroom Cleaning',
     text: 'Sanitized bathroom cleaning with safe and effective products.',
   },
   {
-    icon: <ShieldCheck />,
+    icon: <FaCouch />,
     title: 'Sofa & Carpet',
     text: 'Professional sofa and carpet shampooing services.',
   },
