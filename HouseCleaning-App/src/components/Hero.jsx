@@ -5,7 +5,11 @@ import hero from '../assets/images/hero.png';
 const Hero = () => {
   return (
     <>
-      <section id="home" className="hero-section">
+      <section
+        id="home"
+        className="hero-section"
+        style={{ backgroundImage: `url(${hero})` }}
+      >
         <Container>
           <Row className="align-items-center">
             <Col lg={6} className="hero-content">
@@ -55,7 +59,7 @@ const Hero = () => {
 
       {/* WhatsApp Button */}
       <a
-        href="https://wa.me/919999999999"
+        href="https://wa.me/918073326822"
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-btn"
