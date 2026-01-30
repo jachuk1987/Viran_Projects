@@ -266,15 +266,18 @@ ul {
 /* Enquiry Button */
 .enquiry-btn {
   position: fixed;
-  right: 0;
   top: 50%;
-  transform: rotate(-90deg) translateY(-50%);
+  right: -42px;               /* pulls it flush after rotation */
+  transform: rotate(-90deg);
+  transform-origin: right center;
   background: #0d6efd;
   color: #fff;
-  padding: 10px 20px;
+  padding: 12px 26px;
   font-weight: 600;
-  z-index: 99;
+  border-radius: 6px 6px 0 0;
+  z-index: 999;
 }
+
 
 /* WhatsApp */
 .whatsapp-btn {
