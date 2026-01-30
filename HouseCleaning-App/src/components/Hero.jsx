@@ -10,62 +10,40 @@ const Hero = () => {
         className="hero-section"
         style={{ backgroundImage: `url(${hero})` }}
       >
-        <Container>
-          <Row className="align-items-center">
+        <Container className="hero-container">
+          <Row className="align-items-center min-vh-100">
             <Col lg={6} className="hero-content">
+              <small className="hero-tag">HOMECARE SOLUTIONS</small>
+
               <h1 className="hero-title">
-                Professional <span>House Cleaning</span> Solutions
+                Best <span>services</span> for better life
               </h1>
 
               <p className="hero-text">
-                Experience the joy of a spotless home. We provide top-tier
-                cleaning solutions tailored to your needs. Fast, reliable, and
-                thorough.
+                Homecare Solutions provides world-class Home cleaning services
+                with a flexible pricing option. We have a group of certified
+                Home cleaners in Bangalore and our main aim is to ensure your
+                convenience.
               </p>
 
-              <div className="hero-buttons">
-                <Button
-                  variant="primary"
-                  size="lg"
-                  className="rounded-pill px-4"
-                  href="#contact"
-                >
-                  Book Now
-                </Button>
-
-                <Button
-                  variant="outline-primary"
-                  size="lg"
-                  className="rounded-pill px-4"
-                  href="#services"
-                >
-                  Our Services
-                </Button>
-              </div>
+              <Button className="hero-btn">Book Now</Button>
             </Col>
           </Row>
         </Container>
 
-        {/* Scroll Indicator */}
-        <div className="scroll-indicator">
-          <span></span>
-        </div>
+        {/* Sticky Enquiry */}
+        <a href="#contact" className="enquiry-btn">Enquiry Now</a>
+
+        {/* WhatsApp */}
+        <a
+          href="https://wa.me/919999999999"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="whatsapp-btn"
+        >
+          WhatsApp
+        </a>
       </section>
-
-      {/* Sticky Enquiry */}
-      <a href="#contact" className="enquiry-btn">
-        Enquiry Now
-      </a>
-
-      {/* WhatsApp Button */}
-      <a
-        href="https://wa.me/918073326822"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="whatsapp-btn"
-      >
-        WhatsApp
-      </a>
     </>
   );
 };
