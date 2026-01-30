@@ -16,17 +16,19 @@ const Hero = () => {
               <small className="hero-tag">HOMECARE SOLUTIONS</small>
 
               <h1 className="hero-title">
-                Best <span>services</span> for better life
-              </h1>
+  Professional <span>House Cleaning</span> Solutions
+</h1>
 
-              <p className="hero-text">
-                Homecare Solutions provides world-class Home cleaning services
-                with a flexible pricing option. We have a group of certified
-                Home cleaners in Bangalore and our main aim is to ensure your
-                convenience.
-              </p>
+<p className="hero-text">
+  Experience the joy of a spotless home. We provide top-tier cleaning
+  solutions tailored to your needs. Fast, reliable, and thorough.
+</p>
 
-              <Button className="hero-btn">Book Now</Button>
+<div className="hero-buttons">
+  <Button className="hero-btn">Book Now</Button>
+  <Button className="hero-outline-btn">Our Services</Button>
+</div>
+
             </Col>
           </Row>
         </Container>
