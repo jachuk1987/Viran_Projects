@@ -189,72 +189,104 @@ ul {
 }
 
 /* ================= TEXT ================= */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* DARK GRADIENT OVERLAY (IMPORTANT) */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.6) 40%,
+    rgba(0, 0, 0, 0.2) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 1;
+}
+
+/* Content above overlay */
+.hero-container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  color: #fff;
+}
+
+/* Text styles */
+.hero-tag {
+  color: #f9d200;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
 .hero-title {
-  font-size: 48px;
-  font-weight: 700;
-  color: #222;
-  margin-bottom: 16px;
-  animation: fadeSlide 1s ease forwards;
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.1;
 }
 
 .hero-title span {
-  color: #1e6bff;
+  color: #f9d200;
 }
 
 .hero-text {
+  margin: 20px 0 30px;
+  max-width: 520px;
   font-size: 16px;
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 28px;
-  animation: fadeSlide 1.2s ease forwards;
+  opacity: 0.95;
 }
 
-/* ================= BUTTONS ================= */
-.hero-buttons {
-  display: flex;
-  gap: 16px;
-  animation: fadeSlide 1.4s ease forwards;
+/* Button */
+.hero-btn {
+  background: #f9d200;
+  border: none;
+  color: #000;
+  padding: 12px 32px;
+  font-weight: 600;
+  border-radius: 6px;
 }
 
-/* ================= ENQUIRY BUTTON ================= */
+.hero-btn:hover {
+  background: #e6c100;
+}
+
+/* Enquiry Button */
 .enquiry-btn {
   position: fixed;
-  right: -48px;
+  right: 0;
   top: 50%;
-  transform: rotate(-90deg);
-  background: #1e6bff;
+  transform: rotate(-90deg) translateY(-50%);
+  background: #0d6efd;
   color: #fff;
-  padding: 12px 26px;
+  padding: 10px 20px;
   font-weight: 600;
-  text-decoration: none;
-  border-radius: 0 0 8px 8px;
-  z-index: 999;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  z-index: 99;
 }
 
-.enquiry-btn:hover {
-  background: #1557cc;
-  color: #fff;
-}
-
-/* ================= WHATSAPP ================= */
+/* WhatsApp */
 .whatsapp-btn {
   position: fixed;
   bottom: 25px;
   right: 25px;
   background: #25d366;
   color: #fff;
-  padding: 14px 22px;
-  border-radius: 30px;
+  padding: 14px 18px;
+  border-radius: 50px;
   font-weight: 600;
-  text-decoration: none;
-  z-index: 999;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-}
-
-.whatsapp-btn:hover {
-  background: #1ebd5a;
-  color: #fff;
+  z-index: 99;
 }
 
 /* ================= SCROLL INDICATOR ================= */
