@@ -156,44 +156,40 @@ ul {
   /* filter: invert(1); if needed for dark bg */
 }
 
-/* =========================
-   HERO SECTION
-========================= */
-
+/* ================= HERO SECTION ================= */
 .hero-section {
-  position: relative;
-  min-height: 90vh;
+  min-height: 85vh;
   display: flex;
   align-items: center;
-  background: url('../assets/images/hero.png') no-repeat center right;
   background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 80px 0;
+  overflow: hidden;
 }
 
-/* LIGHT OVERLAY (NOT DULL) */
+/* Overlay */
 .hero-section::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.95),
-    rgba(255, 255, 255, 0.75),
-    rgba(255, 255, 255, 0.3)
-  );
-  z-index: 1;
+  background: rgba(255, 255, 255, 0.88);
 }
 
-/* CONTENT ABOVE OVERLAY */
+/* Content Layer */
 .hero-section .container {
   position: relative;
   z-index: 2;
 }
 
-/* TEXT STYLES */
+/* ================= TEXT ================= */
 .hero-title {
-  font-size: 3rem;
-  font-weight: 800;
-  color: #111;
+  font-size: 48px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 16px;
+  animation: fadeSlide 1s ease forwards;
 }
 
 .hero-title span {
@@ -201,17 +197,139 @@ ul {
 }
 
 .hero-text {
+  font-size: 16px;
   color: #555;
-  max-width: 520px;
-  margin-bottom: 24px;
-  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 28px;
+  animation: fadeSlide 1.2s ease forwards;
 }
 
+/* ================= BUTTONS ================= */
 .hero-buttons {
   display: flex;
   gap: 16px;
+  animation: fadeSlide 1.4s ease forwards;
 }
 
+/* ================= ENQUIRY BUTTON ================= */
+.enquiry-btn {
+  position: fixed;
+  right: -48px;
+  top: 50%;
+  transform: rotate(-90deg);
+  background: #1e6bff;
+  color: #fff;
+  padding: 12px 26px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 8px 8px;
+  z-index: 999;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.enquiry-btn:hover {
+  background: #1557cc;
+  color: #fff;
+}
+
+/* ================= WHATSAPP ================= */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #25d366;
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 999;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.whatsapp-btn:hover {
+  background: #1ebd5a;
+  color: #fff;
+}
+
+/* ================= SCROLL INDICATOR ================= */
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.scroll-indicator span {
+  display: block;
+  width: 24px;
+  height: 40px;
+  border: 2px solid #1e6bff;
+  border-radius: 20px;
+  position: relative;
+}
+
+.scroll-indicator span::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: #1e6bff;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  animation: scrollMove 1.5s infinite;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollMove {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 12px);
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .hero-section {
+    background-position: center;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 34px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .enquiry-btn {
+    right: -42px;
+    font-size: 14px;
+  }
+}
 
 /* ================= SERVICES SECTION ================= */
 .services-section {
