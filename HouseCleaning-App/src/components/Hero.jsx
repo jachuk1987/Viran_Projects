@@ -13,21 +13,21 @@ const Hero = () => {
         <Container className="hero-container">
           <Row className="align-items-center min-vh-100">
             <Col lg={6} className="hero-content">
-              <small className="hero-tag">HOMECARE SOLUTIONS</small>
+              <small className="hero-tag">HOUSE CLEANING SOLUTIONS</small>
 
               <h1 className="hero-title">
-  Professional <span>House Cleaning</span> Solutions
-</h1>
+                Professional <span>House Cleaning</span> Solutions
+              </h1>
 
-<p className="hero-text">
-  Experience the joy of a spotless home. We provide top-tier cleaning
-  solutions tailored to your needs. Fast, reliable, and thorough.
-</p>
+              <p className="hero-text">
+                Experience the joy of a spotless home. We provide top-tier cleaning
+                solutions tailored to your needs. Fast, reliable, and thorough.
+              </p>
 
-<div className="hero-buttons">
-  <Button className="hero-btn">Book Now</Button>
-  <Button className="hero-outline-btn">Our Services</Button>
-</div>
+              <div className="hero-buttons">
+                <Button className="hero-btn">Book Now</Button>
+                <Button className="hero-outline-btn">Our Services</Button>
+              </div>
 
             </Col>
           </Row>
