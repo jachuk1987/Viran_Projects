@@ -38,13 +38,14 @@ const Hero = () => {
 
         {/* WhatsApp */}
         <a
-          href="https://wa.me/919999999999"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="whatsapp-btn"
-        >
-          WhatsApp
-        </a>
+  href="https://wa.me/918073326822"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="whatsapp-btn"
+>
+  <i className="bi bi-whatsapp"></i>
+</a>
+
       </section>
     </>
   );
