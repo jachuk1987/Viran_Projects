@@ -106,7 +106,6 @@ ul {
   background: linear-gradient(120deg, #0b66c3 75%, #f9d400 25%);
   position: sticky;
   top: 97px;
-  /* approx height of topbar */
   z-index: 999;
 }
 
@@ -138,7 +137,6 @@ ul {
 
 .social-icons a {
   color: #000;
-  /* Original black, might want white on this bg? No, bg is yellow part */
   font-size: 20px;
 }
 
