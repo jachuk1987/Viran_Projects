@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import hero from '../assets/images/hero.png';
 
 const Hero = () => {
