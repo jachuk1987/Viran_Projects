@@ -156,7 +156,9 @@ ul {
   /* filter: invert(1); if needed for dark bg */
 }
 
-/* ================= HERO SECTION ================= */
+/* =========================
+        HERO SECTION 
+============================ */
 .hero-section {
   min-height: 85vh;
   display: flex;
