@@ -287,12 +287,24 @@ ul {
   position: fixed;
   bottom: 25px;
   right: 25px;
+
+  width: 56px;
+  height: 56px;
   background: #25d366;
   color: #fff;
-  padding: 14px 18px;
-  border-radius: 50px;
-  font-weight: 600;
-  z-index: 99;
+
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+  z-index: 1000;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe5d;
 }
 
 /* ================= SCROLL INDICATOR ================= */
