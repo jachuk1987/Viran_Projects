@@ -272,7 +272,6 @@ ul {
   top: 50%;
   transform: translateY(-50%) rotate(-90deg);
   transform-origin: right center;
-
   background: #0d6efd;
   color: #fff;
   padding: 14px 32px;
@@ -280,7 +279,6 @@ ul {
   text-decoration: none;
   border-radius: 0 0 10px 10px;
   z-index: 1000;
-
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
