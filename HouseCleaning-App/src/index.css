@@ -196,7 +196,7 @@ ul {
   display: flex;
   align-items: center;
   overflow: hidden;
-  
+  font-family: "Poppins", sans-serif;
 }
 
 /* DARK GRADIENT OVERLAY (IMPORTANT) */
