@@ -16,9 +16,9 @@ const Hero = () => {
             <Col lg={6} className="hero-content">
               <small className="hero-tag">HOUSE CLEANING SOLUTIONS</small>
 
-              <h1 className="hero-title">
+              <h2 className="hero-title">
                 Professional <span>House Cleaning</span> Solutions
-              </h1>
+              </h2>
 
               <p className="hero-text">
                 Experience the joy of a spotless home. We provide top-tier cleaning
