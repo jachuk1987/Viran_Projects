@@ -154,7 +154,7 @@ button {
 ===================== */
 .hero {
   position: relative;
-  background: url("../images/hero-bg.jpg") center/cover no-repeat;
+  /* background: url("../images/hero-bg.jpg") center/cover no-repeat; */
   min-height: 520px;
   color: #fff;
 }
