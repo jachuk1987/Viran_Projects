@@ -72,32 +72,67 @@ ul {
   display: block;
 }
 
+/* =========================
+   CONTACT ICON BUTTONS
+========================= */
+
 .contact-info {
   display: flex;
-  gap: 30px;
-  align-items: center;
-  font-size: 16px;
+  gap: 14px;
 }
 
-.contact-info span {
+.contact-btn {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  animation: floatUp 2.5s infinite ease-in-out;
 }
 
-.contact-info i {
-  font-size: 20px;
-  /* Reduced from 32px for better fit, or match ref if intended big */
+.contact-btn i {
+  font-size: 18px;
 }
 
-.fa-envelope,
-.fa-phone {
-  color: #0d6efd;
+/* Email */
+.contact-btn.email {
+  background: linear-gradient(135deg, #0d6efd, #084298);
 }
 
-.fa-whatsapp {
-  color: #25d366;
+/* Call */
+.contact-btn.call {
+  background: linear-gradient(135deg, #198754, #0f5132);
 }
+
+/* WhatsApp */
+.contact-btn.whatsapp {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+/* Hover Effects */
+.contact-btn:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Floating Animation */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 
 /* =====================
    HEADER & NAV
