@@ -19,19 +19,33 @@ const NavigationBar = () => {
                     </div>
 
                     <div className="contact-info d-none d-lg-flex">
-                        <span>
+                        <a
+                            href="mailto:narasimha87narasimha@gmail.com"
+                            className="contact-btn email"
+                        >
                             <i className="fa-solid fa-envelope"></i>
-                            narasimha87narasimha@gmail.com
-                        </span>
-                        <span>
+                            <span>Email</span>
+                        </a>
+
+                        <a
+                            href="tel:7338446560"
+                            className="contact-btn call"
+                        >
                             <i className="fa-solid fa-phone"></i>
-                            7338446560
-                        </span>
-                        <span>
+                            <span>Call</span>
+                        </a>
+
+                        <a
+                            href="https://wa.me/918073326822"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="contact-btn whatsapp"
+                        >
                             <i className="fa-brands fa-whatsapp"></i>
-                            8073326822
-                        </span>
+                            <span>WhatsApp</span>
+                        </a>
                     </div>
+
                 </Container>
             </div>
 
