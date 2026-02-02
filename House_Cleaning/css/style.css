@@ -588,6 +588,6 @@ button {
   }
 
   .enquiry-btn {
-    display: none; /* Same as original on small screens */
+    display: none;
   }
 }
