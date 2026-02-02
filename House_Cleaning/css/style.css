@@ -560,14 +560,34 @@ button {
 /* =====================
    RESPONSIVE
 ===================== */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
+  .hero {
+    background-position: center;
+  }
 
-  .hero-content,
-  .service-card {
-    flex-direction: column;
+  .hero-content {
+    padding: 90px 20px;
   }
 
   .hero-text h1 {
-    font-size: 38px;
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    min-height: 520px;
+  }
+
+  .hero-text h1 {
+    font-size: 34px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .enquiry-btn {
+    display: none; /* Same as original on small screens */
   }
 }
