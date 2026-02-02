@@ -156,10 +156,10 @@ button {
 .hero {
   position: relative;
   width: 100%;
-  min-height: 600px;
-  background-image: url("../asset/images/hero.png"); /* YOUR IMAGE */
+  min-height: 650px;
+  background-image: url("../asset/images/hero.png");
   background-size: cover;
-  background-position: right center;
+  background-position: 85% center;
   background-repeat: no-repeat;
   color: #fff;
   overflow: hidden;
