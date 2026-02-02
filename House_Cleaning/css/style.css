@@ -157,7 +157,7 @@ button {
   position: relative;
   width: 100%;
   min-height: 600px;
-  background-image: url("../images/hero-bg.jpg"); /* YOUR IMAGE */
+  background-image: url("../asset/images/hero.png"); /* YOUR IMAGE */
   background-size: cover;
   background-position: right center;
   background-repeat: no-repeat;
