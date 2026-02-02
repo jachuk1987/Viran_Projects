@@ -154,46 +154,77 @@ button {
 ===================== */
 .hero {
   position: relative;
-  background: url("../images/hero-bg.jpg") center/cover no-repeat;
-  min-height: 520px;
+  min-height: 600px;
+  background-image: url("../images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
   color: #fff;
 }
 
+/* Dark gradient overlay */
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right,
-      rgba(0, 0, 0, 0.85),
-      rgba(0, 0, 0, 0.4));
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9) 35%,
+    rgba(0, 0, 0, 0.4) 65%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
 }
 
+/* Content layout */
 .hero-content {
   position: relative;
+  height: 100%;
   display: flex;
-  gap: 60px;
   align-items: center;
-  padding: 100px 0;
+  padding: 120px 0;
+}
+
+/* Text block */
+.hero-text {
+  max-width: 520px;
 }
 
 .hero-text h5 {
   color: #f9d400;
   letter-spacing: 2px;
+  font-size: 14px;
+  margin-bottom: 15px;
 }
 
 .hero-text h1 {
-  font-size: 56px;
+  font-size: 58px;
+  line-height: 1.15;
+  margin-bottom: 20px;
 }
 
-.hero-text span {
+.hero-text h1 span {
   color: #f9d400;
 }
 
+.hero-text p {
+  font-size: 15px;
+  line-height: 1.7;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+/* Button */
 .btn-yellow {
   background: #f9d400;
   border: none;
-  padding: 14px 34px;
+  padding: 14px 36px;
   font-weight: 700;
+  font-size: 14px;
   cursor: pointer;
+  border-radius: 3px;
+}
+
+.btn-yellow:hover {
+  background: #e6c200;
 }
 
 /* =====================
