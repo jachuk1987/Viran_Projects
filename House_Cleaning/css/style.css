@@ -329,20 +329,6 @@ button {
   border-radius: 15px;
 }
 
-.play-btn {
-  position: absolute;
-  inset: 50%;
-  transform: translate(-50%, -50%);
-  width: 60px;
-  height: 60px;
-  background: #0b66c3;
-  color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .btn.yellow {
   background: #f4c400;
 }
