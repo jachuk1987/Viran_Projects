@@ -366,7 +366,106 @@ button {
   color: #0b66c3;
 }
 
+/* =====================
+   COMBO OFFERS
+===================== */
 
+.combo-section {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.combo-title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+.combo-title span {
+  display: inline-block;
+}
+
+.combo-title .highlight {
+  color: #f9c400;
+  margin-left: 6px;
+}
+
+.combo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.combo-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.combo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.combo-header img {
+  width: 120px;
+}
+
+.combo-tag {
+  color: #0090ff;
+  font-weight: 700;
+}
+
+.combo-table .table-head {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #0b66c3;
+  margin-bottom: 12px;
+}
+
+.combo-table ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.combo-table li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.btn-blue {
+  margin: 25px auto 0;
+  background: #0b66c3;
+  color: #fff;
+  border: none;
+  padding: 14px 34px;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media (max-width: 992px) {
+  .combo-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* =====================
    WHY US
