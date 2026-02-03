@@ -701,6 +701,7 @@ button {
 /* =====================
    LOCATION
 ===================== */
+
 .location-main {
   padding: 60px 0;
 }
@@ -775,5 +776,17 @@ button {
 
   .enquiry-btn {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .process-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .process-img img {
+    width: 220px;
+    height: 220px;
   }
 }
