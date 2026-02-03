@@ -561,6 +561,8 @@ button {
   }
 }
 
+
+
 @media (max-width: 576px) {
   .hero {
     min-height: 520px;
