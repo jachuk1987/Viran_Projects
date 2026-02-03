@@ -477,16 +477,6 @@ button {
 }
 
 /* =====================
-   RESPONSIVE
-===================== */
-
-@media (max-width: 992px) {
-  .combo-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* =====================
    Our Hassle-Free
 ===================== */
 
