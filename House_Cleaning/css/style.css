@@ -561,10 +561,6 @@ button {
   }
 }
 
-/* =====================
-   HERO – MOBILE FIX
-===================== */
-
 @media (max-width: 768px) {
   .hero {
     min-height: 520px;
