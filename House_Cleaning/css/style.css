@@ -157,27 +157,32 @@ button {
   position: relative;
   width: 100%;
   min-height: 650px;
-  background-image: url("../asset/images/hero.png");
+  background: url("../asset/images/hero.png") no-repeat;
   background-size: cover;
-  background-position: 85% center;
-  background-repeat: no-repeat;
-  color: #fff;
+  background-position: right center; /* FIX */
   overflow: hidden;
 }
 
-
-/* Overlay exactly like original site */
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.88) 32%,
-    rgba(0, 0, 0, 0.55) 55%,
-    rgba(0, 0, 0, 0.15) 75%,
-    rgba(0, 0, 0, 0) 100%
+    rgba(0,0,0,0.9) 30%,
+    rgba(0,0,0,0.55) 55%,
+    rgba(0,0,0,0.15) 75%,
+    rgba(0,0,0,0) 100%
   );
 }
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  min-height: 650px; /* IMPORTANT */
+  display: flex;
+  align-items: center;
+}
+
 
 /* Content wrapper */
 .hero-content {
