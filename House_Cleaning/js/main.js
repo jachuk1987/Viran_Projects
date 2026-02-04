@@ -61,3 +61,22 @@ function changeLocation() {
     map.src = "https://maps.google.com/maps?q=Chennai&t=&z=13&output=embed";
   }
 }
+
+<script>
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach(item => {
+    const question = item.querySelector(".faq-question");
+    const icon = item.querySelector(".icon");
+
+    question.addEventListener("click", () => {
+      faqItems.forEach(i => {
+        i.classList.remove("active");
+        i.querySelector(".icon").textContent = "+";
+      });
+
+      item.classList.add("active");
+      icon.textContent = "−";
+    });
+  });
+</script>
