@@ -533,6 +533,110 @@ button {
    FAQ SECTION 
 ===================== */
 
+/* FAQ SECTION */
+.faq-section {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 50px;
+}
+
+.faq-title span {
+  color: #f9c400;
+}
+
+/* Grid */
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* FAQ ITEM */
+.faq-item {
+  background: #f4f8ff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+/* Question */
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+}
+
+.faq-question .icon {
+  width: 28px;
+  height: 28px;
+  background: #0b66c3;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border-radius: 2px;
+}
+
+/* Answer */
+.faq-answer {
+  display: none;
+  padding: 0 20px 20px 62px;
+}
+
+.faq-answer p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.faq-answer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.faq-answer li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 8px;
+}
+
+.faq-answer li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #0b66c3;
+}
+
+/* Active */
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-item.active .icon {
+  background: #0b66c3;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* =====================
    WHY US
 ===================== */
