@@ -251,7 +251,7 @@ button {
   z-index: 1000;
 }
 
-.enquiry-btn {
+.enquiry-float {
   position: fixed;
   right: -40px;
   top: 50%;
@@ -260,8 +260,6 @@ button {
   color: #fff;
   padding: 14px 28px;
   font-weight: 700;
-  text-decoration: none;
-  border-radius: 6px 6px 0 0;
   z-index: 999;
 }
 
