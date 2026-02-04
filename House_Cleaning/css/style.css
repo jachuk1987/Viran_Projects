@@ -183,17 +183,6 @@ button {
   align-items: center;
 }
 
-
-/* Content wrapper */
-.hero-content {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding: 120px 0;
-}
-
 /* Text block */
 .hero-text {
   max-width: 540px;
