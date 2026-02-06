@@ -7,9 +7,9 @@ body {
 }
 
 .container {
-  width: 90%;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 section {
@@ -895,10 +895,6 @@ button {
 .footer-top-nav a {
   color: #fff;
   font-weight: 500;
-}
-
-.footer-container {
-  padding: 50px 80px;
 }
 
 .footer-address {
