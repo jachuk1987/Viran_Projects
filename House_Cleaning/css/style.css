@@ -884,28 +884,6 @@ button {
 }
 
 /* =====================
-   CONTACT
-===================== */
-.contact {
-  padding: 60px 0;
-  background: #222;
-}
-
-.contact-form {
-  max-width: 500px;
-  margin: auto;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border-radius: 4px;
-  border: none;
-}
-
-/* =====================
    FOOTER
 ===================== */
 .footer {
