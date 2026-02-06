@@ -877,6 +877,27 @@ button {
 /* =====================
    FOOTER
 ===================== */
+
+/* HEADER */
+.site-header {
+  background: #1e78d7;
+  padding: 15px 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.nav-container a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
 .site-footer {
   background: #1e78d7;
   color: #fff;
