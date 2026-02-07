@@ -937,6 +937,78 @@ button {
   font-weight: 500;
 }
 
+/* =========================
+   ENQUIRY NOW (RIGHT SIDE)
+========================= */
+.enquiry-now {
+  position: fixed;
+  right: 0;
+  top: 45%;
+  background: #0b5ed7;
+  color: #fff;
+  padding: 12px 10px;
+  font-weight: 600;
+  font-size: 14px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  cursor: pointer;
+  z-index: 999;
+  border-radius: 6px 0 0 6px;
+}
+
+.enquiry-now:hover {
+  background: #094bb5;
+}
+
+/* =========================
+   WHATSAPP FLOAT BUTTON
+========================= */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.whatsapp-float img {
+  width: 30px;
+  height: 30px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   MOBILE ADJUSTMENTS
+========================= */
+@media (max-width: 768px) {
+  .enquiry-now {
+    top: 40%;
+    font-size: 12px;
+    padding: 10px 8px;
+  }
+
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+  }
+
+  .whatsapp-float img {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+
 /* =====================
    ABOUT PAGE
 ===================== */
