@@ -31,6 +31,13 @@ video {
   .footer-areas {
     grid-template-columns: repeat(3, 1fr);
   }
+  .welcome-container {
+    gap: 50px;
+  }
+
+  .stats-container {
+    padding: 45px 30px;
+  }
 }
 
 /* =====================================================
