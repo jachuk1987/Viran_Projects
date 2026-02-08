@@ -380,44 +380,6 @@ button {
   background: #000;
 }
 
-/* ===========================
-   RESPONSIVE
-=========================== */
-
-@media (max-width: 992px) {
-  .welcome-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .welcome-content h2 {
-    font-size: 30px;
-  }
-}
-
-@media (max-width: 576px) {
-  .welcome-section {
-    padding: 60px 15px;
-  }
-
-  .welcome-content h2 {
-    font-size: 26px;
-  }
-
-  .video-card iframe {
-    height: 220px;
-  }
-
-  .welcome-buttons {
-    flex-direction: column;
-  }
-
-  .btn {
-    text-align: center;
-  }
-}
-
-
 /* =====================
    LOCATION DROPDOWN
 ===================== */
