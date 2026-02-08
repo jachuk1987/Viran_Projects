@@ -87,6 +87,22 @@ video {
     font-size: 44px;
   }
 
+  /* Welcome Section */
+  .welcome-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .welcome-content h2 {
+    font-size: 30px;
+  }
+
+  /* Stats Section */
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 30px;
+  }
+
   /* ABOUT */
   .about-container {
     grid-template-columns: 1fr;
