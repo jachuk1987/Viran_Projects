@@ -547,28 +547,6 @@ button {
   background: #e6b800;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 992px) {
-  .about-container {
-    grid-template-columns: 1fr;
-  }
-
-  .about-images {
-    margin-bottom: 40px;
-  }
-
-  .about-images .img-bottom {
-    position: relative;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    margin-top: 20px;
-  }
-}
-
-
 /* =====================
    Our Hassle-Free
 ===================== */
@@ -857,13 +835,6 @@ button {
   background: #0b66c3;
 }
 
-/* Responsive */
-@media (max-width: 991px) {
-  .faq-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* ========================
    RECENT BLOGS SECTION 
 =========================== */
@@ -1093,27 +1064,6 @@ button {
   transform: scale(1.05);
 }
 
-/* =========================
-   MOBILE ADJUSTMENTS
-========================= */
-@media (max-width: 768px) {
-  .enquiry-now {
-    top: 40%;
-    font-size: 12px;
-    padding: 10px 8px;
-  }
-
-  .whatsapp-float {
-    width: 50px;
-    height: 50px;
-  }
-
-  .whatsapp-float img {
-    width: 26px;
-    height: 26px;
-  }
-}
-
 /* =====================
    ABOUT PAGE
 ===================== */
@@ -1239,145 +1189,4 @@ button {
   width: 100%;
   height: 250px;
   border: 0;
-}
-
-/* =====================
-   RESPONSIVE
-===================== */
-@media (max-width: 991px) {
-  .hero {
-    background-position: center;
-  }
-
-  .hero-content {
-    padding: 90px 20px;
-  }
-
-  .hero-text h1 {
-    font-size: 44px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero {
-    min-height: 520px;
-    background-position: center top;
-  }
-
-  .hero-overlay {
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.85) 0%,
-      rgba(0, 0, 0, 0.6) 45%,
-      rgba(0, 0, 0, 0.2) 75%,
-      rgba(0, 0, 0, 0) 100%
-    );
-  }
-
-  .hero-content {
-    padding: 80px 20px;
-  }
-
-  .hero-text {
-    max-width: 100%;
-  }
-}
-
-
-@media (max-width: 576px) {
-  .hero {
-    min-height: 520px;
-  }
-
-  .hero-text h1 {
-    font-size: 34px;
-  }
-
-  .hero-text p {
-    font-size: 14px;
-  }
-
-  .enquiry-btn {
-    display: none;
-  }
-}
-
-@media (max-width: 992px) {
-  .combo-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .process-row {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .process-img img {
-    width: 220px;
-    height: 220px;
-  }
-}
-
-@media (max-width: 992px) {
-  .services-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
-}
-
-@media (max-width: 576px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 992px) {
-  .testimonial-grid,
-  .logo-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .video-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 576px) {
-  .testimonial-grid,
-  .logo-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 992px) {
-  .blog-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 576px) {
-  .blog-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 992px) {
-  .footer-address,
-  .footer-links,
-  .footer-areas {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-  .footer-address,
-  .footer-links,
-  .footer-areas {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-top-nav .container {
-    flex-wrap: wrap;
-  }
 }
