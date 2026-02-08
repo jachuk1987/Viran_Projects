@@ -1,24 +1,260 @@
-@media (max-width: 900px) {
+/* ==============================
+   GLOBAL FIXES
+============================== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+/* ==============================
+   LARGE TABLETS (≤ 1200px)
+============================== */
+@media (max-width: 1200px) {
+
+  .container {
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 52px;
+  }
+
+  .services-grid,
+  .combo-grid,
+  .testimonial-grid,
+  .logos-grid,
+  .blog-grid {
+    gap: 24px;
+  }
+}
+
+/* ==============================
+   TABLETS (≤ 992px)
+============================== */
+@media (max-width: 992px) {
+
+  /* TOP BAR */
+  .top-content {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .contact-info {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  /* NAV */
+  .nav-wrapper {
+    flex-direction: column;
+  }
+
+  .main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 520px;
+  }
+
   .hero-content {
+    min-height: 520px;
+  }
+
+  .hero-text h1 {
+    font-size: 46px;
+  }
+
+  /* SERVICES */
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* COMBOS */
+  .combo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* PROCESS */
+  .process-row {
     flex-direction: column;
     text-align: center;
   }
 
-  .hero-text h1 {
-    font-size: 40px;
+  .process-content p {
+    max-width: 100%;
   }
 
-  .service-grid {
+  .process-videos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* TESTIMONIALS */
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* BLOGS */
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* FOOTER */
+  .footer-address {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-areas {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 480px) {
-  .service-grid {
-    grid-template-columns: 1fr;
+/* ==============================
+   MOBILES (≤ 768px)
+============================== */
+@media (max-width: 768px) {
+
+  section {
+    padding: 60px 0;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: auto;
+    background-position: center;
+  }
+
+  .hero-content {
+    min-height: auto;
+    padding: 80px 20px;
   }
 
   .hero-text h1 {
+    font-size: 38px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  /* SERVICES */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card img {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* PRICING */
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* COMBO */
+  .combo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ABOUT */
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* PROCESS */
+  .process-img img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .process-videos {
+    grid-template-columns: 1fr;
+  }
+
+  /* TESTIMONIALS */
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* HAPPY CUSTOMERS */
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CLIENT LOGOS */
+  .logos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* FAQ */
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* BLOGS */
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* FOOTER */
+  .footer-top-nav .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-areas {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    font-size: 13px;
+  }
+}
+
+/* ==============================
+   SMALL MOBILES (≤ 480px)
+============================== */
+@media (max-width: 480px) {
+
+  .hero-text h1 {
     font-size: 32px;
+  }
+
+  .section-title h2,
+  .section-title {
+    font-size: 28px;
+  }
+
+  .combo-title {
+    font-size: 30px;
+  }
+
+  .btn-yellow,
+  .btn-blue {
+    padding: 12px 26px;
+    font-size: 13px;
+  }
+
+  .enquiry-now {
+    display: none; /* optional UX improvement */
   }
 }
