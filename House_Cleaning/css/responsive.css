@@ -31,6 +31,7 @@ video {
   .footer-areas {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .welcome-container {
     gap: 50px;
   }
@@ -164,6 +165,38 @@ video {
 
   .btn-yellow {
     padding: 12px 28px;
+  }
+
+  /* Welcome Section */
+  .welcome-section {
+    padding: 60px 20px;
+  }
+
+  .welcome-content h2 {
+    font-size: 28px;
+  }
+
+  .video-card iframe {
+    height: 240px;
+  }
+
+  .welcome-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Stats */
+  .stats-container {
+    padding: 40px 20px;
+  }
+
+  .stat-item h3 {
+    font-size: 38px;
   }
 
   /* SERVICES */
