@@ -989,9 +989,16 @@ button {
 
 .blog-section {
   padding: 80px 0;
-  background: #fff;
+  background: #ffffff;
 }
 
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+/* GRID */
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -999,21 +1006,24 @@ button {
   margin-top: 50px;
 }
 
+/* CARD */
 .blog-card {
   background: #fff;
-  border-radius: 8px;
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .blog-card:hover {
   transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
 }
 
+/* IMAGE */
 .blog-image {
   position: relative;
-  height: 200px;
+  height: 240px;
 }
 
 .blog-image img {
@@ -1022,46 +1032,63 @@ button {
   object-fit: cover;
 }
 
+/* OVERLAY (MATCH IMAGE-1) */
 .blog-overlay {
   position: absolute;
   inset: 0;
-  /* background: rgba(13, 110, 253, 0.85); */
+  background: linear-gradient(
+    90deg,
+    rgba(13, 110, 253, 0.95) 0%,
+    rgba(13, 110, 253, 0.65) 55%,
+    rgba(13, 110, 253, 0) 100%
+  );
   color: #ffd400;
   font-weight: 700;
-  padding: 20px;
-  font-size: 15px;
+  font-size: 16px;
+  padding: 22px;
   display: flex;
   align-items: flex-end;
 }
 
+/* CONTENT */
 .blog-content {
-  padding: 25px;
+  padding: 28px;
 }
 
 .blog-content h3 {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 700;
+  color: #111;
   margin-bottom: 12px;
+  line-height: 1.4;
 }
 
+/* DATE */
 .blog-date {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-size: 14px;
-  color: #666;
-  margin-bottom: 12px;
+  color: #6c757d;
+  margin-bottom: 14px;
 }
 
+/* DESCRIPTION */
 .blog-content p {
   font-size: 15px;
   color: #555;
   line-height: 1.6;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
+/* READ MORE */
 .read-more {
   font-weight: 700;
   color: #0d6efd;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .read-more:hover {
