@@ -1025,7 +1025,7 @@ button {
 .blog-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(13, 110, 253, 0.85);
+  /* background: rgba(13, 110, 253, 0.85); */
   color: #ffd400;
   font-weight: 700;
   padding: 20px;
