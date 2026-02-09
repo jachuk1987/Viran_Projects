@@ -1272,35 +1272,6 @@ button {
   font-weight: 600;
 }
 
-/* =====================
-   BLOG LIST
-===================== */
-.blog-list {
-  padding: 60px 0;
-}
-
-.blog-card {
-  background: #fff;
-  padding: 24px;
-  margin-bottom: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.blog-card h3 {
-  font-size: 22px;
-  margin-bottom: 6px;
-}
-
-.blog-date {
-  color: #888;
-  font-size: 14px;
-  margin-bottom: 12px;
-}
-
-.blog-card p {
-  margin-bottom: 12px;
-}
 
 /* =====================
    SERVICES LIST
