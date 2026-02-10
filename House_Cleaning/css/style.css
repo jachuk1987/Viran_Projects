@@ -836,51 +836,41 @@ button {
    SATISFIED CLIENTS SECTION
 ========================== */
 
-/* GLOBAL FIX */
-html, body {
-  overflow-x: hidden;
-}
-
-/* SATISFIED CLIENTS */
 .satisfied-clients {
   padding: 80px 0;
-  background: #ffffff;
-}
-
-.satisfied-clients .container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
-}
-
-.section-heading {
-  text-align: center;
-  font-size: 36px;
-  font-weight: 800;
-  margin-bottom: 60px;
-}
-
-.section-heading span {
-  color: #ffd400;
-}
-
-/* GRID – NO SLIDER */
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  background: #fff;
   overflow: hidden;
 }
 
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 50px;
+}
+
+.section-title span {
+  color: #ffd400;
+}
+
+/* SLIDER */
+.slider-wrapper {
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.5s ease;
+}
+
+/* CARD */
 .testimonial-card {
+  min-width: calc(25% - 22.5px); /* 4 cards */
   background: #0d6efd;
-  color: #ffffff;
+  color: #fff;
   padding: 28px;
   border-radius: 6px;
-  min-height: 280px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
@@ -896,31 +886,40 @@ html, body {
   font-weight: 700;
 }
 
-/* HIDE SLIDER DOTS */
-.swiper-pagination,
-.slick-dots,
-.owl-dots {
-  display: none !important;
+/* DOTS */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.slider-dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: #ccc;
+  cursor: pointer;
+}
+
+.slider-dots button.active {
+  background: #0d6efd;
 }
 
 /* RESPONSIVE */
-@media (max-width: 1200px) {
-  .testimonials-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 900px) {
-  .testimonials-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 1024px) {
+  .testimonial-card {
+    min-width: calc(50% - 15px); /* 2 cards */
   }
 }
 
 @media (max-width: 600px) {
-  .testimonials-grid {
-    grid-template-columns: 1fr;
+  .testimonial-card {
+    min-width: 100%; /* 1 card */
   }
 }
+
 
 /* ==========================
    HAPPY CUSTOMERS SECTION 
