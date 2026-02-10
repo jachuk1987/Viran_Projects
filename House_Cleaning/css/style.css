@@ -836,6 +836,12 @@ button {
    SATISFIED CLIENTS SECTION
 ========================== */
 
+/* GLOBAL FIX */
+html, body {
+  overflow-x: hidden;
+}
+
+/* SATISFIED CLIENTS */
 .satisfied-clients {
   padding: 80px 0;
   background: #ffffff;
@@ -847,7 +853,6 @@ button {
   padding: 0 20px;
 }
 
-/* Heading */
 .section-heading {
   text-align: center;
   font-size: 36px;
@@ -859,30 +864,24 @@ button {
   color: #ffd400;
 }
 
-/* Grid */
+/* GRID – NO SLIDER */
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
+  overflow: hidden;
 }
 
-/* Card */
 .testimonial-card {
   background: #0d6efd;
   color: #ffffff;
-  padding: 28px 26px;
+  padding: 28px;
   border-radius: 6px;
   min-height: 280px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
 }
 
 .testimonial-card p {
@@ -897,10 +896,14 @@ button {
   font-weight: 700;
 }
 
-/* ==========================
-   RESPONSIVE
-========================== */
+/* HIDE SLIDER DOTS */
+.swiper-pagination,
+.slick-dots,
+.owl-dots {
+  display: none !important;
+}
 
+/* RESPONSIVE */
 @media (max-width: 1200px) {
   .testimonials-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -911,22 +914,13 @@ button {
   .testimonials-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .section-heading {
-    font-size: 30px;
-  }
 }
 
 @media (max-width: 600px) {
   .testimonials-grid {
     grid-template-columns: 1fr;
   }
-
-  .testimonial-card {
-    min-height: auto;
-  }
 }
-
 
 /* ==========================
    HAPPY CUSTOMERS SECTION 
