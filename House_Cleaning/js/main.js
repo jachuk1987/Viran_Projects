@@ -53,3 +53,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+  const track = document.getElementById("sliderTrack");
+  const dotsContainer = document.getElementById("sliderDots");
+  const cards = document.querySelectorAll(".testimonial-card");
+
+  let cardsPerView = window.innerWidth <= 600 ? 1 : window.innerWidth <= 1024 ? 2 : 4;
+  let totalSlides = Math.ceil(cards.length / cardsPerView);
+  let currentIndex = 0;
+
+  function createDots() {
+    dotsContainer.innerHTML = "";
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement("button");
+      if (i === 0) dot.classList.add("active");
+      dot.addEventListener("click", () => moveSlide(i));
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function moveSlide(index) {
+    const slideWidth = track.clientWidth;
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
+    currentIndex = index;
+
+    document.querySelectorAll(".slider-dots button").forEach((d, i) => {
+      d.classList.toggle("active", i === index);
+    });
+  }
+
+  createDots();
+
+  window.addEventListener("resize", () => {
+    cardsPerView = window.innerWidth <= 600 ? 1 : window.innerWidth <= 1024 ? 2 : 4;
+    totalSlides = Math.ceil(cards.length / cardsPerView);
+    createDots();
+    moveSlide(0);
+  });

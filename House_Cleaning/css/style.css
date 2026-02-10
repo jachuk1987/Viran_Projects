@@ -839,87 +839,90 @@ button {
 .satisfied-clients {
   padding: 80px 0;
   background: #fff;
-  overflow: hidden;
 }
 
-.section-title {
+.title {
   text-align: center;
   font-size: 36px;
   font-weight: 800;
   margin-bottom: 50px;
 }
 
-.section-title span {
+.title span {
   color: #ffd400;
 }
 
-/* SLIDER */
-.slider-wrapper {
+.slider-container {
+  position: relative;
+  max-width: 1300px;
+  margin: auto;
   overflow: hidden;
 }
 
 .slider-track {
   display: flex;
-  gap: 30px;
-  transition: transform 0.5s ease;
+  gap: 20px;
+  transition: transform 0.8s ease;
 }
 
-/* CARD */
-.testimonial-card {
-  min-width: calc(25% - 22.5px); /* 4 cards */
+/* 4 cards visible */
+.card {
+  flex: 0 0 calc(25% - 15px);
   background: #0d6efd;
   color: #fff;
-  padding: 28px;
+  padding: 30px;
   border-radius: 6px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  min-height: 330px;
 }
 
-.testimonial-card p {
-  font-size: 14px;
-  line-height: 1.7;
+.card p {
   font-style: italic;
+  line-height: 1.7;
+  font-size: 15px;
 }
 
-.testimonial-card h4 {
-  margin-top: 20px;
-  font-size: 15px;
+.card h4 {
+  margin-top: 25px;
   font-weight: 700;
 }
 
-/* DOTS */
-.slider-dots {
+/* VERTICAL DOTS */
+.dots {
+  position: absolute;
+  right: -35px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   gap: 10px;
-  margin-top: 30px;
 }
 
-.slider-dots button {
-  width: 10px;
-  height: 10px;
+.dots span {
+  width: 8px;
+  height: 8px;
+  background: #ffd400;
   border-radius: 50%;
-  border: none;
-  background: #ccc;
+  opacity: 0.4;
   cursor: pointer;
 }
 
-.slider-dots button.active {
+.dots span.active {
   background: #0d6efd;
+  opacity: 1;
 }
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
-  .testimonial-card {
-    min-width: calc(50% - 15px); /* 2 cards */
+  .card {
+    flex: 0 0 calc(50% - 10px);
   }
 }
 
 @media (max-width: 600px) {
-  .testimonial-card {
-    min-width: 100%; /* 1 card */
+  .card {
+    flex: 0 0 100%;
   }
 }
-
 
 /* ==========================
    HAPPY CUSTOMERS SECTION 
