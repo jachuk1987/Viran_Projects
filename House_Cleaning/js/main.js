@@ -85,3 +85,48 @@ setInterval(() => {
   index = (index + 1) % totalSlides;
   moveSlide(index);
 }, 5000);
+
+let autoSlide;
+
+function startAutoSlide() {
+  autoSlide = setInterval(() => {
+    index = (index + 1) % totalSlides;
+    moveSlide(index);
+  }, 5000);
+}
+
+function stopAutoSlide() {
+  clearInterval(autoSlide);
+}
+
+const slider = document.querySelector(".slider-container");
+slider.addEventListener("mouseenter", stopAutoSlide);
+slider.addEventListener("mouseleave", startAutoSlide);
+
+startAutoSlide();
+
+let startX = 0;
+let endX = 0;
+
+slider.addEventListener("touchstart", e => {
+  startX = e.touches[0].clientX;
+});
+
+slider.addEventListener("touchmove", e => {
+  endX = e.touches[0].clientX;
+});
+
+slider.addEventListener("touchend", () => {
+  if (startX - endX > 50) {
+    index = (index + 1) % totalSlides;
+    moveSlide(index);
+  }
+  if (endX - startX > 50) {
+    index = (index - 1 + totalSlides) % totalSlides;
+    moveSlide(index);
+  }
+});
+
+cards.forEach(card => {
+  track.appendChild(card.cloneNode(true));
+});
