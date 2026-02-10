@@ -53,39 +53,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-  const track = document.getElementById("sliderTrack");
-  const dotsContainer = document.getElementById("sliderDots");
-  const cards = document.querySelectorAll(".testimonial-card");
+/* SATISFIED CLIENTS */
+const track = document.getElementById("sliderTrack");
+const cards = document.querySelectorAll(".card");
+const dotsContainer = document.getElementById("dots");
 
-  let cardsPerView = window.innerWidth <= 600 ? 1 : window.innerWidth <= 1024 ? 2 : 4;
-  let totalSlides = Math.ceil(cards.length / cardsPerView);
-  let currentIndex = 0;
+const visibleCards = 4;
+const totalSlides = Math.ceil(cards.length / visibleCards);
+let index = 0;
 
-  function createDots() {
-    dotsContainer.innerHTML = "";
-    for (let i = 0; i < totalSlides; i++) {
-      const dot = document.createElement("button");
-      if (i === 0) dot.classList.add("active");
-      dot.addEventListener("click", () => moveSlide(i));
-      dotsContainer.appendChild(dot);
-    }
-  }
+// Create dots
+for (let i = 0; i < totalSlides; i++) {
+  const dot = document.createElement("span");
+  if (i === 0) dot.classList.add("active");
+  dot.addEventListener("click", () => moveSlide(i));
+  dotsContainer.appendChild(dot);
+}
 
-  function moveSlide(index) {
-    const slideWidth = track.clientWidth;
-    track.style.transform = `translateX(-${index * slideWidth}px)`;
-    currentIndex = index;
+function moveSlide(i) {
+  const cardWidth = cards[0].offsetWidth + 20;
+  track.style.transform = `translateX(-${i * cardWidth * visibleCards}px)`;
+  index = i;
 
-    document.querySelectorAll(".slider-dots button").forEach((d, i) => {
-      d.classList.toggle("active", i === index);
-    });
-  }
-
-  createDots();
-
-  window.addEventListener("resize", () => {
-    cardsPerView = window.innerWidth <= 600 ? 1 : window.innerWidth <= 1024 ? 2 : 4;
-    totalSlides = Math.ceil(cards.length / cardsPerView);
-    createDots();
-    moveSlide(0);
+  document.querySelectorAll(".dots span").forEach((d, idx) => {
+    d.classList.toggle("active", idx === i);
   });
+}
+
+// Auto slide every 5 sec
+setInterval(() => {
+  index = (index + 1) % totalSlides;
+  moveSlide(index);
+}, 5000);
