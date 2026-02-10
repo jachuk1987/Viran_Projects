@@ -122,6 +122,28 @@ video {
     gap: 40px;
   }
 
+  /* TESTIMONIALS */
+
+  .testimonials-section {
+    padding: 70px 0;
+  }
+
+  .testimonials-content h2 {
+    font-size: 34px;
+  }
+
+  .testimonials-content h3 {
+    font-size: 30px;
+  }
+
+  .testimonials-content p {
+    font-size: 16px;
+  }
+
+  .google-reviews {
+    gap: 12px;
+  }
+
   /* PROCESS */
   .process-row {
     flex-direction: column;
