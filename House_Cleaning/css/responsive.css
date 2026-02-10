@@ -342,6 +342,26 @@ video {
     height: 200px;
   }
 
+  .testimonials-content h2 {
+    font-size: 26px;
+  }
+
+  .testimonials-content h3 {
+    font-size: 22px;
+  }
+
+  .google-rating {
+    font-size: 20px;
+  }
+
+  .google-stars {
+    font-size: 18px;
+  }
+
+  .google-count {
+    font-size: 14px;
+  }
+
   .stat-item h3 {
     font-size: 32px;
   }
