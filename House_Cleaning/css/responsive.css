@@ -39,6 +39,18 @@ video {
   .stats-container {
     padding: 45px 30px;
   }
+
+  .testimonials-content {
+    max-width: 100%;
+  }
+
+  .testimonials-content h2 {
+    font-size: 38px;
+  }
+
+  .testimonials-content h3 {
+    font-size: 34px;
+  }
 }
 
 /* =====================================================
