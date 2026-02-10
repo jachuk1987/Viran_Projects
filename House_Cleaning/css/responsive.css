@@ -252,6 +252,29 @@ video {
     grid-template-columns: 1fr;
   }
 
+  /* TESTIMONIALS */
+
+  .testimonials-section {
+    padding: 60px 0;
+  }
+
+  .testimonials-content h2 {
+    font-size: 30px;
+  }
+
+  .testimonials-content h3 {
+    font-size: 26px;
+  }
+
+  .testimonials-content p {
+    font-size: 15px;
+  }
+
+  .google-reviews {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
   /* VIDEOS */
   .process-videos,
   .video-grid {
