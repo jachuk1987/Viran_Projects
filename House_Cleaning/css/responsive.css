@@ -386,6 +386,7 @@ video {
 ===================================================== */
 
 @media (max-width: 768px) {
+
   .about-grid,
   .info-grid {
     grid-template-columns: 1fr;
