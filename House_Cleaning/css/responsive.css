@@ -380,3 +380,21 @@ video {
     padding: 14px;
   }
 }
+
+
+
+
+@media (max-width: 768px) {
+  .about-grid,
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .banner-overlay {
+    padding-left: 30px;
+  }
+
+  .banner-overlay h2 {
+    font-size: 32px;
+  }
+}
