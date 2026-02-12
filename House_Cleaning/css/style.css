@@ -159,26 +159,26 @@ button {
   min-height: 650px;
   background: url("../asset/images/hero.png") no-repeat;
   background-size: cover;
-  background-position: right center; /* FIX */
+  background-position: right center;
+  /* FIX */
   overflow: hidden;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(0,0,0,0.9) 30%,
-    rgba(0,0,0,0.55) 55%,
-    rgba(0,0,0,0.15) 75%,
-    rgba(0,0,0,0) 100%
-  );
+  background: linear-gradient(to right,
+      rgba(0, 0, 0, 0.9) 30%,
+      rgba(0, 0, 0, 0.55) 55%,
+      rgba(0, 0, 0, 0.15) 75%,
+      rgba(0, 0, 0, 0) 100%);
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  min-height: 650px; /* IMPORTANT */
+  min-height: 650px;
+  /* IMPORTANT */
   display: flex;
   align-items: center;
 }
@@ -231,6 +231,7 @@ button {
 .btn-yellow:hover {
   background-color: #e6c200;
 }
+
 /* ===========================
    STATS BLUE BOX
 =========================== */
@@ -292,7 +293,7 @@ button {
   background: #fff;
   padding: 15px;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .video-card iframe {
@@ -451,7 +452,7 @@ button {
   text-align: center;
   border-radius: 6px;
   transition: all 0.3s ease;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 
 .service-card img {
@@ -471,7 +472,7 @@ button {
 
 .service-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
 
@@ -536,7 +537,7 @@ button {
 .combo-card {
   background: #fff;
   border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -640,7 +641,7 @@ button {
 .about-images img {
   width: 100%;
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .about-images .img-top {
@@ -732,7 +733,7 @@ button {
   object-fit: cover;
   border-radius: 50%;
   border: 10px solid #fff;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
 .process-content h3 {
@@ -759,7 +760,7 @@ button {
 .video-card {
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
 .video-card video {
@@ -943,7 +944,7 @@ button {
   background: #fff;
   padding: 15px;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .video-card video {
@@ -1132,12 +1133,10 @@ button {
 .blog-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(13, 110, 253, 0.85) 0%,
-    rgba(13, 110, 253, 0.65) 15%,
-    rgba(13, 110, 253, 0) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(13, 110, 253, 0.85) 0%,
+      rgba(13, 110, 253, 0.65) 15%,
+      rgba(13, 110, 253, 0) 100%);
   color: #ffd400;
   font-weight: 700;
   font-size: 16px;
@@ -1204,7 +1203,7 @@ button {
 
 /* TOP NAV */
 .footer-top-nav {
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .footer-top-nav .container {
@@ -1272,7 +1271,7 @@ button {
 /* HR */
 .footer hr {
   border: none;
-  border-top: 1px solid rgba(255,255,255,0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   margin: 40px 0;
 }
 
@@ -1323,7 +1322,7 @@ button {
   align-items: center;
   justify-content: center;
   z-index: 999;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .whatsapp-float img {
