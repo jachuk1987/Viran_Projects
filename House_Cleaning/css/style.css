@@ -1468,7 +1468,7 @@ button {
 /* ===== HERO ===== */
 .abouthero {
   height: 450px;
-  background: url("") center/cover no-repeat;
+  background: url("../asset/images/aboutus_image.jpeg") center/cover no-repeat;
   display: flex;
   align-items: center;
   position: relative;
