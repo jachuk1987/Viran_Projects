@@ -1504,10 +1504,6 @@ button {
   background: #fff;
 }
 
-.light-bg {
-  background: #f9f9f9;
-}
-
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
