@@ -1467,11 +1467,16 @@ button {
 }
 
 .about-grid.reverse {
-  direction: rtl;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .about-grid.reverse .about-content {
-  direction: ltr;
+  order: 1;
+}
+
+.about-grid.reverse .about-image {
+  order: 2;
 }
 
 .about-image {
