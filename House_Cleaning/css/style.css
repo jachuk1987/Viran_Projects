@@ -912,19 +912,6 @@ button {
   opacity: 1;
 }
 
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-  .card {
-    flex: 0 0 calc(50% - 10px);
-  }
-}
-
-@media (max-width: 600px) {
-  .card {
-    flex: 0 0 100%;
-  }
-}
-
 /* ==========================
    HAPPY CUSTOMERS SECTION 
 ============================= */
