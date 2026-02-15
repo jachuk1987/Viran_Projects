@@ -457,6 +457,42 @@ video {
 
   /* ===== ABOUTUS PAGE ===== */
 
+  .abouthero-content h1 {
+    font-size: 28px;
+  }
+
+  .abouthero-line {
+    width: 40px;
+    height: 4px;
+  }
+
+  .about-content h2 {
+    font-size: 22px;
+  }
+
+  .about-content p {
+    font-size: 14px;
+  }
+
+  .about-content ul li {
+    font-size: 14px;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .why-card {
+    padding: 20px;
+  }
+
+  .badge {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
 }
 
 /* =====================================================
