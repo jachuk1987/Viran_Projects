@@ -190,6 +190,31 @@ video {
 
   /* ===== ABOUTUS PAGE ===== */
 
+  /* About Grid */
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-grid.reverse {
+    direction: ltr;
+  }
+
+  .badge {
+    position: static;
+    margin-top: 15px;
+    display: inline-block;
+  }
+
+  .about-content h2 {
+    font-size: 30px;
+  }
+
+  /* Why Section */
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
 }
 
 /* =====================================================
