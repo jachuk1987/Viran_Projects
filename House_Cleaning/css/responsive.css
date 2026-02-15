@@ -356,6 +356,36 @@ video {
 
   /* ===== ABOUTUS PAGE ===== */
 
+    .abouthero {
+    height: 320px;
+  }
+
+  .abouthero-content h1 {
+    font-size: 36px;
+  }
+
+  .about-section {
+    padding: 50px 0;
+  }
+
+  .about-content h2 {
+    font-size: 26px;
+  }
+
+  .why-section h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-card {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
 }
 
 /* =====================================================
