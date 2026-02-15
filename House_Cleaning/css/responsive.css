@@ -54,6 +54,17 @@ video {
 
   /* ===== ABOUTUS PAGE ===== */
 
+  .about-grid {
+    gap: 30px;
+  }
+
+  .abouthero-content h1 {
+    font-size: 48px;
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* =====================================================
