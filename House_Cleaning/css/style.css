@@ -1455,20 +1455,20 @@ button {
 
 /* ===== ABOUT SECTIONS ===== */
 .about-section {
-  padding: 80px 0;
+  padding: 30px 0;
   background: #fff;
 }
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 62% 38%;
   gap: 50px;
   align-items: center;
 }
 
 .about-grid.reverse {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 45% 55%;
 }
 
 .about-grid.reverse .about-content {
@@ -1484,7 +1484,7 @@ button {
 }
 
 .about-image img {
-  width: 100%;
+  width: 145%;
   border-radius: 6px;
   display: block;
 }
