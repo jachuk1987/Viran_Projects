@@ -1574,10 +1574,7 @@ button {
 /* ============================================
                 BLOG PAGE 
 =============================================== */
-/* ========================= */
 /* BLOG HERO */
-/* ========================= */
-
 .blog-hero {
   background: url('images/blog-banner.jpg') center/cover no-repeat;
   height: 280px;
