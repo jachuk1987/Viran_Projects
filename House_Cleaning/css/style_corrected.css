@@ -1,0 +1,134 @@
+/* ========= CLEANED & CORRECTED CSS (SERVICES DROPDOWN + HEADER FIX) ========= */
+
+/* NAV */
+.main-header {
+    background: linear-gradient(120deg, #0b66c3 75%, #f9d400 25%);
+    z-index: 1000;
+    position: relative
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.main-nav>ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.main-nav>ul>li {
+    position: relative
+}
+
+.main-nav>ul>li>a {
+    padding: 20px 24px;
+    display: block;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none
+}
+
+.main-nav>ul>li>a:hover {
+    background: #084298
+}
+
+/* ========= MEGA DROPDOWN ========= */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    display: none;
+    min-width: 260px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 15px 0;
+}
+
+.has-dropdown:hover>.dropdown {
+    display: block
+}
+
+/* City */
+.city>a {
+    display: block;
+    padding: 12px 18px;
+    font-weight: 600;
+    color: #111;
+    white-space: nowrap;
+}
+
+/* Services panel */
+.services-list {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: #fff;
+    display: none;
+    min-width: 900px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+}
+
+.city:hover>.services-list {
+    display: grid;
+}
+
+/* Service links */
+.services-list li {
+    list-style: none;
+}
+
+.services-list a {
+    display: block;
+    padding: 8px 5px;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+}
+
+.services-list a:hover {
+    color: #0b66c3;
+}
+
+/* Social icons */
+.social-icons {
+    display: flex;
+    gap: 18px
+}
+
+.social-icons a {
+    color: #000;
+    font-size: 18px
+}
+
+/* ========= FIX FLOAT BUTTONS ========= */
+.enquiry-now {
+    position: fixed;
+    right: 0;
+    top: 45%;
+    background: #0b5ed7;
+    color: #fff;
+    padding: 12px 10px;
+    writing-mode: vertical-rl;
+    z-index: 999
+}
+
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #25d366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999
+}
