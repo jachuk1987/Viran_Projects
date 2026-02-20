@@ -102,11 +102,11 @@ button {
 /* =====================
    HEADER & NAV
 ===================== */
+
 .main-header {
   background: linear-gradient(120deg, #0b66c3 75%, #f9d400 25%);
-  /* position: sticky; */
-  top: 92px;
-  z-index: 999;
+  position: relative;
+  z-index: 1000;
 }
 
 .nav-wrapper {
@@ -115,33 +115,100 @@ button {
   align-items: center;
 }
 
-.main-nav ul {
+/* Apply flex ONLY to first UL */
+.main-nav > ul {
   display: flex;
   list-style: none;
-  min-height: 64px;
+  margin: 0;
+  padding: 0;
 }
 
-.main-nav a {
-  color: #fff;
-  padding: 20px 24px;
+/* Parent LI */
+.main-nav ul li {
+  position: relative;
+}
+
+/* Main nav links */
+.main-nav > ul > li > a {
   display: block;
-  font-weight: 600;
+  padding: 20px 24px;
+  color: #fff;
   text-decoration: none;
+  font-weight: 600;
 }
 
-.main-nav a:hover {
+.main-nav > ul > li > a:hover {
   background: #084298;
 }
 
-/* Social */
+/* =========================
+   DROPDOWN
+========================= */
+
+/* Hide all dropdowns */
+.dropdown,
+.services-list {
+  display: none;
+  position: absolute;
+  background: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 220px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+/* Cities dropdown */
+.dropdown {
+  top: 100%;
+  left: 0;
+}
+
+/* Services dropdown */
+.services-list {
+  top: 0;
+  left: 100%;
+}
+
+/* Show cities when hovering Services */
+.has-dropdown:hover > .dropdown {
+  display: block;
+}
+
+/* Show services only when hovering city */
+.city:hover > .services-list {
+  display: block;
+}
+
+/* Dropdown links */
+.dropdown li a,
+.services-list li a {
+  display: block;
+  padding: 12px 16px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.dropdown li a:hover,
+.services-list li a:hover {
+  background: #f2f2f2;
+}
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+
 .social-icons {
   display: flex;
-  gap: 22px;
+  gap: 20px;
 }
 
 .social-icons a {
   color: #000;
-  font-size: 20px;
+  font-size: 18px;
+  transition: 0.3s;
 }
 
 .social-icons a:hover {
@@ -1587,7 +1654,7 @@ button {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .hero-line {
@@ -1628,7 +1695,7 @@ button {
   background: #fff;
   border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
   transition: 0.3s ease;
 }
 
@@ -1655,12 +1722,10 @@ button {
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(0, 86, 179, 0.9),
-    rgba(0, 86, 179, 0.6),
-    rgba(0, 0, 0, 0)
-  );
+  background: linear-gradient(to right,
+      rgba(0, 86, 179, 0.9),
+      rgba(0, 86, 179, 0.6),
+      rgba(0, 0, 0, 0));
   display: flex;
   align-items: center;
   padding: 20px;
@@ -1819,12 +1884,6 @@ button {
 /* =====================
    HEADER & NAV
 ===================== */
-.main-header {
-  background: linear-gradient(120deg, #0b66c3 75%, #f9d400 25%);
-  /* position: sticky; */
-  top: 92px;
-  z-index: 999;
-}
 
 .nav-wrapper {
   display: flex;
@@ -3304,7 +3363,7 @@ button {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .hero-line {
@@ -3345,7 +3404,7 @@ button {
   background: #fff;
   border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
   transition: 0.3s ease;
 }
 
@@ -3372,12 +3431,10 @@ button {
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(0, 86, 179, 0.9),
-    rgba(0, 86, 179, 0.6),
-    rgba(0, 0, 0, 0)
-  );
+  background: linear-gradient(to right,
+      rgba(0, 86, 179, 0.9),
+      rgba(0, 86, 179, 0.6),
+      rgba(0, 0, 0, 0));
   display: flex;
   align-items: center;
   padding: 20px;
@@ -3427,93 +3484,4 @@ button {
 
 .read-more:hover {
   text-decoration: underline;
-}
-
-/* ============================================
-                SERVICES PAGE 
-=============================================== */
-
-body {
-  font-family: Arial, sans-serif;
-}
-
-.navbar {
-  background: #0d6efd;
-  padding: 0 20px;
-}
-
-.menu {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.menu-item {
-  position: relative;
-  padding: 15px 20px;
-  color: white;
-  cursor: pointer;
-}
-
-.menu-item:hover {
-  background: #084298;
-}
-
-/* Dropdown Base */
-.dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: white;
-  list-style: none;
-  padding: 10px 0;
-  margin: 0;
-  min-width: 220px;
-  display: none;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  z-index: 1000;
-}
-
-/* Show Cities on Hover */
-.services:hover > .cities {
-  display: block;
-}
-
-/* City List Styling */
-.city {
-  position: relative;
-  padding: 10px 20px;
-  color: #333;
-  white-space: nowrap;
-}
-
-.city:hover {
-  background: #f1f1f1;
-}
-
-/* Services inside city */
-.services-list {
-  top: 0;
-  left: 100%;
-  max-height: 300px;   /* Scrollable */
-  overflow-y: auto;    /* Scroll enabled */
-}
-
-.has-dropdown:hover > .dropdown {
-  display: block;
-}
-
-.city:hover > .services-list {
-  display: block;
-}
-
-/* Service items */
-.services-list li {
-  padding: 10px 20px;
-  color: #333;
-}
-
-.services-list li:hover {
-  background: #e9ecef;
 }
