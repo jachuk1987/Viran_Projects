@@ -3500,7 +3500,10 @@ body {
   overflow-y: auto;    /* Scroll enabled */
 }
 
-/* Show services on city hover */
+.has-dropdown:hover > .dropdown {
+  display: block;
+}
+
 .city:hover > .services-list {
   display: block;
 }
