@@ -1716,3 +1716,89 @@ button {
 .read-more:hover {
   text-decoration: underline;
 }
+
+/* ============================================
+                BLOG PAGE 
+=============================================== */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background: #0d6efd;
+  padding: 0 20px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  position: relative;
+  padding: 15px 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background: #084298;
+}
+
+/* Dropdown Base */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  min-width: 220px;
+  display: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+/* Show Cities on Hover */
+.services:hover > .cities {
+  display: block;
+}
+
+/* City List Styling */
+.city {
+  position: relative;
+  padding: 10px 20px;
+  color: #333;
+  white-space: nowrap;
+}
+
+.city:hover {
+  background: #f1f1f1;
+}
+
+/* Services inside city */
+.services-list {
+  top: 0;
+  left: 100%;
+  max-height: 300px;   /* Scrollable */
+  overflow-y: auto;    /* Scroll enabled */
+}
+
+/* Show services on city hover */
+.city:hover > .services-list {
+  display: block;
+}
+
+/* Service items */
+.services-list li {
+  padding: 10px 20px;
+  color: #333;
+}
+
+.services-list li:hover {
+  background: #e9ecef;
+}
