@@ -142,63 +142,81 @@ button {
    DROPDOWN
 ========================= */
 
-.dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #fff;
-    display: none;
-    min-width: 260px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    padding: 15px 0;
+.has-dropdown {
+  position: relative;
 }
 
-.has-dropdown:hover>.dropdown {
-    display: block
-}
-
-/* City */
-.city>a {
-    display: block;
-    padding: 12px 18px;
-    font-weight: 600;
-    color: #111;
-    white-space: nowrap;
-}
-
-/* Services panel */
+/* Base hidden state */
+.dropdown,
 .services-list {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    background: #fff;
-    display: none;
-    min-width: 900px;
-    padding: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    grid-template-columns: repeat(5, 1fr);
-    gap: 25px;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  background: #fff;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99999;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  border-radius: 6px;
 }
 
-.city:hover>.services-list {
-    display: grid;
+/* First level dropdown (Cities) */
+.dropdown.cities {
+  top: 100%;
+  left: 0;
+  min-width: 220px;
 }
 
-/* Service links */
-.services-list li {
-    list-style: none;
+/* Second level dropdown (Services) */
+.services-list {
+  top: 0;
+  left: 100%;
+  min-width: 260px;
+  padding: 12px 0;
 }
 
-.services-list a {
-    display: block;
-    padding: 8px 5px;
-    font-weight: 500;
-    color: #333;
-    text-decoration: none;
+/* Hover activation */
+.has-dropdown:hover > .dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
-.services-list a:hover {
-    color: #0b66c3;
+.city:hover > .services-list {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Links */
+.dropdown li a,
+.services-list li a {
+  display: block;
+  padding: 12px 18px;
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Hover styles */
+.dropdown li a:hover,
+.services-list li a:hover {
+  background: #f2f6ff;
+  color: #0b66c3;
+}
+
+/* City arrow layout */
+.city > a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* =========================
