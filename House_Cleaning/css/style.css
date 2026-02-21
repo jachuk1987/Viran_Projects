@@ -146,7 +146,9 @@ button {
   position: relative;
 }
 
-/* Base hidden state */
+/* =========================
+   BASE HIDDEN STATE
+========================= */
 .dropdown,
 .services-list {
   position: absolute;
@@ -158,28 +160,45 @@ button {
   background: #fff;
   list-style: none;
   margin: 0;
-  padding: 10px 0;
   z-index: 99999;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   border-radius: 6px;
 }
 
-/* First level dropdown (Cities) */
+/* =========================
+   FIRST LEVEL (CITIES)
+========================= */
 .dropdown.cities {
   top: 100%;
   left: 0;
   min-width: 220px;
+  padding: 10px 0;
 }
 
-/* Second level dropdown (Services) */
+/* =========================
+   SECOND LEVEL (SERVICES GRID)
+========================= */
 .services-list {
   top: 0;
   left: 100%;
-  min-width: 260px;
-  padding: 12px 0;
+  background: #fff;
+
+  /* GRID LAYOUT */
+  display: grid;
+  grid-template-columns: repeat(5, minmax(160px, 1fr));
+  gap: 16px;
+
+  padding: 24px;
+  min-width: 880px;
+
+  /* reset list behavior */
+  list-style: none;
+  margin: 0;
 }
 
-/* Hover activation */
+/* =========================
+   HOVER ACTIVATION
+========================= */
 .has-dropdown:hover > .dropdown {
   opacity: 1;
   visibility: visible;
@@ -194,31 +213,46 @@ button {
   transform: translateY(0);
 }
 
-/* Links */
+/* =========================
+   GRID ITEMS
+========================= */
+.services-list li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   LINKS
+========================= */
 .dropdown li a,
 .services-list li a {
   display: block;
-  padding: 12px 18px;
+  padding: 10px 12px;
   text-decoration: none;
   color: #222;
   font-weight: 500;
-  white-space: nowrap;
+  border-radius: 4px;
+  transition: all 0.2s ease;
 }
 
-/* Hover styles */
+/* =========================
+   HOVER EFFECTS
+========================= */
 .dropdown li a:hover,
 .services-list li a:hover {
   background: #f2f6ff;
   color: #0b66c3;
 }
 
-/* City arrow layout */
+/* =========================
+   CITY ROW STYLE
+========================= */
 .city > a {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 /* =========================
    SOCIAL ICONS
 ========================= */
