@@ -196,9 +196,7 @@ button {
   margin: 0;
 }
 
-/* =========================
-   HOVER ACTIVATION
-========================= */
+/* HOVER ACTIVATION */
 .has-dropdown:hover > .dropdown {
   opacity: 1;
   visibility: visible;
@@ -213,18 +211,14 @@ button {
   transform: translateY(0);
 }
 
-/* =========================
-   GRID ITEMS
-========================= */
+/* GRID ITEMS */
 .services-list li {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* =========================
-   LINKS
-========================= */
+/* LINKS */
 .dropdown li a,
 .services-list li a {
   display: block;
@@ -236,26 +230,20 @@ button {
   transition: all 0.2s ease;
 }
 
-/* =========================
-   HOVER EFFECTS
-========================= */
+/* HOVER EFFECTS */
 .dropdown li a:hover,
 .services-list li a:hover {
   background: #f2f6ff;
   color: #0b66c3;
 }
 
-/* =========================
-   CITY ROW STYLE
-========================= */
+/* CITY ROW STYLE */
 .city > a {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-/* =========================
-   SOCIAL ICONS
-========================= */
+/* SOCIAL ICONS */
 
 .social-icons {
   display: flex;
