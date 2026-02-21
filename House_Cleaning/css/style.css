@@ -179,9 +179,9 @@ button {
   top: 0;
   left: 100%;
   padding: 25px;
-  min-width: 250px;
+  min-width: 200px;
   display: grid;
-  gap: 15px;
+  gap: 10px;
 }
 
 /* =========================
