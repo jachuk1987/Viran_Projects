@@ -182,6 +182,7 @@ button {
   min-width: 200px;
   display: grid;
   gap: 10px;
+  font-size: small;
 }
 
 /* =========================
