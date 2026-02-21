@@ -166,7 +166,7 @@ button {
 .dropdown.cities {
   top: 100%;
   left: 0;
-  min-width: 220px;
+  min-width: 180px;
   padding: 10px 0;
   display: grid;
 }
