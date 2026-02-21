@@ -104,70 +104,65 @@ button {
 ===================== */
 
 .main-header {
-    background: linear-gradient(120deg, #0b66c3 75%, #f9d400 25%);
-    z-index: 1000;
-    position: relative
+  background: linear-gradient(120deg, #0b66c3 75%, #f9d400 25%);
+  position: relative;
+  z-index: 1000;
 }
 
 .nav-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.main-nav>ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0
+/* MAIN MENU */
+.main-nav > ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.main-nav>ul>li {
-    position: relative
-}
-
-.main-nav>ul>li>a {
-    padding: 20px 24px;
-    display: block;
-    color: #fff;
-    font-weight: 600;
-    text-decoration: none
-}
-
-.main-nav>ul>li>a:hover {
-    background: #084298
-}
-
-/* =========================
-   DROPDOWN
-========================= */
-
-.has-dropdown {
+.main-nav > ul > li {
   position: relative;
 }
 
-/* =========================
-   BASE HIDDEN STATE
-========================= */
-.dropdown,
-.services-list {
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transform: translateY(10px);
-  transition: all 0.25s ease;
-  background: #fff;
-  list-style: none;
-  margin: 0;
-  z-index: 99999;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-  border-radius: 6px;
+.main-nav > ul > li > a {
+  padding: 20px 24px;
+  display: block;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.main-nav > ul > li > a:hover {
+  background: #084298;
 }
 
 /* =========================
-   FIRST LEVEL (CITIES)
+   DROPDOWN BASE
 ========================= */
+
+.dropdown,
+.services-list {
+  position: absolute;
+  background: #fff;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  z-index: 9999;
+}
+
+/* =========================
+   FIRST LEVEL - CITIES
+========================= */
+
 .dropdown.cities {
   top: 100%;
   left: 0;
@@ -176,74 +171,67 @@ button {
 }
 
 /* =========================
-   SECOND LEVEL (SERVICES GRID)
+   SECOND LEVEL - SERVICES GRID
 ========================= */
+
 .services-list {
   top: 0;
   left: 100%;
-  background: #fff;
+  padding: 25px;
+  min-width: 750px;
 
-  /* GRID LAYOUT */
   display: grid;
-  grid-template-columns: repeat(5, minmax(160px, 1fr));
-  gap: 16px;
-
-  padding: 24px;
-  min-width: 880px;
-
-  /* reset list behavior */
-  list-style: none;
-  margin: 0;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
 }
 
-/* HOVER ACTIVATION */
+/* =========================
+   SHOW DROPDOWNS
+========================= */
+
 .has-dropdown:hover > .dropdown {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transform: translateY(0);
 }
 
 .city:hover > .services-list {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transform: translateY(0);
 }
 
-/* GRID ITEMS */
-.services-list li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+/* =========================
+   LINKS STYLING
+========================= */
 
-/* LINKS */
 .dropdown li a,
 .services-list li a {
   display: block;
-  padding: 10px 12px;
+  padding: 10px 14px;
   text-decoration: none;
   color: #222;
   font-weight: 500;
   border-radius: 4px;
-  transition: all 0.2s ease;
+  transition: 0.2s ease;
 }
 
-/* HOVER EFFECTS */
 .dropdown li a:hover,
 .services-list li a:hover {
   background: #f2f6ff;
   color: #0b66c3;
 }
 
-/* CITY ROW STYLE */
+/* City row */
 .city > a {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-/* SOCIAL ICONS */
+
+/* =====================
+   SOCIAL ICONS
+===================== */
 
 .social-icons {
   display: flex;
