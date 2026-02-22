@@ -1591,6 +1591,59 @@ button {
   background: #e6c200;
 }
 
+/* Section background */
+.address-section {
+  background: #f4f6f9;
+  padding: 60px 8%;
+}
+
+/* Card style */
+.address-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 40px;
+  margin-bottom: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  gap: 40px;
+}
+
+/* Left side */
+.address-left {
+  flex: 1;
+}
+
+.address-left h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.address-left h4 {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.address-left p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Right side map */
+.address-right {
+  flex: 1;
+}
+
+.address-right iframe {
+  border-radius: 10px;
+  width: 100%;
+}
+
 /* =====================
    LOCATION
 ===================== */
