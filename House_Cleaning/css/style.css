@@ -1442,6 +1442,51 @@ button {
 /* =====================
    CONTACT
 ===================== */
+
+/* Contact Hero Section */
+.contact-hero {
+  width: 100%;
+  height: 320px;
+  background: url("images/contact-hero.jpg") no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Dark overlay */
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+}
+
+/* Content wrapper */
+.hero-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  color: #fff;
+}
+
+/* Yellow line above heading */
+.hero-line {
+  display: inline-block;
+  width: 60px;
+  height: 4px;
+  background-color: #ffcc00;
+  margin-bottom: 15px;
+}
+
+/* Heading */
+.cthero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
 /* ===== SECTION ===== */
 .contact-section {
   background: #f2f2f2;
