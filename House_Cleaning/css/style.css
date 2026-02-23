@@ -1663,7 +1663,7 @@ button {
 /* HERO SECTION */
 .location-hero {
   position: relative;
-  background: url("images/cleaning-hero.jpg") no-repeat center center/cover;
+  background: url("../asset/images/cleaning-service.jpg") no-repeat center center/cover;
   padding: 100px 8%;
   color: #fff;
 }
