@@ -1,0 +1,496 @@
+/* =====================================================
+   GLOBAL FIXES
+===================================================== */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+}
+
+/* =====================================================
+   LARGE TABLETS (≤ 1200px)
+===================================================== */
+@media (max-width: 1200px) {
+
+  .services-grid,
+  .combo-grid,
+  .testimonial-grid,
+  .blog-grid,
+  .logos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-videos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-areas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .welcome-container {
+    gap: 50px;
+  }
+
+  .stats-container {
+    padding: 45px 30px;
+  }
+
+  .testimonials-content {
+    max-width: 100%;
+  }
+
+  .testimonials-content h2 {
+    font-size: 38px;
+  }
+
+  .testimonials-content h3 {
+    font-size: 34px;
+  }
+
+  /* ===== ABOUTUS PAGE ===== */
+
+  .about-grid {
+    gap: 30px;
+  }
+
+  .abouthero-content h1 {
+    font-size: 48px;
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =====================================================
+   TABLETS (≤ 992px)
+===================================================== */
+@media (max-width: 992px) {
+
+  /* TOP BAR */
+  .top-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .contact-info {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  /* NAVIGATION */
+  .nav-wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .main-nav a {
+    padding: 12px 16px;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 520px;
+    background-position: center;
+  }
+
+  .hero-content {
+    min-height: 520px;
+  }
+
+  .hero-text h1 {
+    font-size: 44px;
+  }
+
+  /* Welcome Section */
+  .welcome-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .welcome-content h2 {
+    font-size: 30px;
+  }
+
+  /* Stats Section */
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 30px;
+  }
+
+  /* ABOUT */
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* TESTIMONIALS */
+
+  .testimonials-section {
+    padding: 70px 0;
+  }
+
+  .testimonials-content h2 {
+    font-size: 34px;
+  }
+
+  .testimonials-content h3 {
+    font-size: 30px;
+  }
+
+  .testimonials-content p {
+    font-size: 16px;
+  }
+
+  .google-reviews {
+    gap: 12px;
+  }
+
+  /* PROCESS */
+  .process-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .process-content p {
+    max-width: 100%;
+  }
+
+  /* FAQ */
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* FOOTER */
+  .footer-address {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-areas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ===== ABOUTUS PAGE ===== */
+
+  /* About Grid */
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-grid.reverse {
+    direction: ltr;
+  }
+
+  .badge {
+    position: static;
+    margin-top: 15px;
+    display: inline-block;
+  }
+
+  .about-content h2 {
+    font-size: 30px;
+  }
+
+  /* Why Section */
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/* =====================================================
+   MOBILE (≤ 768px)
+===================================================== */
+@media (max-width: 768px) {
+
+  section {
+    margin-bottom: 10px;
+  }
+
+  /* HERO */
+  .hero-text h5 {
+    font-size: 12px;
+  }
+
+  .hero-text h1 {
+    font-size: 34px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .btn-yellow {
+    padding: 12px 28px;
+  }
+
+  /* Welcome Section */
+  .welcome-section {
+    padding: 60px 20px;
+  }
+
+  .welcome-content h2 {
+    font-size: 28px;
+  }
+
+  .video-card iframe {
+    height: 240px;
+  }
+
+  .welcome-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Stats */
+  .stats-container {
+    padding: 40px 20px;
+  }
+
+  .stat-item h3 {
+    font-size: 38px;
+  }
+
+  /* SERVICES */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card img {
+    width: 100%;
+  }
+
+  /* PRICING */
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* COMBO */
+  .combo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* TESTIMONIALS */
+
+  .testimonials-section {
+    padding: 60px 0;
+  }
+
+  .testimonials-content h2 {
+    font-size: 30px;
+  }
+
+  .testimonials-content h3 {
+    font-size: 26px;
+  }
+
+  .testimonials-content p {
+    font-size: 15px;
+  }
+
+  .google-reviews {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  /* VIDEOS */
+  .process-videos,
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* TESTIMONIALS */
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* BLOG */
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* FOOTER */
+  .footer-top-nav .container {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-areas {
+    grid-template-columns: 1fr;
+  }
+
+  /* ENQUIRY BUTTON */
+  .enquiry-now {
+    font-size: 11px;
+    padding: 8px 6px;
+  }
+
+  /* ===== ABOUTUS PAGE ===== */
+
+    .abouthero {
+    height: 320px;
+  }
+
+  .abouthero-content h1 {
+    font-size: 36px;
+  }
+
+  .about-section {
+    padding: 50px 0;
+  }
+
+  .about-content h2 {
+    font-size: 26px;
+  }
+
+  .why-section h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-card {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
+}
+
+/* =====================================================
+   SMALL MOBILE (≤ 480px)
+===================================================== */
+@media (max-width: 480px) {
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .section-title h2,
+  .combo-title,
+  .faq-title,
+  .sub-title {
+    font-size: 26px;
+  }
+
+  .welcome-section {
+    padding: 50px 15px;
+  }
+
+  .welcome-content h2 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .video-card iframe {
+    height: 200px;
+  }
+
+  .testimonials-content h2 {
+    font-size: 26px;
+  }
+
+  .testimonials-content h3 {
+    font-size: 22px;
+  }
+
+  .google-rating {
+    font-size: 20px;
+  }
+
+  .google-stars {
+    font-size: 18px;
+  }
+
+  .google-count {
+    font-size: 14px;
+  }
+
+  .stat-item h3 {
+    font-size: 32px;
+  }
+
+  .stat-item p {
+    font-size: 14px;
+  }
+
+  .process-img img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .footer-bottom {
+    font-size: 13px;
+    padding: 14px;
+  }
+
+  /* ===== ABOUTUS PAGE ===== */
+
+  .abouthero-content h1 {
+    font-size: 28px;
+  }
+
+  .abouthero-line {
+    width: 40px;
+    height: 4px;
+  }
+
+  .about-content h2 {
+    font-size: 22px;
+  }
+
+  .about-content p {
+    font-size: 14px;
+  }
+
+  .about-content ul li {
+    font-size: 14px;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .why-card {
+    padding: 20px;
+  }
+
+  .badge {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+}
