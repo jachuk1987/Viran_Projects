@@ -1661,7 +1661,7 @@ button {
 }
 
 /* HERO SECTION */
-.service-hero {
+.location-hero {
   position: relative;
   background: url("images/cleaning-hero.jpg") no-repeat center center/cover;
   padding: 100px 8%;
@@ -1669,14 +1669,14 @@ button {
 }
 
 /* DARK OVERLAY */
-.service-hero::before {
+.location-hero::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.65);
 }
 
-.hero-container {
+.location-container {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -1686,17 +1686,17 @@ button {
 }
 
 /* LEFT SIDE */
-.hero-left {
+.location-left {
   flex: 1;
 }
 
-.hero-left h1 {
+.location-left h1 {
   font-size: 42px;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
-.hero-left p {
+.location-left p {
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 30px;
@@ -1704,7 +1704,7 @@ button {
 }
 
 /* FEATURE GRID */
-.hero-features {
+.location-features {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
@@ -1719,7 +1719,7 @@ button {
 }
 
 /* RIGHT FORM CARD */
-.hero-form {
+.location-form {
   flex: 0.9;
   background: #fff;
   padding: 30px;
@@ -1728,19 +1728,19 @@ button {
   box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
-.hero-form h3 {
+.location-form h3 {
   margin-bottom: 20px;
   font-size: 22px;
 }
 
-.hero-form form {
+.location-form form {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-.hero-form input,
-.hero-form textarea {
+.location-form input,
+.location-form textarea {
   padding: 12px;
   border: none;
   background: #f1f1f1;
@@ -1748,12 +1748,12 @@ button {
   font-size: 14px;
 }
 
-.hero-form textarea {
+.location-form textarea {
   resize: none;
   height: 80px;
 }
 
-.hero-form button {
+.location-form button {
   background: #f4c400;
   border: none;
   padding: 12px;
@@ -1763,7 +1763,7 @@ button {
   transition: 0.3s;
 }
 
-.hero-form button:hover {
+.location-form button:hover {
   background: #e0b100;
 }
 
