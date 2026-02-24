@@ -1767,20 +1767,6 @@ button {
   background: #e0b100;
 }
 
-/* GENERAL */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
 /* =========================
    DEEP CLEANING SECTION
 ========================= */
