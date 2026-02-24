@@ -1767,6 +1767,222 @@ button {
   background: #e0b100;
 }
 
+/* GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* =========================
+   DEEP CLEANING SECTION
+========================= */
+.deep-cleaning-section {
+  padding: 80px 0;
+  background: #f8f9fc;
+}
+
+.deep-cleaning-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.deep-left {
+  flex: 1;
+}
+
+.deep-left h2 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.sub-text {
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.feature-list {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.feature-list li {
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 30px;
+  font-size: 16px;
+}
+
+.feature-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #ffc107;
+  color: #fff;
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 22px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.btn-dark {
+  background: #222;
+  color: #fff;
+}
+
+.btn-primary {
+  background: #1976d2;
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+/* RIGHT VIDEO */
+.deep-right {
+  flex: 1;
+}
+
+.video-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.video-card iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+}
+
+/* =========================
+   HOW SECTION
+========================= */
+.how-section {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.how-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.how-left,
+.how-right {
+  flex: 1;
+}
+
+.how-right h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.how-right p {
+  margin-bottom: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* =========================
+   FLOATING BUTTONS
+========================= */
+
+.enquiry-btn {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #1976d2;
+  color: #fff;
+  padding: 15px 8px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px 0 0 8px;
+}
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background: #25D366;
+  color: #fff;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 55px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.call-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #1976d2;
+  color: #fff;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 55px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .deep-cleaning-wrapper,
+  .how-wrapper {
+    flex-direction: column;
+  }
+
+  .video-card iframe {
+    height: 220px;
+  }
+
+  .deep-left h2,
+  .how-right h2 {
+    font-size: 26px;
+  }
+}
+
 /* =========================
    ABOUT BANNER
 ========================= */
