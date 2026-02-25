@@ -1671,19 +1671,38 @@ button {
 }
 
 /* FEATURE GRID */
+/* Grid Layout */
 .location-features {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 25px;
+  z-index: 2;
 }
 
+/* Feature Box - Flat Rectangle */
 .feature-box {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 20px;
-  border-radius: 6px;
-  font-weight: 500;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(0, 0, 60, 0.7);
+  padding: 30px;
+  color: #fff;
 }
+
+/* White Outline Icons */
+.feature-icon svg {
+  width: 55px;
+  height: 55px;
+}
+
+/* Text Style */
+.feature-box span {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
 
 /* RIGHT FORM CARD */
 .location-form {
