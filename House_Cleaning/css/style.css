@@ -1756,7 +1756,67 @@ button {
    DEEP CLEANING SERVICE
 ========================= */
 
+.deep-cleaning-service {
+  background: #f3f5f7;
+  padding: 80px 0;
+  position: relative;
+}
 
+/* Optional hexagon background on right */
+.deep-cleaning-service::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 35%;
+  height: 100%;
+  background: url("images/hex-pattern.png") no-repeat center right;
+  background-size: contain;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.service-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* LEFT IMAGE */
+.service-image {
+  flex: 1;
+}
+
+.service-image img {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+}
+
+/* RIGHT CONTENT */
+.service-content {
+  flex: 1.2;
+}
+
+.service-content h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.service-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 20px;
+}
 
 /* =========================
    DEEP CLEANING SECTION
