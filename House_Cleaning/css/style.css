@@ -1768,7 +1768,7 @@ button {
   position: absolute;
   right: 0;
   top: 0;
-  width: 35%;
+  width: 50%;
   height: 100%;
   background: url("../asset/images/hex-pattern.jpg") no-repeat center right;
   background-size: contain;
