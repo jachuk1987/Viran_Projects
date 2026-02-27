@@ -1770,7 +1770,7 @@ button {
   top: 0;
   width: 35%;
   height: 100%;
-  background: url("images/hex-pattern.png") no-repeat center right;
+  background: url("../asset/images/regular-cleaning.jpg") no-repeat center right;
   background-size: contain;
   opacity: 0.15;
   pointer-events: none;
