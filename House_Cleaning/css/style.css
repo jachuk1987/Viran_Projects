@@ -2008,6 +2008,109 @@ button {
 
    /* DEEP CLEANING PACKAGES */
 
+   .deep-packages {
+  background: #f3f5f7;
+  padding: 80px 0;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+.package-grid {
+  display: flex;
+  gap: 30px;
+}
+
+.package-box {
+  flex: 1;
+  background: #e9edf1;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* HEADER */
+.box-header {
+  background: #155a9c;
+  padding: 25px;
+  position: relative;
+  color: #fff;
+}
+
+.box-header h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Yellow angled ribbon */
+.box-header::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  background: #e9edf1;
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  border-left: 8px solid #ffc400;
+}
+
+/* Header icon */
+.header-icon {
+  position: absolute;
+  right: 40px;
+  top: 20px;
+  width: 30px;
+  opacity: 0.7;
+}
+
+/* BODY */
+.box-body {
+  padding: 30px;
+}
+
+.box-body ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.box-body ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 18px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* Blue checkmark */
+.box-body ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #1a73e8;
+  font-weight: bold;
+}
+
+/* Yellow button */
+.start-btn {
+  display: inline-block;
+  background: #ffc400;
+  color: #000;
+  padding: 12px 28px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.start-btn:hover {
+  background: #e6b000;
+}
 
 /* =========================
    ABOUT BANNER
