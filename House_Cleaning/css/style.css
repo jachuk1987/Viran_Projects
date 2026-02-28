@@ -1635,7 +1635,6 @@ button {
   color: #fff;
 }
 
-/* DARK OVERLAY */
 .location-hero::before {
   content: "";
   position: absolute;
@@ -1680,7 +1679,6 @@ button {
   z-index: 2;
 }
 
-/* Feature Box - Flat Rectangle */
 .feature-box {
   display: flex;
   align-items: center;
