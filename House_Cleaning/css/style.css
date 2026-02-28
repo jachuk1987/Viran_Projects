@@ -2178,19 +2178,7 @@ button {
   background: #e6b000;
 }
 
-/* ===============================
-   OUR TOP-RATED SERVICE
-================================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  background: #f3f6fb;
-}
+   /* OUR TOP-RATED SERVICE */
 
 .services-section {
   padding: 80px 0;
