@@ -2146,7 +2146,6 @@ button {
   font-size: 15px;
 }
 
-/* Blue checkmark */
 .box-body ul li::before {
   content: "✔";
   position: absolute;
