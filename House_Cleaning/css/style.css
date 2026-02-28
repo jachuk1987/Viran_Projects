@@ -2198,7 +2198,6 @@ body {
   position: relative;
 }
 
-/* Optional subtle hex background effect */
 .services-section::before {
   content: "";
   position: absolute;
@@ -2281,7 +2280,6 @@ h2 {
 .service-card a:hover {
   text-decoration: underline;
 }
-
 
 /* =========================
    ABOUT BANNER
