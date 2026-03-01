@@ -2261,6 +2261,60 @@ h2 {
 
    /* BENEFITS SECTION */
 
+.benefits-section {
+  padding: 80px 0;
+}
+
+.benefits-section h2 {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #111;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* Card */
+.benefit-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.benefit-content {
+  padding: 25px;
+}
+
+.benefit-content h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.benefit-content p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+}
 
 /* =========================
    ABOUT BANNER
