@@ -2296,8 +2296,7 @@ h2 {
   color: #555;
 }
 
-   /* WHY CHOOSEUS SECTION */
-
+/* WHY CHOOSEUS SECTION */
 .why-choose {
   padding: 80px 0;
 }
@@ -2320,7 +2319,8 @@ h2 {
 
 /* Card Styling */
 .why-card {
-  background: #eef0f6; /* light grey like screenshot */
+  background: #eef0f6;
+  /* light grey like screenshot */
   padding: 35px 30px;
   border-radius: 12px;
   transition: 0.3s ease;
@@ -2328,7 +2328,7 @@ h2 {
 
 .why-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
 .why-card h3 {
