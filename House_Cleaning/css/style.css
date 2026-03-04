@@ -2297,16 +2297,6 @@ h2 {
 }
 
    /* WHY CHOOSEUS SECTION */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  background: #f4f6fb;
-}
 
 .why-choose {
   padding: 80px 0;
