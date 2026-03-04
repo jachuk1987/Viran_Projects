@@ -2319,16 +2319,21 @@ h2 {
 
 /* Card Styling */
 .why-card {
-  background: #eef0f6;
-  /* light grey like screenshot */
-  padding: 35px 30px;
+  background: #e9e9e9;
+  padding: 35px;
   border-radius: 12px;
-  transition: 0.3s ease;
 }
 
 .why-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card-row {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  gap: 25px;
+  align-items: start;
 }
 
 .why-card h3 {
