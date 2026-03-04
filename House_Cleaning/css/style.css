@@ -2312,12 +2312,6 @@ body {
   padding: 80px 0;
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
 .why-choose h2 {
   font-size: 42px;
   font-weight: 700;
@@ -2360,23 +2354,6 @@ body {
   color: #555;
 }
 
-/* Tablet */
-@media (max-width: 992px) {
-  .why-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .why-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .why-choose h2 {
-    font-size: 28px;
-  }
-}
 /* =========================
    ABOUT BANNER
 ========================= */
