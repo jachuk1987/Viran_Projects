@@ -918,6 +918,17 @@ button {
   color: #ffd400;
 }
 
+.title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 50px;
+}
+
+.title span {
+  color: #ffd400;
+}
+
 .slider-container {
   position: relative;
   max-width: 1200px;
