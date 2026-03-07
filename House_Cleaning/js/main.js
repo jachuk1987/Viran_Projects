@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
   /* LOCATION DROPDOWN */
   const locationBtn = document.getElementById("locationBtn");
   const locationMenu = document.getElementById("locationMenu");
