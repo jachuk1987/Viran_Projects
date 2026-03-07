@@ -1,39 +1,26 @@
 /* =====================================================
-   LARGE LAPTOPS (1400px)
+   GLOBAL FIXES
 ===================================================== */
-@media (max-width: 1400px) {
-
-  .hero-text h1 {
-    font-size: 50px;
-  }
-
-  .stats-container {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
+img,
+video {
+  max-width: 100%;
+  height: auto;
 }
 
+.container {
+  width: 100%;
+}
 
 /* =====================================================
-   SMALL LAPTOPS (1200px)
+   LARGE TABLETS (≤ 1200px)
 ===================================================== */
 @media (max-width: 1200px) {
 
-  .container {
-    width: 95%;
-  }
-
-  .hero-text h1 {
-    font-size: 44px;
-  }
-
   .services-grid,
   .combo-grid,
-  .blog-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .why-grid {
+  .testimonial-grid,
+  .blog-grid,
+  .logos-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -41,19 +28,51 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .logos-grid {
+  .footer-areas {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .welcome-container {
+    gap: 50px;
+  }
+
+  .stats-container {
+    padding: 45px 30px;
+  }
+
+  .testimonials-content {
+    max-width: 100%;
+  }
+
+  .testimonials-content h2 {
+    font-size: 38px;
+  }
+
+  .testimonials-content h3 {
+    font-size: 34px;
+  }
+
+  /* ===== ABOUTUS PAGE ===== */
+
+  .about-grid {
+    gap: 30px;
+  }
+
+  .abouthero-content h1 {
+    font-size: 48px;
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-
 /* =====================================================
-   LARGE TABLETS (992px)
+   TABLETS (≤ 992px)
 ===================================================== */
 @media (max-width: 992px) {
 
-  /* Top Bar */
+  /* TOP BAR */
   .top-content {
     flex-direction: column;
     gap: 15px;
@@ -61,66 +80,93 @@
   }
 
   .contact-info {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  /* NAVIGATION */
+  .nav-wrapper {
     flex-direction: column;
     gap: 10px;
   }
 
-  /* Navbar */
-  .nav-wrapper {
-    flex-direction: column;
+  .main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .main-nav>ul {
-    flex-direction: column;
-    width: 100%;
+  .main-nav a {
+    padding: 12px 16px;
   }
 
-  .main-nav>ul>li>a {
-    padding: 12px;
+  /* HERO */
+  .hero {
+    min-height: 520px;
+    background-position: center;
   }
 
-  /* Hero */
   .hero-content {
-    min-height: auto;
-    padding: 80px 0;
+    min-height: 520px;
   }
 
   .hero-text h1 {
-    font-size: 38px;
+    font-size: 44px;
   }
 
-  /* Welcome */
+  /* Welcome Section */
   .welcome-container {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
 
-  /* Stats */
+  .welcome-content h2 {
+    font-size: 30px;
+  }
+
+  /* Stats Section */
   .stats-container {
     grid-template-columns: repeat(2, 1fr);
+    border-radius: 30px;
   }
 
-  /* Services */
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Combo */
-  .combo-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* About */
-  .about-container,
-  .about-grid {
+  /* ABOUT */
+  .about-container {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
 
-  .about-images .img-bottom {
-    position: relative;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    margin-top: 20px;
+  /* TESTIMONIALS */
+
+  .testimonials-section {
+    padding: 70px 0;
+  }
+
+  .testimonials-content h2 {
+    font-size: 34px;
+  }
+
+  .testimonials-content h3 {
+    font-size: 30px;
+  }
+
+  .testimonials-content p {
+    font-size: 16px;
+  }
+
+  .google-reviews {
+    gap: 12px;
+  }
+
+  /* PROCESS */
+  .process-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .process-content p {
+    max-width: 100%;
   }
 
   /* FAQ */
@@ -128,195 +174,323 @@
     grid-template-columns: 1fr;
   }
 
-  /* Blog */
-  .blog-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Footer */
+  /* FOOTER */
   .footer-address {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-links {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .footer-links,
   .footer-areas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ===== ABOUTUS PAGE ===== */
+
+  /* About Grid */
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-grid.reverse {
+    direction: ltr;
+  }
+
+  .badge {
+    position: static;
+    margin-top: 15px;
+    display: inline-block;
+  }
+
+  .about-content h2 {
+    font-size: 30px;
+  }
+
+  /* Why Section */
+  .why-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
 }
 
-
 /* =====================================================
-   TABLETS (768px)
+   MOBILE (≤ 768px)
 ===================================================== */
 @media (max-width: 768px) {
 
-  /* Hero */
-  .hero {
-    min-height: auto;
-    padding: 100px 20px;
-    background-position: center;
+  section {
+    margin-bottom: 10px;
+  }
+
+  /* HERO */
+  .hero-text h5 {
+    font-size: 12px;
   }
 
   .hero-text h1 {
-    font-size: 30px;
+    font-size: 34px;
   }
 
   .hero-text p {
     font-size: 14px;
   }
 
-  /* Location Hero */
-  .location-container {
+  .btn-yellow {
+    padding: 12px 28px;
+  }
+
+  /* Welcome Section */
+  .welcome-section {
+    padding: 60px 20px;
+  }
+
+  .welcome-content h2 {
+    font-size: 28px;
+  }
+
+  .video-card iframe {
+    height: 240px;
+  }
+
+  .welcome-buttons {
     flex-direction: column;
+    gap: 15px;
   }
 
-  .location-features {
-    grid-template-columns: 1fr;
-  }
-
-  /* Services */
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Combo */
-  .combo-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Why */
-  .why-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Videos */
-  .process-videos {
-    grid-template-columns: 1fr;
-  }
-
-  .video-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Testimonials cards */
-  .card {
-    flex: 0 0 100%;
-  }
-
-  /* Trusted Clients */
-  .logos-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Contact */
-  .form-row {
-    flex-direction: column;
-  }
-
-  .address-card {
-    flex-direction: column;
-  }
-
-  /* Footer */
-  .footer-top-nav .container {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-}
-
-
-/* =====================================================
-   MOBILES (576px)
-===================================================== */
-@media (max-width: 576px) {
-
-  body {
-    font-size: 14px;
-  }
-
-  h1 {
-    font-size: 24px !important;
-  }
-
-  h2 {
-    font-size: 22px !important;
+  .btn {
+    width: 100%;
+    text-align: center;
   }
 
   /* Stats */
   .stats-container {
-    grid-template-columns: 1fr;
-    padding: 30px 20px;
+    padding: 40px 20px;
   }
 
-  /* Services */
+  .stat-item h3 {
+    font-size: 38px;
+  }
+
+  /* SERVICES */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
   .service-card img {
     width: 100%;
   }
 
-  /* Process */
-  .process-row {
-    flex-direction: column;
-    text-align: center;
+  /* PRICING */
+  .pricing-grid {
+    grid-template-columns: 1fr;
   }
 
-  .process-img img {
-    width: 200px;
-    height: 200px;
+  /* COMBO */
+  .combo-grid {
+    grid-template-columns: 1fr;
   }
 
-  /* Blog */
+  /* TESTIMONIALS */
+
+  .testimonials-section {
+    padding: 60px 0;
+  }
+
+  .testimonials-content h2 {
+    font-size: 30px;
+  }
+
+  .testimonials-content h3 {
+    font-size: 26px;
+  }
+
+  .testimonials-content p {
+    font-size: 15px;
+  }
+
+  .google-reviews {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  /* VIDEOS */
+  .process-videos,
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* TESTIMONIALS */
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* BLOG */
   .blog-grid {
     grid-template-columns: 1fr;
   }
 
-  /* Logos */
-  .logos-grid {
-    grid-template-columns: 1fr;
+  /* FOOTER */
+  .footer-top-nav .container {
+    flex-wrap: wrap;
+    gap: 25px;
   }
 
-  /* Footer */
-  .footer-address,
-  .footer-links,
+  .footer-links {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
   .footer-areas {
     grid-template-columns: 1fr;
   }
 
-  /* Floating buttons smaller */
-  .whatsapp-float {
-    width: 48px;
-    height: 48px;
+  /* ENQUIRY BUTTON */
+  .enquiry-now {
+    font-size: 11px;
+    padding: 8px 6px;
   }
 
+  /* ===== ABOUTUS PAGE ===== */
+
+  .abouthero {
+    height: 320px;
+  }
+
+  .abouthero-content h1 {
+    font-size: 36px;
+  }
+
+  .about-section {
+    padding: 50px 0;
+  }
+
+  .about-content h2 {
+    font-size: 26px;
+  }
+
+  .why-section h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-card {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
 }
 
-
 /* =====================================================
-   SMALL MOBILES (420px)
+   SMALL MOBILE (≤ 480px)
 ===================================================== */
-@media (max-width: 420px) {
+@media (max-width: 480px) {
 
   .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .section-title h2,
+  .combo-title,
+  .faq-title,
+  .sub-title {
+    font-size: 26px;
+  }
+
+  .welcome-section {
+    padding: 50px 15px;
+  }
+
+  .welcome-content h2 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .video-card iframe {
+    height: 200px;
+  }
+
+  .testimonials-content h2 {
+    font-size: 26px;
+  }
+
+  .testimonials-content h3 {
     font-size: 22px;
   }
 
-  .btn,
-  .btn-yellow {
-    padding: 10px 18px;
+  .google-rating {
+    font-size: 20px;
+  }
+
+  .google-stars {
+    font-size: 18px;
+  }
+
+  .google-count {
+    font-size: 14px;
+  }
+
+  .stat-item h3 {
+    font-size: 32px;
+  }
+
+  .stat-item p {
+    font-size: 14px;
+  }
+
+  .process-img img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .footer-bottom {
     font-size: 13px;
+    padding: 14px;
   }
 
-  .combo-title {
-    font-size: 24px;
+  /* ===== ABOUTUS PAGE ===== */
+
+  .abouthero-content h1 {
+    font-size: 28px;
   }
 
-  .section-title {
-    font-size: 24px;
+  .abouthero-line {
+    width: 40px;
+    height: 4px;
   }
 
-  .banner-overlay {
-    padding-left: 20px;
+  .about-content h2 {
+    font-size: 22px;
+  }
+
+  .about-content p {
+    font-size: 14px;
+  }
+
+  .about-content ul li {
+    font-size: 14px;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .why-card {
+    padding: 20px;
+  }
+
+  .badge {
+    font-size: 12px;
+    padding: 8px 12px;
   }
 
 }
