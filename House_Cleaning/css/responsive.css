@@ -70,12 +70,12 @@
     flex-direction: column;
   }
 
-  .main-nav > ul {
+  .main-nav>ul {
     flex-direction: column;
     width: 100%;
   }
 
-  .main-nav > ul > li > a {
+  .main-nav>ul>li>a {
     padding: 12px;
   }
 
