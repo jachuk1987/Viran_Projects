@@ -927,6 +927,10 @@ button {
   color: #ffd400;
 }
 
+h4 span {
+  color: #ffd400;
+}
+
 .slider-container {
   position: relative;
   max-width: 1200px;
