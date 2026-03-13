@@ -245,7 +245,6 @@ button {
   background: url("../asset/images/hero.png") no-repeat;
   background-size: cover;
   background-position: right center;
-  /* FIX */
   overflow: hidden;
 }
 
@@ -263,7 +262,6 @@ button {
   position: relative;
   z-index: 2;
   min-height: 650px;
-  /* IMPORTANT */
   display: flex;
   align-items: center;
 }
