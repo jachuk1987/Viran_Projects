@@ -207,7 +207,6 @@ button {
   color: #0b66c3;
 }
 
-/* City row */
 .city>a {
   display: flex;
   justify-content: space-between;
