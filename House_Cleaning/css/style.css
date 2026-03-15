@@ -901,7 +901,6 @@ h4 span {
   transition: transform 0.8s ease;
 }
 
-/* 4 cards visible */
 .card {
   flex: 0 0 calc(25% - 15px);
   background: #0d6efd;
