@@ -1137,7 +1137,6 @@ h4 span {
   object-fit: cover;
 }
 
-/* OVERLAY (MATCH IMAGE-1) */
 .blog-overlay {
   position: absolute;
   inset: 0;
