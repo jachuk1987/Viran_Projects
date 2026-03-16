@@ -1242,7 +1242,6 @@ h4 span {
   cursor: pointer;
 }
 
-/* LINKS */
 .footer-links {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
