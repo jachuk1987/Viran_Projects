@@ -1255,7 +1255,6 @@ h4 span {
   margin-bottom: 8px;
 }
 
-/* AREAS */
 .footer-areas {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
