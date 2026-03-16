@@ -1106,7 +1106,6 @@ h4 span {
   font-weight: 700;
 }
 
-/* GRID */
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
