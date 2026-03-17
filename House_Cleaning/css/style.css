@@ -1432,7 +1432,6 @@ h4 span {
   flex-direction: column;
 }
 
-/* Inputs */
 .contact-form input,
 .contact-form select {
   flex: 1;
