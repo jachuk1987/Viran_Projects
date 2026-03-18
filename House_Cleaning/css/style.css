@@ -1682,7 +1682,6 @@ h4 span {
   position: relative;
 }
 
-/* Optional hexagon background on right */
 .deep-cleaning-service::after {
   content: "";
   position: absolute;
