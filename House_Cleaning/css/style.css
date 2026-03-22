@@ -1320,7 +1320,6 @@ h4 span {
 }
 
    SERVICES LIST
-===================== */
 .services-grid-full {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
