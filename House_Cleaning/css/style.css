@@ -1319,7 +1319,7 @@ h4 span {
   transform: scale(1.05);
 }
 
-   SERVICES LIST
+   /* SERVICES LIST */
 .services-grid-full {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
