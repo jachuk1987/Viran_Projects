@@ -161,7 +161,7 @@ button {
   font-size: small;
 }
 
-   SHOW DROPDOWNS
+   /* SHOW DROPDOWNS */
 .has-dropdown:hover>.dropdown {
   opacity: 1;
   visibility: visible;
