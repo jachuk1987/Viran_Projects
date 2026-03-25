@@ -318,7 +318,9 @@ button {
   margin: 0;
 }
 
-/* WELCOME SECTION */
+/* ===========================
+   WELCOME SECTION
+=========================== */
 .welcome-section {
   padding: 80px 20px;
   background: #ffffff;
@@ -426,7 +428,9 @@ button {
   background: #000;
 }
 
-/* SERVICES */
+/* =====================
+   SERVICES
+===================== */
 .services {
   padding: 80px 0;
   background: #f8f9fb;
