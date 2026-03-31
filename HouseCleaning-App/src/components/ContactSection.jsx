@@ -12,7 +12,7 @@ const ContactSection = () => {
                         <p className="text-muted">Fill out the form below and we will get back to you shortly.</p>
                     </Col>
                 </Row>
-                
+
                 <Row className="justify-content-center">
                     <Col lg={8} className="bg-white p-5 rounded-4 shadow-lg">
                         <Form>
@@ -23,6 +23,7 @@ const ContactSection = () => {
                                         <Form.Control type="text" placeholder="Enter your name" className="bg-light border-0 py-3" />
                                     </Form.Group>
                                 </Col>
+                                
                                 <Col md={6} className="mb-3">
                                     <Form.Group controlId="formPhone">
                                         <Form.Label>Phone Number</Form.Label>
