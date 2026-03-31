@@ -26,7 +26,7 @@ const AboutUs = () => {
                             <p className="text-muted">Our cleaners are vetted, trained, and experienced professionals.</p>
                         </div>
                     </Col>
-                    
+
                     <Col md={4} className="text-center">
                         <div className="p-4 bg-white rounded-4 shadow-sm h-100 hover-sc">
                             <div className="display-5 text-primary mb-3">
@@ -36,6 +36,7 @@ const AboutUs = () => {
                             <p className="text-muted">We use high-quality, eco-friendly products for a safe clean.</p>
                         </div>
                     </Col>
+                    
                     <Col md={4} className="text-center">
                         <div className="p-4 bg-white rounded-4 shadow-sm h-100 hover-sc">
                             <div className="display-5 text-primary mb-3">
