@@ -45,13 +45,14 @@ const ContactSection = () => {
                                     </Form.Select>
                                 </Form.Group>
                             </div>
-                            
+
                             <div className="mb-4">
                                 <Form.Group controlId="formMessage">
                                     <Form.Label>Message</Form.Label>
                                     <Form.Control as="textarea" rows={4} placeholder="Your message or requirements" className="bg-light border-0" />
                                 </Form.Group>
                             </div>
+                            
                             <div className="text-center">
                                 <Button variant="primary" size="lg" className="px-5 rounded-pill" type="submit">
                                     Send Message
