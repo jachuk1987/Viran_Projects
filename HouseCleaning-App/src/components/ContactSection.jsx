@@ -12,6 +12,7 @@ const ContactSection = () => {
                         <p className="text-muted">Fill out the form below and we will get back to you shortly.</p>
                     </Col>
                 </Row>
+                
                 <Row className="justify-content-center">
                     <Col lg={8} className="bg-white p-5 rounded-4 shadow-lg">
                         <Form>
