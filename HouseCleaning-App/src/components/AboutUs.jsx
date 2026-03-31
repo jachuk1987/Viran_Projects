@@ -15,6 +15,7 @@ const AboutUs = () => {
                         </p>
                     </Col>
                 </Row>
+                
                 <Row className="g-4">
                     <Col md={4} className="text-center">
                         <div className="p-4 bg-white rounded-4 shadow-sm h-100 hover-sc">
