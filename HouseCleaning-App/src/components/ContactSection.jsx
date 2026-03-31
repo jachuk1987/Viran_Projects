@@ -23,7 +23,7 @@ const ContactSection = () => {
                                         <Form.Control type="text" placeholder="Enter your name" className="bg-light border-0 py-3" />
                                     </Form.Group>
                                 </Col>
-                                
+
                                 <Col md={6} className="mb-3">
                                     <Form.Group controlId="formPhone">
                                         <Form.Label>Phone Number</Form.Label>
@@ -31,6 +31,7 @@ const ContactSection = () => {
                                     </Form.Group>
                                 </Col>
                             </Row>
+                            
                             <div className="mb-3">
                                 <Form.Group controlId="formService">
                                     <Form.Label>Service Required</Form.Label>
