@@ -31,7 +31,7 @@ const ContactSection = () => {
                                     </Form.Group>
                                 </Col>
                             </Row>
-                            
+
                             <div className="mb-3">
                                 <Form.Group controlId="formService">
                                     <Form.Label>Service Required</Form.Label>
@@ -45,6 +45,7 @@ const ContactSection = () => {
                                     </Form.Select>
                                 </Form.Group>
                             </div>
+                            
                             <div className="mb-4">
                                 <Form.Group controlId="formMessage">
                                     <Form.Label>Message</Form.Label>
