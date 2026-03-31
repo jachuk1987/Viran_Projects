@@ -1,0 +1,41 @@
+.footer {
+  background: #1e78d6;
+  color: #fff;
+  font-size: 14px;
+}
+
+.footer-top-nav {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-top-nav a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.footer-links a {
+  display: block;
+  color: #fff;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
+.footer-areas h6 {
+  margin-bottom: 8px;
+}
+
+.footer hr {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom {
+  background: #ffd400;
+  color: #000;
+  font-weight: 500;
+}
+
+.footer button {
+  background: #ffd400;
+  border: none;
+}
