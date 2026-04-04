@@ -81,8 +81,8 @@ export default function Dashboard() {
           </Grid>
 
           <Grid item xs={12}>
-  <LoanTable />
-</Grid>
+            <LoanTable />
+          </Grid>
         </Box>
       </Box>
     </Box>
