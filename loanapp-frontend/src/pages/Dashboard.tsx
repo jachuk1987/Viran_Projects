@@ -4,6 +4,7 @@ import Sidebar from "../components/Sidebar";
 import EMICalculator from "../components/EMICalculator";
 import LoanChart from "../components/LoanChart";
 import { getLoans } from "../utils/storage";
+import LoanTable from "../components/LoanTable";
 
 export default function Dashboard() {
   const loans = getLoans();
