@@ -21,13 +21,13 @@ export default function App() {
 
         {/* <Route path="/admin" element={<AdminPanel />} /> */}
         <Route
-  path="/admin"
-  element={
-    <ProtectedRoute>
-      <AdminPanel />
-    </ProtectedRoute>
-  }
-/>
+          path="/admin"
+          element={
+            <ProtectedRoute>
+              <AdminPanel />
+            </ProtectedRoute>
+          }
+        />
 
         <Route path="*" element={<NotFound />} />
 
