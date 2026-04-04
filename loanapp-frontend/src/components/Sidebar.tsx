@@ -5,6 +5,7 @@ import { AuthContext } from "../context/AuthContext";
 
 export default function Sidebar() {
   const navigate = useNavigate();
+  const { user } = useContext(AuthContext);
 
   return (
     <Drawer variant="permanent">
