@@ -21,6 +21,23 @@ export default function Sidebar() {
         <ListItem button onClick={() => navigate("/admin")}>
           <ListItemText primary="Admin Panel" />
         </ListItem>
+
+        <List>
+  <ListItem button onClick={() => navigate("/dashboard")}>
+    <ListItemText primary="Dashboard" />
+  </ListItem>
+
+  <ListItem button onClick={() => navigate("/apply")}>
+    <ListItemText primary="Apply Loan" />
+  </ListItem>
+
+  {/* 👇 Only Admin */}
+  {user?.role === "admin" && (
+    <ListItem button onClick={() => navigate("/admin")}>
+      <ListItemText primary="Admin Panel" />
+    </ListItem>
+  )}
+</List>
       </List>
     </Drawer>
   );
