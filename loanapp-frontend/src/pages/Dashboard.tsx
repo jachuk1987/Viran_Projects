@@ -79,6 +79,10 @@ export default function Dashboard() {
               </Paper>
             </Grid>
           </Grid>
+
+          <Grid item xs={12}>
+  <LoanTable />
+</Grid>
         </Box>
       </Box>
     </Box>
