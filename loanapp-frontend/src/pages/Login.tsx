@@ -13,14 +13,14 @@ export default function Login() {
   });
 
   const handleLogin = () => {
-  login(form);
+    login(form);
 
-  if (form.role === "admin") {
-    navigate("/admin");
-  } else {
-    navigate("/dashboard");
-  }
-};
+    if (form.role === "admin") {
+      navigate("/admin");
+    } else {
+      navigate("/dashboard");
+    }
+  };
 
   return (
     <Box display="flex" justifyContent="center" alignItems="center" height="100vh">
