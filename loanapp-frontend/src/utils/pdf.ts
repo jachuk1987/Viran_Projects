@@ -13,7 +13,8 @@ export const downloadPDF = () => {
     loan.status,
   ]);
 
-  doc.text("Loan Report", 14, 15);
+doc.setFontSize(18);
+doc.text("Loan Report - Fintech App", 14, 15);
 
   autoTable(doc, {
     head: [["Amount", "Type", "Status"]],
