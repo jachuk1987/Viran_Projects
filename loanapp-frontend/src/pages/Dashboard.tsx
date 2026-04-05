@@ -86,6 +86,12 @@ export default function Dashboard() {
             <LoanTable />
           </Grid>
         </Box>
+
+        <Box display="flex" justifyContent="flex-end" mb={2}>
+          <Button variant="contained" onClick={downloadPDF}>
+            Download PDF
+          </Button>
+        </Box>
       </Box>
     </Box>
   );
