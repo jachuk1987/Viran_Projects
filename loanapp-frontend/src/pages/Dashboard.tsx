@@ -5,6 +5,8 @@ import EMICalculator from "../components/EMICalculator";
 import LoanChart from "../components/LoanChart";
 import { getLoans } from "../utils/storage";
 import LoanTable from "../components/LoanTable";
+import { Button } from "@mui/material";
+import { downloadPDF } from "../utils/pdf";
 
 export default function Dashboard() {
   const loans = getLoans();
