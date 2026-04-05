@@ -1,4 +1,4 @@
-import { Box, TextField, Button, Paper, Typography } from "@mui/material";
+import { Box, TextField, Button, Paper, Typography, MenuItem } from "@mui/material";
 import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
@@ -9,10 +9,15 @@ export default function Login() {
 
   const [form, setForm] = useState({
     name: "",
-    role: "user",
+    role: "",
   });
 
   const handleLogin = () => {
+    if (!form.name || !form.role) {
+      alert("Please fill all fields");
+      return;
+    }
+
     login(form);
 
     if (form.role === "admin") {
@@ -39,10 +44,11 @@ export default function Login() {
           label="Role"
           fullWidth
           margin="normal"
+          value={form.role}
           onChange={(e) => setForm({ ...form, role: e.target.value })}
         >
-          <option value="user">User</option>
-          <option value="admin">Admin</option>
+          <MenuItem value="user">User</MenuItem>
+          <MenuItem value="admin">Admin</MenuItem>
         </TextField>
 
         <Button fullWidth variant="contained" onClick={handleLogin}>
