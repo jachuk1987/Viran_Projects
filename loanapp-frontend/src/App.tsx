@@ -19,7 +19,6 @@ export default function App() {
 
         <Route path="/apply" element={<ApplyLoan />} />
 
-        {/* <Route path="/admin" element={<AdminPanel />} /> */}
         <Route
           path="/admin"
           element={
