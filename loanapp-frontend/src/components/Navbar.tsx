@@ -36,7 +36,7 @@ export default function Navbar() {
   return (
     <AppBar position="static" elevation={1}>
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-        
+
         {/* 💳 App Title */}
         <Typography variant="h6" fontWeight="bold">
           💳 Loan Banking App
@@ -44,7 +44,7 @@ export default function Navbar() {
 
         {/* Right Side */}
         <Box display="flex" alignItems="center" gap={2}>
-          
+
           {/* 🔔 Notifications */}
           <IconButton color="inherit">
             <Badge badgeContent={3} color="error">
