@@ -1,36 +1,45 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import AdminPanel from "./pages/AdminPanel";
 import Dashboard from "./pages/Dashboard";
 import ApplyLoan from "./pages/ApplyLoan";
-import AdminPanel from "./pages/AdminPanel";
-import Login from "./pages/Login";
-import ProtectedRoute from "./routes/ProtectedRoute";
-import NotFound from "./pages/NotFound";
+import Layout from "./components/Layout";
 
-export default function App() {
+function App() {
   return (
     <BrowserRouter>
       <Routes>
-
         <Route path="/" element={<Login />} />
 
-        <Route path="/dashboard" element={
-          <ProtectedRoute><Dashboard /></ProtectedRoute>
-        } />
+        <Route
+          path="/dashboard"
+          element={
+            <Layout>
+              <Dashboard />
+            </Layout>
+          }
+        />
 
-        <Route path="/apply" element={<ApplyLoan />} />
+        <Route
+          path="/apply"
+          element={
+            <Layout>
+              <ApplyLoan />
+            </Layout>
+          }
+        />
 
         <Route
           path="/admin"
           element={
-            <ProtectedRoute role="admin">
+            <Layout>
               <AdminPanel />
-            </ProtectedRoute>
+            </Layout>
           }
         />
-
-        <Route path="*" element={<NotFound />} />
-
       </Routes>
     </BrowserRouter>
   );
 }
+
+export default App;
