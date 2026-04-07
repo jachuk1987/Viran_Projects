@@ -86,3 +86,30 @@
 //     </Drawer>
 //   );
 // }
+
+import { Box, List, ListItemButton, ListItemText } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+
+export default function Sidebar() {
+  const navigate = useNavigate();
+
+  return (
+    <Box width={220} bgcolor="#1e293b" color="#fff" height="100vh" p={2}>
+      <h2>Loan App</h2>
+
+      <List>
+        <ListItemButton onClick={() => navigate("/dashboard")}>
+          <ListItemText primary="Dashboard" />
+        </ListItemButton>
+
+        <ListItemButton onClick={() => navigate("/apply")}>
+          <ListItemText primary="Apply Loan" />
+        </ListItemButton>
+
+        <ListItemButton onClick={() => navigate("/admin")}>
+          <ListItemText primary="Admin Panel" />
+        </ListItemButton>
+      </List>
+    </Box>
+  );
+}
