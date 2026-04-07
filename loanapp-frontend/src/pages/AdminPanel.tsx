@@ -14,11 +14,14 @@ export default function AdminPanel() {
     setLoans(getLoans());
   };
 
-  return (
-    <div style={{ padding: 20 }}>
-      <Typography variant="h5">Admin Panel</Typography>
+ return (
+  <div style={{ padding: 20 }}>
+    <Typography variant="h5">Admin Panel</Typography>
 
-      {loans.map((loan) => (
+    {loans.length === 0 ? (
+      <Typography mt={2}>No loan applications found</Typography>
+    ) : (
+      loans.map((loan) => (
         <Paper key={loan.id} sx={{ p: 2, my: 2 }}>
           <p>Amount: ₹{loan.amount}</p>
           <p>Status: {loan.status}</p>
@@ -31,7 +34,7 @@ export default function AdminPanel() {
             Reject
           </Button>
         </Paper>
-      ))}
-    </div>
-  );
-}
+      ))
+    )}
+  </div>
+);
