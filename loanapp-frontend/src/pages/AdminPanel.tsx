@@ -1,6 +1,6 @@
 import { getLoans, updateLoan } from "../utils/storage";
 import { useEffect, useState } from "react";
-import { Button, Paper, Typography } from "@mui/material";
+import { Button, Card, CardContent, Typography, Box } from "@mui/material";
 
 export default function AdminPanel() {
   const [loans, setLoans] = useState<any[]>([]);
@@ -14,27 +14,58 @@ export default function AdminPanel() {
     setLoans(getLoans());
   };
 
- return (
-  <div style={{ padding: 20 }}>
-    <Typography variant="h5">Admin Panel</Typography>
+  return (
+    <Box>
+      <Typography variant="h5" mb={2}>
+        Admin Panel
+      </Typography>
 
-    {loans.length === 0 ? (
-      <Typography mt={2}>No loan applications found</Typography>
-    ) : (
-      loans.map((loan) => (
-        <Paper key={loan.id} sx={{ p: 2, my: 2 }}>
-          <p>Amount: ₹{loan.amount}</p>
-          <p>Status: {loan.status}</p>
+      {loans.length === 0 ? (
+        <Typography>No loan applications found</Typography>
+      ) : (
+        loans.map((loan) => (
+          <Card key={loan.id} sx={{ mb: 2 }}>
+            <CardContent>
+              <Typography>👤 {loan.name}</Typography>
+              <Typography>💰 ₹{loan.amount}</Typography>
+              <Typography>
+                Status:{" "}
+                <span
+                  style={{
+                    color:
+                      loan.status === "Approved"
+                        ? "green"
+                        : loan.status === "Rejected"
+                        ? "red"
+                        : "orange",
+                  }}
+                >
+                  {loan.status}
+                </span>
+              </Typography>
 
-          <Button onClick={() => update(loan.id, "Approved")}>
-            Approve
-          </Button>
+              <Box mt={2}>
+                <Button
+                  variant="contained"
+                  color="success"
+                  onClick={() => update(loan.id, "Approved")}
+                  sx={{ mr: 1 }}
+                >
+                  Approve
+                </Button>
 
-          <Button onClick={() => update(loan.id, "Rejected")}>
-            Reject
-          </Button>
-        </Paper>
-      ))
-    )}
-  </div>
-);
+                <Button
+                  variant="contained"
+                  color="error"
+                  onClick={() => update(loan.id, "Rejected")}
+                >
+                  Reject
+                </Button>
+              </Box>
+            </CardContent>
+          </Card>
+        ))
+      )}
+    </Box>
+  );
+}
