@@ -4,6 +4,7 @@ import App from "./App";
 import { ThemeProvider, CssBaseline } from "@mui/material";
 import { useState } from "react";
 import { getTheme } from "./theme";
+import { AuthProvider } from "./context/AuthContext"; // 👈 ADD THIS
 
 function Root() {
   const [mode, setMode] = useState<"light" | "dark">("light");
@@ -15,7 +16,12 @@ function Root() {
   return (
     <ThemeProvider theme={getTheme(mode)}>
       <CssBaseline />
-      <App toggleTheme={toggleTheme} />
+
+      {/* 👇 ADD THIS WRAPPER */}
+      <AuthProvider>
+        <App toggleTheme={toggleTheme} />
+      </AuthProvider>
+
     </ThemeProvider>
   );
 }
