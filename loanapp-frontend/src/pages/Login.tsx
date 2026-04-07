@@ -4,7 +4,14 @@ import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 export default function Login() {
-  const { login } = useContext(AuthContext);
+  const auth = useContext(AuthContext);
+
+  // ✅ SAFETY CHECK
+  if (!auth) {
+    throw new Error("AuthContext not found. Wrap your app with AuthProvider.");
+  }
+
+  const { login } = auth;
   const navigate = useNavigate();
 
   const [form, setForm] = useState({
