@@ -1,30 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import { ThemeProvider, CssBaseline } from "@mui/material";
-import { useState } from "react";
 import { getTheme } from "./theme";
-import { AuthProvider } from "./context/AuthContext"; // ✅ IMPORT
+import { AuthProvider } from "./context/AuthContext";
 
+// ✅ Root Component
 function Root() {
   const [mode, setMode] = useState<"light" | "dark">("light");
 
+  // ✅ Better toggle logic
   const toggleTheme = () => {
-    setMode(mode === "light" ? "dark" : "light");
+    setMode((prev) => (prev === "light" ? "dark" : "light"));
   };
 
   return (
-    <ThemeProvider theme={getTheme(mode)}>
-      <CssBaseline />
+    <React.StrictMode>
+      <ThemeProvider theme={getTheme(mode)}>
+        <CssBaseline />
 
-      {/* ✅ THIS IS THE FIX */}
-      <AuthProvider>
-        <App toggleTheme={toggleTheme} />
-      </AuthProvider>
+        {/* ✅ AuthProvider wraps entire app */}
+        <AuthProvider>
+          <App toggleTheme={toggleTheme} />
+        </AuthProvider>
 
-    </ThemeProvider>
+      </ThemeProvider>
+    </React.StrictMode>
   );
 }
 
-
-ReactDOM.createRoot(document.getElementById("root")!).render(<Root />);
+// ✅ Root render
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+  <Root />
+);
