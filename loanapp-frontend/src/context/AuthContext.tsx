@@ -1,4 +1,4 @@
-import { createContext, useState, ReactNode } from "react";
+import { createContext, useState, ReactNode, useEffect } from "react";
 
 // ✅ Define types
 type User = {
@@ -12,7 +12,7 @@ type AuthContextType = {
   logout: () => void;
 };
 
-// ✅ Proper typing instead of any
+// ✅ Create context
 export const AuthContext = createContext<AuthContextType | null>(null);
 
 // ✅ Props typing
@@ -21,15 +21,28 @@ type Props = {
 };
 
 export const AuthProvider = ({ children }: Props) => {
-  const [user, setUser] = useState<User | null>(
-    JSON.parse(localStorage.getItem("user") || "null")
-  );
+  const [user, setUser] = useState<User | null>(null);
 
+  // ✅ Load user safely from localStorage (prevents JSON crash)
+  useEffect(() => {
+    try {
+      const storedUser = localStorage.getItem("user");
+      if (storedUser) {
+        setUser(JSON.parse(storedUser));
+      }
+    } catch (error) {
+      console.error("Invalid user data in localStorage");
+      localStorage.removeItem("user");
+    }
+  }, []);
+
+  // ✅ Login
   const login = (userData: User) => {
     localStorage.setItem("user", JSON.stringify(userData));
     setUser(userData);
   };
 
+  // ✅ Logout
   const logout = () => {
     localStorage.removeItem("user");
     setUser(null);
