@@ -8,7 +8,7 @@ import {
   Badge,
 } from "@mui/material";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import { useAuth } from "../context/useAuth";
+import { useAuth } from "../context/AuthContext";
 
 export default function Navbar() {
   const { user } = useAuth();
