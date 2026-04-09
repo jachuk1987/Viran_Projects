@@ -37,32 +37,32 @@ export default function Dashboard() {
   return (
     <Layout>
       <Typography variant="h4" fontWeight="bold" mb={3}>
-      Financial Overview 💰
-    </Typography>
-
-    {/* ✅ KPI Cards */}
-    <Grid container spacing={3} mb={3}>
-      ...
-    </Grid>
-
-    {/* ✅ Charts Section */}
-    <Grid container spacing={3}>
-      ...
-    </Grid>
-
-    {/* ✅ 👉 ADD HERE (EMI Insight) */}
-    <Paper sx={{ mt: 3 }}>
-      <Typography fontWeight="bold" mb={1}>
-        EMI Insight
+        Financial Overview 💰
       </Typography>
-      <Typography color="text.secondary">
-        Your average EMI this month is ₹4,200 across all active loans.
-      </Typography>
-    </Paper>
-    
+
+      {/* ✅ KPI Cards */}
+      <Grid container spacing={3} mb={3}>
+        ...
+      </Grid>
+
+      {/* ✅ Charts Section */}
+      <Grid container spacing={3}>
+        ...
+      </Grid>
+
+      {/* ✅ 👉 ADD HERE (EMI Insight) */}
+      <Paper sx={{ mt: 3 }}>
+        <Typography fontWeight="bold" mb={1}>
+          EMI Insight
+        </Typography>
+        <Typography color="text.secondary">
+          Your average EMI this month is ₹4,200 across all active loans.
+        </Typography>
+      </Paper>
+
       {/* 🔥 Stats Cards */}
       <Grid container spacing={3} mb={3}>
-        
+
         {[
           { label: "Total Loans", value: "₹50,000" },
           { label: "Approved", value: "₹30,000" },
@@ -85,7 +85,7 @@ export default function Dashboard() {
 
       {/* 📊 Charts Section */}
       <Grid container spacing={3}>
-        
+
         {/* 📈 Bar Chart */}
         <Grid item xs={12} md={8}>
           <Paper sx={{ p: 3, borderRadius: 3 }}>
