@@ -1,98 +1,118 @@
-import { Box, Grid, Paper, Typography } from "@mui/material";
-import Navbar from "../components/Navbar";
-import Sidebar from "../components/Sidebar";
-import EMICalculator from "../components/EMICalculator";
-import LoanChart from "../components/LoanChart";
-import { getLoans } from "../utils/storage";
-import LoanTable from "../components/LoanTable";
-import { Button } from "@mui/material";
-import { downloadPDF } from "../utils/pdf";
+import Layout from "../components/Layout";
+import {
+  Grid,
+  Paper,
+  Typography,
+  Box,
+} from "@mui/material";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+  PieChart,
+  Pie,
+  Cell,
+} from "recharts";
+
+// 🔢 Sample Data (later replace with API)
+const loanData = [
+  { name: "Jan", amount: 4000 },
+  { name: "Feb", amount: 3000 },
+  { name: "Mar", amount: 5000 },
+  { name: "Apr", amount: 7000 },
+];
+
+const statusData = [
+  { name: "Approved", value: 60 },
+  { name: "Pending", value: 25 },
+  { name: "Rejected", value: 15 },
+];
+
+const COLORS = ["#4caf50", "#ff9800", "#f44336"];
 
 export default function Dashboard() {
-  const loans = getLoans();
-
-  const total = loans.length;
-  const approved = loans.filter((l: any) => l.status === "Approved").length;
-  const pending = loans.filter((l: any) => l.status === "Pending").length;
-  const rejected = loans.filter((l: any) => l.status === "Rejected").length;
-
-  const Card = ({ title, value }: any) => (
-    <Paper
-      sx={{
-        p: 3,
-        borderRadius: 3,
-        textAlign: "center",
-        boxShadow: 3,
-      }}
-    >
-      <Typography variant="h6" color="text.secondary">
-        {title}
-      </Typography>
-      <Typography variant="h4" fontWeight="bold">
-        {value}
-      </Typography>
-    </Paper>
-  );
-
   return (
-    <Box sx={{ display: "flex" }}>
-      {/* Sidebar */}
-      <Sidebar />
+    <Layout>
+      <Typography variant="h4" fontWeight="bold" mb={3}>
+        Financial Overview 💰
+      </Typography>
 
-      {/* Main Content */}
-      <Box sx={{ flexGrow: 1 }}>
-        {/* Navbar */}
-        <Navbar />
-
-        <Box sx={{ p: 3 }}>
-          {/* Stats Cards */}
-          <Grid container spacing={2} mb={2}>
-            <Grid item xs={12} md={3}>
-              <Card title="Total Loans" value={total} />
-            </Grid>
-
-            <Grid item xs={12} md={3}>
-              <Card title="Approved" value={approved} />
-            </Grid>
-
-            <Grid item xs={12} md={3}>
-              <Card title="Pending" value={pending} />
-            </Grid>
-
-            <Grid item xs={12} md={3}>
-              <Card title="Rejected" value={rejected} />
-            </Grid>
+      {/* 🔥 Stats Cards */}
+      <Grid container spacing={3} mb={3}>
+        
+        {[
+          { label: "Total Loans", value: "₹50,000" },
+          { label: "Approved", value: "₹30,000" },
+          { label: "Pending", value: "₹12,000" },
+          { label: "Rejected", value: "₹8,000" },
+        ].map((item) => (
+          <Grid item xs={12} md={3} key={item.label}>
+            <Paper sx={{ p: 3, borderRadius: 3 }}>
+              <Typography color="text.secondary">
+                {item.label}
+              </Typography>
+              <Typography variant="h5" fontWeight="bold">
+                {item.value}
+              </Typography>
+            </Paper>
           </Grid>
+        ))}
 
-          {/* Charts + EMI */}
-          <Grid container spacing={2}>
-            <Grid item xs={12} md={6}>
-              <Paper sx={{ p: 3, borderRadius: 3, boxShadow: 3 }}>
-                <Typography variant="h6" mb={2}>
-                  Loan Analytics
-                </Typography>
-                <LoanChart />
-              </Paper>
-            </Grid>
+      </Grid>
 
-            <Grid item xs={12} md={6}>
-              <Paper sx={{ p: 3, borderRadius: 3, boxShadow: 3 }}>
-                <EMICalculator />
-              </Paper>
-            </Grid>
-          </Grid>
+      {/* 📊 Charts Section */}
+      <Grid container spacing={3}>
+        
+        {/* 📈 Bar Chart */}
+        <Grid item xs={12} md={8}>
+          <Paper sx={{ p: 3, borderRadius: 3 }}>
+            <Typography mb={2} fontWeight="bold">
+              Monthly Loan Distribution
+            </Typography>
 
-          <Grid item xs={12}>
-            <LoanTable />
-          </Grid>
-        </Box>
+            <Box height={300}>
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart data={loanData}>
+                  <XAxis dataKey="name" />
+                  <YAxis />
+                  <Tooltip />
+                  <Bar dataKey="amount" />
+                </BarChart>
+              </ResponsiveContainer>
+            </Box>
+          </Paper>
+        </Grid>
 
-        <Box display="flex" justifyContent="flex-end" mb={2}>
-          <Button variant="contained" onClick={downloadPDF}>
-            Download PDF
-          </Button>
-        </Box>
-      </Box>
-    </Box>
+        {/* 🥧 Pie Chart */}
+        <Grid item xs={12} md={4}>
+          <Paper sx={{ p: 3, borderRadius: 3 }}>
+            <Typography mb={2} fontWeight="bold">
+              Loan Status
+            </Typography>
+
+            <Box height={300}>
+              <ResponsiveContainer>
+                <PieChart>
+                  <Pie
+                    data={statusData}
+                    dataKey="value"
+                    outerRadius={100}
+                  >
+                    {statusData.map((_, index) => (
+                      <Cell key={index} fill={COLORS[index]} />
+                    ))}
+                  </Pie>
+                  <Tooltip />
+                </PieChart>
+              </ResponsiveContainer>
+            </Box>
+          </Paper>
+        </Grid>
+
+      </Grid>
+    </Layout>
   );
 }
