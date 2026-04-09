@@ -65,14 +65,14 @@ export default function Dashboard() {
   return (
     <Layout>
       {/* ✅ Title */}
-      <Typography variant="h4" fontWeight="bold" mb={3}>
+      <Typography variant="h4" fontWeight="bold" gutterBottom>
         Financial Overview 💰
       </Typography>
 
       {/* ✅ KPI Cards */}
-      <Grid container spacing={3} mb={3}>
+      <Grid container spacing={3} sx={{ mb: 3 }}>
         {stats.map((item) => (
-          <Grid item xs={12} md={3} key={item.label}>
+          <Grid item xs={12} sm={6} md={3} key={item.label}>
             <Paper
               elevation={2}
               sx={{
@@ -80,6 +80,7 @@ export default function Dashboard() {
                 alignItems: "center",
                 gap: 2,
                 transition: "0.3s",
+                cursor: "pointer",
                 "&:hover": {
                   transform: "translateY(-4px)",
                   boxShadow: 4,
@@ -118,17 +119,17 @@ export default function Dashboard() {
         {/* Bar Chart */}
         <Grid item xs={12} md={8}>
           <Paper>
-            <Typography fontWeight="bold" mb={2}>
+            <Typography fontWeight="bold" gutterBottom>
               Monthly Loan Distribution
             </Typography>
 
-            <Box height={300}>
+            <Box sx={{ height: 300 }}>
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={loanData}>
                   <XAxis dataKey="name" />
                   <YAxis />
                   <Tooltip />
-                  <Bar dataKey="amount" fill="#6366f1" />
+                  <Bar dataKey="amount" fill="#6366f1" radius={[6, 6, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </Box>
@@ -138,12 +139,12 @@ export default function Dashboard() {
         {/* Pie Chart */}
         <Grid item xs={12} md={4}>
           <Paper>
-            <Typography fontWeight="bold" mb={2}>
+            <Typography fontWeight="bold" gutterBottom>
               Loan Status
             </Typography>
 
-            <Box height={300}>
-              <ResponsiveContainer>
+            <Box sx={{ height: 300 }}>
+              <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie
                     data={statusData}
