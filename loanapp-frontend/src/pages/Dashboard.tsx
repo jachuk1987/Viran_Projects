@@ -21,6 +21,33 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import PendingActionsIcon from "@mui/icons-material/PendingActions";
 import CancelIcon from "@mui/icons-material/Cancel";
 
+const stats = [
+  {
+    label: "Total Loans",
+    value: "₹50,000",
+    icon: <AccountBalanceWalletIcon />,
+    color: "#6366f1",
+  },
+  {
+    label: "Approved",
+    value: "₹30,000",
+    icon: <CheckCircleIcon />,
+    color: "#22c55e",
+  },
+  {
+    label: "Pending",
+    value: "₹12,000",
+    icon: <PendingActionsIcon />,
+    color: "#f59e0b",
+  },
+  {
+    label: "Rejected",
+    value: "₹8,000",
+    icon: <CancelIcon />,
+    color: "#ef4444",
+  },
+];
+
 // 🔢 Sample Data (later replace with API)
 const loanData = [
   { name: "Jan", amount: 4000 },
