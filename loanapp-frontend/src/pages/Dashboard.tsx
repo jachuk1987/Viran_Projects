@@ -1,10 +1,5 @@
 import Layout from "../components/Layout";
-import {
-  Grid,
-  Paper,
-  Typography,
-  Box,
-} from "@mui/material";
+import { Grid, Paper, Typography, Box } from "@mui/material";
 import {
   BarChart,
   Bar,
@@ -16,11 +11,13 @@ import {
   Pie,
   Cell,
 } from "recharts";
+
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import PendingActionsIcon from "@mui/icons-material/PendingActions";
 import CancelIcon from "@mui/icons-material/Cancel";
 
+// ✅ KPI Data
 const stats = [
   {
     label: "Total Loans",
@@ -48,7 +45,7 @@ const stats = [
   },
 ];
 
-// 🔢 Sample Data (later replace with API)
+// 📊 Chart Data
 const loanData = [
   { name: "Jan", amount: 4000 },
   { name: "Feb", amount: 3000 },
@@ -62,65 +59,66 @@ const statusData = [
   { name: "Rejected", value: 15 },
 ];
 
-const COLORS = ["#4caf50", "#ff9800", "#f44336"];
+const COLORS = ["#22c55e", "#f59e0b", "#ef4444"];
 
 export default function Dashboard() {
   return (
     <Layout>
+      {/* ✅ Title */}
       <Typography variant="h4" fontWeight="bold" mb={3}>
         Financial Overview 💰
       </Typography>
 
       {/* ✅ KPI Cards */}
       <Grid container spacing={3} mb={3}>
-        ...
-      </Grid>
-
-      {/* ✅ Charts Section */}
-      <Grid container spacing={3}>
-        ...
-      </Grid>
-
-      {/* ✅ 👉 ADD HERE (EMI Insight) */}
-      <Paper sx={{ mt: 3 }}>
-        <Typography fontWeight="bold" mb={1}>
-          EMI Insight
-        </Typography>
-        <Typography color="text.secondary">
-          Your average EMI this month is ₹4,200 across all active loans.
-        </Typography>
-      </Paper>
-
-      {/* 🔥 Stats Cards */}
-      <Grid container spacing={3} mb={3}>
-
-        {[
-          { label: "Total Loans", value: "₹50,000" },
-          { label: "Approved", value: "₹30,000" },
-          { label: "Pending", value: "₹12,000" },
-          { label: "Rejected", value: "₹8,000" },
-        ].map((item) => (
+        {stats.map((item) => (
           <Grid item xs={12} md={3} key={item.label}>
-            <Paper sx={{ p: 3, borderRadius: 3 }}>
-              <Typography color="text.secondary">
-                {item.label}
-              </Typography>
-              <Typography variant="h5" fontWeight="bold">
-                {item.value}
-              </Typography>
+            <Paper
+              elevation={2}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: 2,
+                transition: "0.3s",
+                "&:hover": {
+                  transform: "translateY(-4px)",
+                  boxShadow: 4,
+                },
+              }}
+            >
+              {/* Icon */}
+              <Box
+                sx={{
+                  backgroundColor: item.color,
+                  color: "#fff",
+                  borderRadius: 2,
+                  p: 1.5,
+                  display: "flex",
+                }}
+              >
+                {item.icon}
+              </Box>
+
+              {/* Text */}
+              <Box>
+                <Typography color="text.secondary" fontSize={14}>
+                  {item.label}
+                </Typography>
+                <Typography variant="h6" fontWeight="bold">
+                  {item.value}
+                </Typography>
+              </Box>
             </Paper>
           </Grid>
         ))}
-
       </Grid>
 
-      {/* 📊 Charts Section */}
+      {/* 📊 Charts */}
       <Grid container spacing={3}>
-
-        {/* 📈 Bar Chart */}
+        {/* Bar Chart */}
         <Grid item xs={12} md={8}>
-          <Paper sx={{ p: 3, borderRadius: 3 }}>
-            <Typography mb={2} fontWeight="bold">
+          <Paper>
+            <Typography fontWeight="bold" mb={2}>
               Monthly Loan Distribution
             </Typography>
 
@@ -130,17 +128,17 @@ export default function Dashboard() {
                   <XAxis dataKey="name" />
                   <YAxis />
                   <Tooltip />
-                  <Bar dataKey="amount" />
+                  <Bar dataKey="amount" fill="#6366f1" />
                 </BarChart>
               </ResponsiveContainer>
             </Box>
           </Paper>
         </Grid>
 
-        {/* 🥧 Pie Chart */}
+        {/* Pie Chart */}
         <Grid item xs={12} md={4}>
-          <Paper sx={{ p: 3, borderRadius: 3 }}>
-            <Typography mb={2} fontWeight="bold">
+          <Paper>
+            <Typography fontWeight="bold" mb={2}>
               Loan Status
             </Typography>
 
@@ -162,8 +160,17 @@ export default function Dashboard() {
             </Box>
           </Paper>
         </Grid>
-
       </Grid>
+
+      {/* 💡 EMI Insight */}
+      <Paper sx={{ mt: 3 }}>
+        <Typography fontWeight="bold">
+          EMI Insight 💡
+        </Typography>
+        <Typography color="text.secondary" mt={1}>
+          Your average EMI this month is ₹4,200 across all active loans.
+        </Typography>
+      </Paper>
     </Layout>
   );
 }
