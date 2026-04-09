@@ -8,19 +8,27 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   return (
-    <Box display="flex">
+    <Box sx={{ display: "flex" }}>
       
-      {/* Sidebar */}
+      {/* ✅ Sidebar */}
       <Sidebar />
 
-      {/* Main Content */}
-      <Box flexGrow={1}>
+      {/* ✅ Main Content Area */}
+      <Box
+        component="main"
+        sx={{
+          flexGrow: 1,
+          transition: "all 0.3s ease",
+        }}
+      >
+        {/* ✅ Navbar */}
         <Navbar />
 
+        {/* ✅ Page Content */}
         <Box
-          p={3}
           sx={{
-            backgroundColor: "#f5f6fa",
+            p: 3,
+            backgroundColor: "background.default", // ✅ use theme
             minHeight: "100vh",
           }}
         >
