@@ -16,6 +16,10 @@ import {
   Pie,
   Cell,
 } from "recharts";
+import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import PendingActionsIcon from "@mui/icons-material/PendingActions";
+import CancelIcon from "@mui/icons-material/Cancel";
 
 // 🔢 Sample Data (later replace with API)
 const loanData = [
