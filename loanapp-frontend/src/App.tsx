@@ -3,7 +3,6 @@ import Login from "./pages/Login";
 import AdminPanel from "./pages/AdminPanel";
 import Dashboard from "./pages/Dashboard";
 import ApplyLoan from "./pages/ApplyLoan";
-import Layout from "./components/Layout";
 
 function App() {
   return (
@@ -11,32 +10,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
 
-        <Route
-          path="/dashboard"
-          element={
-            <Layout>
-              <Dashboard />
-            </Layout>
-          }
-        />
-
-        <Route
-          path="/apply"
-          element={
-            <Layout>
-              <ApplyLoan />
-            </Layout>
-          }
-        />
-
-        <Route
-          path="/admin"
-          element={
-            <Layout>
-              <AdminPanel />
-            </Layout>
-          }
-        />
+        {/* ✅ NO Layout here */}
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/apply" element={<ApplyLoan />} />
+        <Route path="/admin" element={<AdminPanel />} />
       </Routes>
     </BrowserRouter>
   );
