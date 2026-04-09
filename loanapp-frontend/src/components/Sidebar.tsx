@@ -4,14 +4,16 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  IconButton,
   Box,
   Typography,
 } from "@mui/material";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
+import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate, useLocation } from "react-router-dom";
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 
 export default function Sidebar() {
@@ -19,8 +21,9 @@ export default function Sidebar() {
   const location = useLocation();
   const auth = useContext(AuthContext);
 
-  if (!auth) return null;
+  const [open, setOpen] = useState(true);
 
+  if (!auth) return null;
   const { user } = auth;
 
   const menuItems = [
@@ -36,7 +39,6 @@ export default function Sidebar() {
     },
   ];
 
-  // ✅ Admin only
   if (user?.role === "admin") {
     menuItems.push({
       text: "Admin Panel",
@@ -49,24 +51,34 @@ export default function Sidebar() {
     <Drawer
       variant="permanent"
       sx={{
-        width: 220,
+        width: open ? 220 : 70,
         flexShrink: 0,
         "& .MuiDrawer-paper": {
-          width: 220,
+          width: open ? 220 : 70,
           backgroundColor: "#1e293b",
           color: "#fff",
-          borderRight: "none",
+          transition: "0.3s",
+          overflowX: "hidden",
         },
       }}
     >
-      {/* ✅ Small Branding (not big header) */}
-      <Box px={2} py={2}>
-        <Typography variant="subtitle1" fontWeight="bold">
-          💳 Loan App
-        </Typography>
+      {/* 🔘 Toggle Button */}
+      <Box display="flex" justifyContent={open ? "flex-end" : "center"} p={1}>
+        <IconButton onClick={() => setOpen(!open)} sx={{ color: "#fff" }}>
+          <MenuIcon />
+        </IconButton>
       </Box>
 
-      {/* ✅ Menu */}
+      {/* 🏷 Logo */}
+      {open && (
+        <Box px={2} pb={2}>
+          <Typography variant="subtitle1" fontWeight="bold">
+            💳 Loan App
+          </Typography>
+        </Box>
+      )}
+
+      {/* 📋 Menu */}
       <List>
         {menuItems.map((item) => (
           <ListItemButton
@@ -77,16 +89,23 @@ export default function Sidebar() {
               mx: 1,
               borderRadius: 2,
               mb: 1,
+              justifyContent: open ? "initial" : "center",
               "&.Mui-selected": {
                 backgroundColor: "#334155",
               },
             }}
           >
-            <ListItemIcon sx={{ color: "#cbd5f5" }}>
+            <ListItemIcon
+              sx={{
+                color: "#cbd5f5",
+                minWidth: open ? 40 : "auto",
+                justifyContent: "center",
+              }}
+            >
               {item.icon}
             </ListItemIcon>
 
-            <ListItemText primary={item.text} />
+            {open && <ListItemText primary={item.text} />}
           </ListItemButton>
         ))}
       </List>
