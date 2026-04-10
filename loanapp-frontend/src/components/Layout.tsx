@@ -4,31 +4,22 @@ import Sidebar from "./Sidebar";
 
 type Props = {
   children: React.ReactNode;
+  toggleTheme: () => void; // ✅ add this
 };
 
-export default function Layout({ children }: Props) {
+export default function Layout({ children, toggleTheme }: Props) {
   return (
     <Box sx={{ display: "flex" }}>
-      
-      {/* ✅ Sidebar */}
       <Sidebar />
 
-      {/* ✅ Main Content Area */}
-      <Box
-        component="main"
-        sx={{
-          flexGrow: 1,
-          transition: "all 0.3s ease",
-        }}
-      >
-        {/* ✅ Navbar */}
-        <Navbar />
+      <Box component="main" sx={{ flexGrow: 1 }}>
+        {/* ✅ pass to navbar */}
+        <Navbar toggleTheme={toggleTheme} />
 
-        {/* ✅ Page Content */}
         <Box
           sx={{
             p: 3,
-            backgroundColor: "background.default", // ✅ use theme
+            backgroundColor: "background.default",
             minHeight: "100vh",
           }}
         >
