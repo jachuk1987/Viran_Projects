@@ -17,6 +17,11 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import PendingActionsIcon from "@mui/icons-material/PendingActions";
 import CancelIcon from "@mui/icons-material/Cancel";
 
+// ✅ Props (for dark mode toggle)
+type Props = {
+  toggleTheme: () => void;
+};
+
 // ✅ KPI Data
 const stats = [
   {
@@ -61,9 +66,9 @@ const statusData = [
 
 const COLORS = ["#22c55e", "#f59e0b", "#ef4444"];
 
-export default function Dashboard() {
+export default function Dashboard({ toggleTheme }: Props) {
   return (
-    <Layout>
+    <Layout toggleTheme={toggleTheme}>
       {/* ✅ Title */}
       <Typography variant="h4" fontWeight="bold" gutterBottom>
         Financial Overview 💰
@@ -76,6 +81,7 @@ export default function Dashboard() {
             <Paper
               elevation={2}
               sx={{
+                p: 2,
                 display: "flex",
                 alignItems: "center",
                 gap: 2,
@@ -116,9 +122,9 @@ export default function Dashboard() {
 
       {/* 📊 Charts */}
       <Grid container spacing={3}>
-        {/* Bar Chart */}
+        {/* 📈 Bar Chart */}
         <Grid item xs={12} md={8}>
-          <Paper>
+          <Paper sx={{ p: 2 }}>
             <Typography fontWeight="bold" gutterBottom>
               Monthly Loan Distribution
             </Typography>
@@ -129,16 +135,20 @@ export default function Dashboard() {
                   <XAxis dataKey="name" />
                   <YAxis />
                   <Tooltip />
-                  <Bar dataKey="amount" fill="#6366f1" radius={[6, 6, 0, 0]} />
+                  <Bar
+                    dataKey="amount"
+                    fill="#6366f1"
+                    radius={[6, 6, 0, 0]}
+                  />
                 </BarChart>
               </ResponsiveContainer>
             </Box>
           </Paper>
         </Grid>
 
-        {/* Pie Chart */}
+        {/* 🥧 Pie Chart */}
         <Grid item xs={12} md={4}>
-          <Paper>
+          <Paper sx={{ p: 2 }}>
             <Typography fontWeight="bold" gutterBottom>
               Loan Status
             </Typography>
@@ -164,7 +174,7 @@ export default function Dashboard() {
       </Grid>
 
       {/* 💡 EMI Insight */}
-      <Paper sx={{ mt: 3 }}>
+      <Paper sx={{ mt: 3, p: 2 }}>
         <Typography fontWeight="bold">
           EMI Insight 💡
         </Typography>
