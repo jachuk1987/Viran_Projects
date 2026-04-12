@@ -36,8 +36,8 @@ export default function AdminPanel() {
                       loan.status === "Approved"
                         ? "green"
                         : loan.status === "Rejected"
-                          ? "red"
-                          : "orange",
+                        ? "red"
+                        : "orange",
                   }}
                 >
                   {loan.status}
