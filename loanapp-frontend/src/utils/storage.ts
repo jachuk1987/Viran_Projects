@@ -17,4 +17,3 @@ export const deleteLoan = (id: number) => {
   const loans = getLoans().filter((loan: any) => loan.id !== id);
   localStorage.setItem("loans", JSON.stringify(loans));
 };
- 
