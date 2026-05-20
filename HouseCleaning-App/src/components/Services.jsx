@@ -70,6 +70,6 @@ const Services = () => {
       </Container>
     </section>
   );
-};
+}; 
 
 export default Services;
