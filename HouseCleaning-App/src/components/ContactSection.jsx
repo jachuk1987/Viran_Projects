@@ -65,6 +65,6 @@ const ContactSection = () => {
             </Container>
         </section>
     );
-};
+}; 
 
 export default ContactSection;
