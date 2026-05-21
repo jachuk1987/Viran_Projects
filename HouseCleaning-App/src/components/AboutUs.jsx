@@ -11,7 +11,7 @@ const AboutUs = () => {
                         <h2 className="fw-bold mb-3">Why Choose Home Care Solutions?</h2>
                         <div className="mx-auto bg-primary mb-4" style={{ height: '3px', width: '80px' }}></div>
                         <p className="text-muted lead">
-                            We are dedicated to providing the best house cleaning services in the city. Our team of professionals is trained to handle all your cleaning needs with precision and care. 
+                            We are dedicated to providing the best house cleaning services in the city. Our team of professionals is trained to handle all your cleaning needs with precision and care.
                         </p>
                     </Col>
                 </Row>
