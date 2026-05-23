@@ -50,6 +50,6 @@ const AboutUs = () => {
             </Container>
         </section>
     );
-}; 
+};
 
 export default AboutUs;
