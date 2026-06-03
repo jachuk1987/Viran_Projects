@@ -5,11 +5,11 @@
 /* Color Variables and Theme Configurations */
 :root {
     /* Dark Theme Variables (Default) */
-    --bg-primary: #0a0e17;
-    --bg-secondary: #121824;
-    --bg-tertiary: #1b2336;
-    --bg-glass: rgba(18, 24, 36, 0.75);
-    --border-color: #26334d;
+    --bg-primary: #0f172a; /* Plain cool slate */
+    --bg-secondary: #1e293b; /* Solid slate-800 */
+    --bg-tertiary: #0f172a; /* Darker slate contrast */
+    --bg-glass: rgba(15, 23, 42, 0.85);
+    --border-color: #334155;
     --text-primary: #f3f4f6;
     --text-secondary: #9ca3af;
     --text-muted: #6b7280;
