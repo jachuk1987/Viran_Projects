@@ -53,7 +53,7 @@ export default function Footer({ switchTab }) {
             <div class="footer-bottom">
                 <div class="container footer-bottom-flex">
                     <p>&copy; 2026 Uwon Enterprises. All rights reserved. Registered Manpower Supplier.</p>
-                    <p></p>
+                    <p>Uwon Enterprises | Designed By Viranapps</p>
                 </div>
             </div>
         </footer>
