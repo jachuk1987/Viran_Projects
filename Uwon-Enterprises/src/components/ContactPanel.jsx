@@ -37,7 +37,7 @@ export default function ContactPanel({ showToast }) {
                             <div class="icon"><i class="fa-solid fa-envelope"></i></div>
                             <div>
                                 <h4>Email Address</h4>
-                                <p>info@uwonenterprises.lk</p>
+                                <p>jachu.k1212@gmail.com</p>
                                 <p>careers@uwonenterprises.lk</p>
                             </div>
                         </div>
