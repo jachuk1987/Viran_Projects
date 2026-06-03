@@ -6,7 +6,7 @@ export default function Footer({ switchTab }) {
             <div class="container footer-grid">
                 <div class="footer-brand">
                     <div class="logo-area">
-                        <img src="/logo.jpg" alt="UWON Enterprises Logo" style={{ height: '54px', objectFit: 'contain', borderRadius: '6px' }} />
+                        <img src="/logo.png" alt="UWON Enterprises Logo" style={{ height: '54px', objectFit: 'contain', borderRadius: '6px' }} />
                     </div>
                     <p class="footer-desc">Premium workforce supply & staffing solutions built on integrity, competence, and reliability. Empowering teams, powering businesses.</p>
                     <div class="social-icons">

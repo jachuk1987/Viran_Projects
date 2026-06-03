@@ -12,7 +12,7 @@ export default function Header({ currentTab, switchTab, theme, toggleTheme }) {
         <header className="main-header">
             <div class="header-container">
                 <a href="#" class="logo-area" onClick={(e) => { e.preventDefault(); handleLinkClick('home-tab'); }}>
-                    <img src="/logo.jpg" alt="UWON Enterprises Logo" style={{ height: '48px', objectFit: 'contain', borderRadius: '6px' }} />
+                    <img src="/logo.png" alt="UWON Enterprises Logo" style={{ height: '48px', objectFit: 'contain', borderRadius: '6px' }} />
                 </a>
                 
                 <nav class={`navbar ${mobileMenuOpen ? 'mobile-active' : ''}`} id="navbar">
