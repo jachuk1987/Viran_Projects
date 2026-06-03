@@ -29,8 +29,8 @@ export default function ContactPanel({ showToast }) {
                             <div class="icon"><i class="fa-solid fa-phone"></i></div>
                             <div>
                                 <h4>Phone Lines</h4>
-                                <p>+94 (11) 234-5678 (Hotline)</p>
-                                <p>+94 (77) 987-6543 (Emergency Placement)</p>
+                                <p>+91 9885058859 (Hotline)</p>
+                                <p>+91 8217083919 (Emergency Placement)</p>
                             </div>
                         </div>
                         <div class="method-card">
