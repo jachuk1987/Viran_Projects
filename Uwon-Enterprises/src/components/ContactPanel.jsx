@@ -38,7 +38,7 @@ export default function ContactPanel({ showToast }) {
                             <div>
                                 <h4>Email Address</h4>
                                 <p>jachu.k1212@gmail.com</p>
-                                <p>gnanashekar</p>
+                                <p>gnanashekar045</p>
                             </div>
                         </div>
                         <div class="method-card">
