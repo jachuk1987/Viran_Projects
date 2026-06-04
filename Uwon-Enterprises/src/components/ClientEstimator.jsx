@@ -41,7 +41,7 @@ export default function ClientEstimator({ addClientRequest, defaultIndustry }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+
         if (!industry) {
             alert("Please select a sector/industry.");
             return;
@@ -84,63 +84,63 @@ export default function ClientEstimator({ addClientRequest, defaultIndustry }) {
                         <h2>Submit a Staffing Inquiry</h2>
                         <p>Describe your staffing needs, and we'll reply with custom proposals within 24 hours.</p>
                     </div>
-                    
+
                     <form id="staffing-request-form" class="interactive-form" onSubmit={handleSubmit}>
                         <div class="form-row">
                             <div class="form-group">
                                 <label htmlFor="client-name">Your Name *</label>
-                                <input 
-                                    type="text" 
-                                    id="client-name" 
+                                <input
+                                    type="text"
+                                    id="client-name"
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
-                                    placeholder="John Doe" 
-                                    required 
+                                    placeholder="John Doe"
+                                    required
                                 />
                             </div>
                             <div class="form-group">
                                 <label htmlFor="client-company">Company Name *</label>
-                                <input 
-                                    type="text" 
-                                    id="client-company" 
+                                <input
+                                    type="text"
+                                    id="client-company"
                                     value={company}
                                     onChange={(e) => setCompany(e.target.value)}
-                                    placeholder="Acme Construction Ltd" 
-                                    required 
+                                    placeholder="Acme Construction Ltd"
+                                    required
                                 />
                             </div>
                         </div>
-                        
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label htmlFor="client-email">Email Address *</label>
-                                <input 
-                                    type="email" 
-                                    id="client-email" 
+                                <input
+                                    type="email"
+                                    id="client-email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    placeholder="john@company.com" 
-                                    required 
+                                    placeholder="john@company.com"
+                                    required
                                 />
                             </div>
                             <div class="form-group">
                                 <label htmlFor="client-phone">Phone Number *</label>
-                                <input 
-                                    type="tel" 
-                                    id="client-phone" 
+                                <input
+                                    type="tel"
+                                    id="client-phone"
                                     value={phone}
                                     onChange={(e) => setPhone(e.target.value)}
-                                    placeholder="+94 (77) 123-4567" 
-                                    required 
+                                    placeholder="+94 (77) 123-4567"
+                                    required
                                 />
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
                             <label htmlFor="client-industry">Workplace Sector / Industry *</label>
-                            <select 
-                                id="client-industry" 
-                                value={industry} 
+                            <select
+                                id="client-industry"
+                                value={industry}
                                 onChange={(e) => setIndustry(e.target.value)}
                                 required
                             >
@@ -157,14 +157,14 @@ export default function ClientEstimator({ addClientRequest, defaultIndustry }) {
                             <div class="form-group">
                                 <label htmlFor="staff-count">Number of Staff Needed *</label>
                                 <div class="slider-container">
-                                    <input 
-                                        type="range" 
-                                        id="staff-count" 
-                                        min="1" 
-                                        max="100" 
+                                    <input
+                                        type="range"
+                                        id="staff-count"
+                                        min="1"
+                                        max="100"
                                         value={staffCount}
                                         onChange={(e) => setStaffCount(parseInt(e.target.value))}
-                                        class="custom-slider" 
+                                        class="custom-slider"
                                     />
                                     <span id="staff-count-badge" class="slider-badge">
                                         {staffCount} {staffCount === 1 ? 'Worker' : 'Workers'}
@@ -174,14 +174,14 @@ export default function ClientEstimator({ addClientRequest, defaultIndustry }) {
                             <div class="form-group">
                                 <label htmlFor="duration-weeks">Project Duration (Weeks) *</label>
                                 <div class="slider-container">
-                                    <input 
-                                        type="range" 
-                                        id="duration-weeks" 
-                                        min="1" 
-                                        max="52" 
-                                        value={duration} 
+                                    <input
+                                        type="range"
+                                        id="duration-weeks"
+                                        min="1"
+                                        max="52"
+                                        value={duration}
                                         onChange={(e) => setDuration(parseInt(e.target.value))}
-                                        class="custom-slider" 
+                                        class="custom-slider"
                                     />
                                     <span id="duration-weeks-badge" class="slider-badge">
                                         {duration} {duration === 1 ? 'Week' : 'Weeks'}
@@ -192,9 +192,9 @@ export default function ClientEstimator({ addClientRequest, defaultIndustry }) {
 
                         <div class="form-group">
                             <label htmlFor="client-requirements">Special Requirements / Certifications</label>
-                            <textarea 
-                                id="client-requirements" 
-                                rows="4" 
+                            <textarea
+                                id="client-requirements"
+                                rows="4"
                                 value={requirements}
                                 onChange={(e) => setRequirements(e.target.value)}
                                 placeholder="E.g., CSCS green cards required, shift starts at 6:00 AM, forklift licenses essential."
@@ -212,7 +212,7 @@ export default function ClientEstimator({ addClientRequest, defaultIndustry }) {
                     <div class="glass-card sticky-panel">
                         <h3><i class="fa-solid fa-calculator"></i> Cost Estimator</h3>
                         <p class="panel-desc">Get an instant budgetary guide for Uwon workforce deployment. Final quotes may vary depending on skill levels and locations.</p>
-                        
+
                         <div class="calculator-details">
                             <div class="calc-row">
                                 <span>Selected Industry:</span>
