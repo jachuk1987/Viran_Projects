@@ -19,7 +19,7 @@ export default function Footer({ switchTab }) {
                         <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="footer-links">
                     <h4>For Clients</h4>
                     <ul>
