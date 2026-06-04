@@ -8,12 +8,12 @@ const INDUSTRY_LABELS = {
     Tech: "IT / Technical Support"
 };
 
-export default function AdminDashboard({ 
-    clientRequests, 
-    candidateApplications, 
-    updateClientStatus, 
-    updateCandidateStatus, 
-    resetDatabase 
+export default function AdminDashboard({
+    clientRequests,
+    candidateApplications,
+    updateClientStatus,
+    updateCandidateStatus,
+    resetDatabase
 }) {
     const [activeSubTab, setActiveSubTab] = useState('clients'); // 'clients' or 'candidates'
 
@@ -49,20 +49,20 @@ export default function AdminDashboard({
 
             {/* Dashboard Tabs Selector */}
             <div class="sub-nav">
-                <button 
-                    class={`sub-nav-btn ${activeSubTab === 'clients' ? 'active' : ''}`} 
+                <button
+                    class={`sub-nav-btn ${activeSubTab === 'clients' ? 'active' : ''}`}
                     onClick={() => setActiveSubTab('clients')}
                 >
                     <i class="fa-solid fa-building-user"></i> Client Staffing Inquiries
                 </button>
-                <button 
-                    class={`sub-nav-btn ${activeSubTab === 'candidates' ? 'active' : ''}`} 
+                <button
+                    class={`sub-nav-btn ${activeSubTab === 'candidates' ? 'active' : ''}`}
                     onClick={() => setActiveSubTab('candidates')}
                 >
                     <i class="fa-solid fa-user-graduate"></i> Candidate Applications
                 </button>
-                <button 
-                    class="btn btn-outline btn-sm reset-dash-btn" 
+                <button
+                    class="btn btn-outline btn-sm reset-dash-btn"
                     onClick={resetDatabase}
                 >
                     <i class="fa-solid fa-arrow-rotate-left"></i> Reset Dummy Data
@@ -105,9 +105,9 @@ export default function AdminDashboard({
                                             </td>
                                             <td>
                                                 <div><strong>{req.staffCount} Workers</strong> for <strong>{req.duration} Weeks</strong></div>
-                                                <div 
-                                                    class="small-text" 
-                                                    style={{ maxWidth: '250px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }} 
+                                                <div
+                                                    class="small-text"
+                                                    style={{ maxWidth: '250px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}
                                                     title={req.requirements || 'None'}
                                                 >
                                                     {req.requirements || 'No special requirements'}
@@ -118,8 +118,8 @@ export default function AdminDashboard({
                                                 <span class={`status-badge ${req.status}`}>{req.status}</span>
                                             </td>
                                             <td>
-                                                <select 
-                                                    class="status-select" 
+                                                <select
+                                                    class="status-select"
                                                     value={req.status}
                                                     onChange={(e) => updateClientStatus(req.id, e.target.value)}
                                                 >
@@ -175,9 +175,9 @@ export default function AdminDashboard({
                                                 <div style={{ maxWidth: '250px', fontSize: '12px', color: 'var(--text-secondary)' }} title={app.skills}>
                                                     <strong>Skills:</strong> {app.skills}
                                                 </div>
-                                                <div 
-                                                    class="small-text" 
-                                                    style={{ maxWidth: '250px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }} 
+                                                <div
+                                                    class="small-text"
+                                                    style={{ maxWidth: '250px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}
                                                     title={app.message || 'None'}
                                                 >
                                                     <strong>Msg:</strong> {app.message || 'None'}
@@ -187,8 +187,8 @@ export default function AdminDashboard({
                                                 <span class={`status-badge ${app.status}`}>{app.status}</span>
                                             </td>
                                             <td>
-                                                <select 
-                                                    class="status-select" 
+                                                <select
+                                                    class="status-select"
                                                     value={app.status}
                                                     onChange={(e) => updateCandidateStatus(app.id, e.target.value)}
                                                 >
