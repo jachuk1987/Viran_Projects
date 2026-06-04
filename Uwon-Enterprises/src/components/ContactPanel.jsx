@@ -23,7 +23,7 @@ export default function ContactPanel({ showToast }) {
                     <span class="subtitle">Get in Touch</span>
                     <h2>Let's Discuss Your Personnel Needs</h2>
                     <p class="section-desc">Our dedicated recruitment managers are available to assist you. Find us at our corporate offices or reach us directly.</p>
-                    
+
                     <div class="contact-methods">
                         <div class="method-card">
                             <div class="icon"><i class="fa-solid fa-phone"></i></div>
@@ -64,48 +64,48 @@ export default function ContactPanel({ showToast }) {
                 <div class="form-wrapper">
                     <h3>Send a Quick Message</h3>
                     <p>Have a general inquiry? Write to us, and we will direct your query to the correct department.</p>
-                    
+
                     <form id="general-contact-form" class="interactive-form" onSubmit={handleSubmit}>
                         <div class="form-group">
                             <label htmlFor="contact-name">Name *</label>
-                            <input 
-                                type="text" 
-                                id="contact-name" 
+                            <input
+                                type="text"
+                                id="contact-name"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
-                                required 
-                                placeholder="Your full name" 
+                                required
+                                placeholder="Your full name"
                             />
                         </div>
                         <div class="form-group">
                             <label htmlFor="contact-email">Email Address *</label>
-                            <input 
-                                type="email" 
-                                id="contact-email" 
+                            <input
+                                type="email"
+                                id="contact-email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                required 
-                                placeholder="your.email@gmail.com" 
+                                required
+                                placeholder="your.email@gmail.com"
                             />
                         </div>
                         <div class="form-group">
                             <label htmlFor="contact-subject">Subject</label>
-                            <input 
-                                type="text" 
-                                id="contact-subject" 
+                            <input
+                                type="text"
+                                id="contact-subject"
                                 value={subject}
                                 onChange={(e) => setSubject(e.target.value)}
-                                placeholder="What are you writing about?" 
+                                placeholder="What are you writing about?"
                             />
                         </div>
                         <div class="form-group">
                             <label htmlFor="contact-msg">Message *</label>
-                            <textarea 
-                                id="contact-msg" 
-                                rows="5" 
+                            <textarea
+                                id="contact-msg"
+                                rows="5"
                                 value={message}
                                 onChange={(e) => setMessage(e.target.value)}
-                                required 
+                                required
                                 placeholder="Type your message details..."
                             ></textarea>
                         </div>
