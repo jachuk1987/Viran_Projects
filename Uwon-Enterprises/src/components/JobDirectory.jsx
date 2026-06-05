@@ -3,57 +3,93 @@ import React, { useState } from 'react';
 const DEFAULT_JOBS = [
     {
         id: "job-1",
-        title: "Concrete Mason & General Laborer",
+        title: "Concrete Mason & Civil Construction Laborer",
         category: "Construction",
         location: "Colombo",
         salary: "$18.50 - $22.00 / Hour",
         type: "Full-Time",
-        description: "Seeking physical workers experienced in cement laying, mixing, steel reinforcing, and heavy loading on commercial construction projects. Safety boots and valid green/site card required. Transport provided from Colombo Central."
+        description: "Join our commercial building construction crews. Primary tasks involve concrete mixing, setting structural rebar forms, assisting masonry teams, leveling wet cement platforms, and executing basic site cleanup. Requirements: Physical stamina, steel-toe safety boots, and a valid CSCS / construction safety card. Transport coordinates provided from Colombo Central."
     },
     {
         id: "job-2",
-        title: "Certified Forklift Operator (Reach/Counterbalance)",
+        title: "Certified Reach Truck & Forklift Operator",
         category: "Logistics",
         location: "Gampaha",
         salary: "$21.00 - $25.00 / Hour",
         type: "Contract",
-        description: "Operate modern electric reach trucks in a temperature-controlled FMCG warehouse. Duties include cargo loading, stacking, inventory management using RF scanners, and safety reporting. Active forklift license required."
+        description: "Operate modern electric reach trucks and counterbalance forklifts in a temperature-controlled FMCG warehouse facility. Primary duties consist of pallet loading/unloading, inventory management utilizing RF scanners, sorting pallets on industrial rack groupings, and completing routine machine checks. Requirements: Active forklift operator license with at least 2 years warehouse experience."
     },
     {
         id: "job-3",
-        title: "Kitchen Porter & Food Prep Assistant",
+        title: "Kitchen Porter & Food Preparation Assistant",
         category: "Hospitality",
         location: "Negombo",
         salary: "$16.00 - $19.00 / Hour",
         type: "Part-Time",
-        description: "Join a high-volume resort kitchen team. Duties include washing dishes, sanitizing stations, peeling vegetables, and unloading weekly grocery shipments. High standard of hygiene and clean background certificate required."
+        description: "Provide support to our hotel's main buffet restaurant. Tasks involve operating commercial washing systems, organizing kitchen utensils, preparing vegetable segments under chef instructions, cleaning workstation surfaces, and unpacking food ingredients shipments. Requirements: Food handler certificate and high standard of personal hygiene."
     },
     {
         id: "job-4",
-        title: "Junior Data Entry & Office Coordinator",
+        title: "Administrative Data Entry Specialist",
         category: "Admin",
         location: "Colombo 03",
         salary: "$19.00 - $23.00 / Hour",
         type: "Temporary",
-        description: "Provide clerical support during annual financial audits. Duties include digitizing physical documents, spreadsheet management, and answering incoming front-office phone calls. Experience with MS Excel is mandatory."
+        description: "Manage large data translation rosters for an upcoming corporate financial audit. Responsibilities: Digitizing invoices, compiling data within MS Excel trackers, reconciling data records, and answering customer helpdesk lines. Requirements: High typing accuracy (45+ WPM) and intermediate spreadsheet skills."
     },
     {
         id: "job-5",
-        title: "IT Support Technician (L1)",
+        title: "IT Infrastructure Support Technician (L1)",
         category: "Tech",
         location: "Colombo 07",
         salary: "$28.00 - $35.00 / Hour",
         type: "Full-Time",
-        description: "Provide hardware, software, and networking support for corporate client offices. Setup and configure workstations, reset user passwords, and diagnose local connection issues. A+ Certification preferred."
+        description: "Deliver hardware, software, and local network support inside corporate offices. Responsibilities include system installations, reset user passwords, troubleshooting print and local connectivity issues, and tracking helpdesk requests in Jira. Requirements: CompTIA A+ Certification or equivalent diploma."
     },
     {
         id: "job-6",
-        title: "Night Duty Hotel Receptionist",
+        title: "Guest Relations Officer & Receptionist",
         category: "Hospitality",
         location: "Kandy",
         salary: "$20.00 - $24.00 / Hour",
         type: "Full-Time",
-        description: "Manage guest check-ins and check-outs during the night shift. Answer customer requests, oversee safety patrols, and verify billing information using Opera PMS software. Excellent English communication skills required."
+        description: "Manage front-desk customer experience for a premium boutique hotel. Duties: Check-in/check-out guest registration, processing payments via Opera PMS, resolving customer queries, and arranging transport schedules. Requirements: Fluent English communication skills and professional grooming."
+    },
+    {
+        id: "job-7",
+        title: "CISRS Advanced Scaffolding Erecter",
+        category: "Construction",
+        location: "Hambantota",
+        salary: "$24.50 - $30.00 / Hour",
+        type: "Full-Time",
+        description: "Direct assembly of structural tube-and-fitting scaffolding towers for industrial maritime ports. Responsibilities include load calculations, safety net installations, routine scaffolding safety checks, and rigging crane loads. Requirements: Advanced CISRS card and working-at-height clearance."
+    },
+    {
+        id: "job-8",
+        title: "Logistics Delivery Fleet Driver (Class 4)",
+        category: "Logistics",
+        location: "Galle",
+        salary: "$22.00 - $26.00 / Hour",
+        type: "Full-Time",
+        description: "Execute distribution routes of industrial components from Gampaha assembly plants to Hambantota ports. Responsibilities: Safe transit of freight containers, logging mileage, checking cargo security straps, and verifying delivery slips. Requirements: Clean Class 4 heavy commercial driving license."
+    },
+    {
+        id: "job-9",
+        title: "Senior HR Generalist & Payroll Administrator",
+        category: "Admin",
+        location: "Colombo 02",
+        salary: "$32.00 - $40.00 / Hour",
+        type: "Full-Time",
+        description: "Oversee internal HR and payroll setups for our agency's deployed staff rosters. Responsibilities include onboarding documents, tracking employee logs, calculating weekly salary structures, and managing insurance claims. Requirements: Bachelor's in Human Resources and 3+ years experience."
+    },
+    {
+        id: "job-10",
+        title: "Full-Stack Software Developer (Spring/React)",
+        category: "Tech",
+        location: "Colombo 03",
+        salary: "$45.00 - $60.00 / Hour",
+        type: "Full-Time",
+        description: "Design and implement web portals for cloud-based logistics databases. Responsibilities: Sourcing REST API endpoints with Java Spring Boot, designing dashboard components in React, and building relational database scripts (PostgreSQL). Requirements: 3+ years experience with Java & Javascript."
     }
 ];
 

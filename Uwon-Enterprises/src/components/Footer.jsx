@@ -51,9 +51,8 @@ export default function Footer({ switchTab }) {
                 </div>
             </div>
             <div class="footer-bottom">
-                <div class="container footer-bottom-flex">
-                    <p>&copy; 2026 Uwon Enterprises. All rights reserved. Registered Manpower Supplier.</p>
-                    <p>Uwon Enterprises | Designed By Viranapps</p>
+                <div class="container footer-bottom-flex" style={{ justifyContent: 'center' }}>
+                    <p>Copyright &copy; 2026 Uwon Enterprises | Designed By Viranapps</p>
                 </div>
             </div>
         </footer>

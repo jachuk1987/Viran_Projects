@@ -467,16 +467,7 @@ button {
 }
 
 .hero-bg-accent {
-    position: absolute;
-    top: -150px;
-    right: -100px;
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    background: radial-gradient(circle, var(--primary-glow) 0%, rgba(0,0,0,0) 70%);
-    filter: blur(50px);
-    z-index: -1;
-    pointer-events: none;
+    display: none;
 }
 
 .hero-container {
@@ -508,9 +499,7 @@ button {
 }
 
 .gradient-text {
-    background: linear-gradient(135deg, var(--primary), var(--accent));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--primary);
 }
 
 .hero-lead {
@@ -533,14 +522,7 @@ button {
 }
 
 .glow-sphere {
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary-glow), rgba(245, 158, 11, 0.1));
-    filter: blur(20px);
-    animation: float 6s ease-in-out infinite;
-    z-index: 1;
+    display: none;
 }
 
 .visual-card {
