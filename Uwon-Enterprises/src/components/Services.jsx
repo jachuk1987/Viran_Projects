@@ -8,7 +8,7 @@ export default function Services({ openStaffingWizard }) {
                 <h2>Staffing Solutions for Diverse Industries</h2>
                 <p class="section-desc text-center-margin">We supply labor across multiple categories, fully customized for construction sites, modern hotels, distribution warehouses, corporate settings, and medical centers.</p>
             </div>
-            
+
             <div class="sectors-grid">
                 {/* Construction */}
                 <div class="sector-card">
