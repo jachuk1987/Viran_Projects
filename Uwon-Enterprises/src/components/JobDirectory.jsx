@@ -96,11 +96,11 @@ const DEFAULT_JOBS = [
 export default function JobDirectory({ addJobApplication }) {
     const [searchQuery, setSearchQuery] = useState('');
     const [categoryFilter, setCategoryFilter] = useState('All');
-    
+
     // Modal states
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedJob, setSelectedJob] = useState(null);
-    
+
     // Form fields states
     const [candName, setCandName] = useState('');
     const [candEmail, setCandEmail] = useState('');
@@ -133,9 +133,9 @@ export default function JobDirectory({ addJobApplication }) {
     const filteredJobs = DEFAULT_JOBS.filter(job => {
         const matchesCategory = categoryFilter === 'All' || job.category === categoryFilter;
         const matchesSearch = job.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                              job.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                              job.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                              job.category.toLowerCase().includes(searchQuery.toLowerCase());
+            job.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            job.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            job.category.toLowerCase().includes(searchQuery.toLowerCase());
         return matchesCategory && matchesSearch;
     });
 
@@ -174,16 +174,16 @@ export default function JobDirectory({ addJobApplication }) {
             <div class="filter-controls">
                 <div class="search-box">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input 
-                        type="text" 
+                    <input
+                        type="text"
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        placeholder="Search job titles, skills, or locations..." 
+                        placeholder="Search job titles, skills, or locations..."
                     />
                 </div>
                 <div class="filter-buttons">
                     {['All', 'Construction', 'Hospitality', 'Logistics', 'Admin'].map(cat => (
-                        <button 
+                        <button
                             key={cat}
                             class={`filter-btn ${categoryFilter === cat ? 'active' : ''}`}
                             onClick={() => setCategoryFilter(cat)}
@@ -239,7 +239,7 @@ export default function JobDirectory({ addJobApplication }) {
                             </div>
                             <button class="modal-close-btn" onClick={closeModal} aria-label="Close modal">&times;</button>
                         </div>
-                        
+
                         <div class="modal-body">
                             <div class="modal-details-grid">
                                 <div>
@@ -263,24 +263,24 @@ export default function JobDirectory({ addJobApplication }) {
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label htmlFor="cand-name">Your Full Name *</label>
-                                        <input 
-                                            type="text" 
-                                            id="cand-name" 
+                                        <input
+                                            type="text"
+                                            id="cand-name"
                                             value={candName}
                                             onChange={(e) => setCandName(e.target.value)}
-                                            required 
-                                            placeholder="E.g., Jane Smith" 
+                                            required
+                                            placeholder="E.g., Jane Smith"
                                         />
                                     </div>
                                     <div class="form-group">
                                         <label htmlFor="cand-email">Email Address *</label>
-                                        <input 
-                                            type="email" 
-                                            id="cand-email" 
+                                        <input
+                                            type="email"
+                                            id="cand-email"
                                             value={candEmail}
                                             onChange={(e) => setCandEmail(e.target.value)}
-                                            required 
-                                            placeholder="E.g., jane.smith@domain.com" 
+                                            required
+                                            placeholder="E.g., jane.smith@domain.com"
                                         />
                                     </div>
                                 </div>
@@ -288,19 +288,19 @@ export default function JobDirectory({ addJobApplication }) {
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label htmlFor="cand-phone">Contact Phone *</label>
-                                        <input 
-                                            type="tel" 
-                                            id="cand-phone" 
+                                        <input
+                                            type="tel"
+                                            id="cand-phone"
                                             value={candPhone}
                                             onChange={(e) => setCandPhone(e.target.value)}
-                                            required 
-                                            placeholder="E.g., +94 71 234 5678" 
+                                            required
+                                            placeholder="E.g., +94 71 234 5678"
                                         />
                                     </div>
                                     <div class="form-group">
                                         <label htmlFor="cand-exp">Relevant Experience (Years) *</label>
-                                        <select 
-                                            id="cand-exp" 
+                                        <select
+                                            id="cand-exp"
                                             value={candExp}
                                             onChange={(e) => setCandExp(e.target.value)}
                                             required
@@ -315,21 +315,21 @@ export default function JobDirectory({ addJobApplication }) {
 
                                 <div class="form-group">
                                     <label htmlFor="cand-skills">List Your Skills / Certifications *</label>
-                                    <input 
-                                        type="text" 
-                                        id="cand-skills" 
+                                    <input
+                                        type="text"
+                                        id="cand-skills"
                                         value={candSkills}
                                         onChange={(e) => setCandSkills(e.target.value)}
-                                        required 
-                                        placeholder="E.g., Safety Card, Welding Level 2, Forklift License" 
+                                        required
+                                        placeholder="E.g., Safety Card, Welding Level 2, Forklift License"
                                     />
                                 </div>
 
                                 <div class="form-group">
                                     <label htmlFor="cand-message">Cover Note / Extra Information</label>
-                                    <textarea 
-                                        id="cand-message" 
-                                        rows="3" 
+                                    <textarea
+                                        id="cand-message"
+                                        rows="3"
                                         value={candMsg}
                                         onChange={(e) => setCandMsg(e.target.value)}
                                         placeholder="Tell us when you can start or if you need transport support..."
