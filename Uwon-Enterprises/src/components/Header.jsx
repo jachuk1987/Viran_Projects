@@ -17,40 +17,40 @@ export default function Header({ currentTab, switchTab, theme, toggleTheme }) {
                     </div>
                     <span class="logo-text">UWON <span class="accent-text">Enterprises</span></span>
                 </a>
-                
+
                 <nav class={`navbar ${mobileMenuOpen ? 'mobile-active' : ''}`} id="navbar">
-                    <button 
-                        class={`nav-link ${currentTab === 'home-tab' ? 'active' : ''}`} 
+                    <button
+                        class={`nav-link ${currentTab === 'home-tab' ? 'active' : ''}`}
                         onClick={() => handleLinkClick('home-tab')}
                     >
                         Home
                     </button>
-                    <button 
-                        class={`nav-link ${currentTab === 'services-tab' ? 'active' : ''}`} 
+                    <button
+                        class={`nav-link ${currentTab === 'services-tab' ? 'active' : ''}`}
                         onClick={() => handleLinkClick('services-tab')}
                     >
                         Services
                     </button>
-                    <button 
-                        class={`nav-link ${currentTab === 'clients-tab' ? 'active' : ''}`} 
+                    <button
+                        class={`nav-link ${currentTab === 'clients-tab' ? 'active' : ''}`}
                         onClick={() => handleLinkClick('clients-tab')}
                     >
                         For Clients
                     </button>
-                    <button 
-                        class={`nav-link ${currentTab === 'candidates-tab' ? 'active' : ''}`} 
+                    <button
+                        class={`nav-link ${currentTab === 'candidates-tab' ? 'active' : ''}`}
                         onClick={() => handleLinkClick('candidates-tab')}
                     >
                         Find Work
                     </button>
-                    <button 
-                        class={`nav-link ${currentTab === 'dashboard-tab' ? 'active' : ''}`} 
+                    <button
+                        class={`nav-link ${currentTab === 'dashboard-tab' ? 'active' : ''}`}
                         onClick={() => handleLinkClick('dashboard-tab')}
                     >
                         Agency Panel
                     </button>
-                    <button 
-                        class={`nav-link ${currentTab === 'contact-tab' ? 'active' : ''}`} 
+                    <button
+                        class={`nav-link ${currentTab === 'contact-tab' ? 'active' : ''}`}
                         onClick={() => handleLinkClick('contact-tab')}
                     >
                         Contact
@@ -58,9 +58,9 @@ export default function Header({ currentTab, switchTab, theme, toggleTheme }) {
                 </nav>
 
                 <div class="header-actions">
-                    <button 
-                        id="theme-toggle-btn" 
-                        class="theme-btn" 
+                    <button
+                        id="theme-toggle-btn"
+                        class="theme-btn"
                         aria-label="Toggle Theme"
                         onClick={toggleTheme}
                     >
@@ -69,9 +69,9 @@ export default function Header({ currentTab, switchTab, theme, toggleTheme }) {
                     <button class="btn btn-primary" onClick={() => switchTab('clients-tab')}>
                         Request Staff
                     </button>
-                    <button 
-                        class="menu-toggle" 
-                        id="menu-toggle" 
+                    <button
+                        class="menu-toggle"
+                        id="menu-toggle"
                         aria-label="Toggle navigation menu"
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     >
