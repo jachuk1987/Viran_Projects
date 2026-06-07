@@ -22,6 +22,46 @@ export default function AdminDashboard({
         .filter(req => req.status === "pending" || req.status === "contacted")
         .reduce((sum, req) => sum + req.estimatedValue, 0);
 
+    // Calculate Roster Deployments based on Fulfilled requests
+    const getDeployedCount = (sector, baseValue) => {
+        return baseValue + clientRequests
+            .filter(req => req.industry === sector && req.status === "fulfilled")
+            .reduce((sum, req) => sum + req.staffCount, 0);
+    };
+
+    const rosterData = {
+        Construction: {
+            label: "Construction",
+            icon: "fa-helmet-safety",
+            capacity: 500,
+            deployed: getDeployedCount("Construction", 340)
+        },
+        Logistics: {
+            label: "Logistics",
+            icon: "fa-truck-ramp-box",
+            capacity: 400,
+            deployed: getDeployedCount("Logistics", 290)
+        },
+        Hospitality: {
+            label: "Hospitality",
+            icon: "fa-bell-concierge",
+            capacity: 300,
+            deployed: getDeployedCount("Hospitality", 180)
+        },
+        Admin: {
+            label: "Admin Support",
+            icon: "fa-keyboard",
+            capacity: 150,
+            deployed: getDeployedCount("Admin", 95)
+        },
+        Tech: {
+            label: "Tech Roster",
+            icon: "fa-network-wired",
+            capacity: 80,
+            deployed: getDeployedCount("Tech", 45)
+        }
+    };
+
     return (
         <div class="container py-5">
             <div class="dashboard-header">
@@ -44,6 +84,60 @@ export default function AdminDashboard({
                         </span>
                         <span class="stat-label">Active Pipeline</span>
                     </div>
+                </div>
+            </div>
+
+            {/* Standby Roster Status Panel */}
+            <div class="glass-card" style={{ marginBottom: '32px', padding: '30px' }}>
+                <h3 style={{ fontSize: '18px', marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                    <i class="fa-solid fa-chart-simple" style={{ color: 'var(--primary)' }}></i>
+                    Standby Workforce & Deployment Levels
+                </h3>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px' }}>
+                    {Object.keys(rosterData).map(sector => {
+                        const { deployed, capacity, label, icon } = rosterData[sector];
+                        const percentage = Math.round((deployed / capacity) * 100);
+                        let statusColor = 'var(--primary)'; // green
+                        let statusText = 'Optimal';
+                        if (percentage >= 75) {
+                            statusColor = 'var(--accent)'; // amber
+                            statusText = 'Low Standby';
+                        }
+                        if (percentage >= 90) {
+                            statusColor = 'var(--danger)'; // red
+                            statusText = 'Critical';
+                        }
+                        return (
+                            <div key={sector} style={{ backgroundColor: 'var(--bg-primary)', border: '1px solid var(--border-color)', borderRadius: 'var(--border-radius)', padding: '20px' }}>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+                                    <span style={{ fontSize: '13px', fontWeight: '700', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                        <i class={`fa-solid ${icon}`} style={{ color: 'var(--text-muted)' }}></i>
+                                        {label}
+                                    </span>
+                                    <span style={{ fontSize: '10px', fontWeight: '800', textTransform: 'uppercase', color: statusColor }}>
+                                        {statusText}
+                                    </span>
+                                </div>
+                                <div style={{ fontSize: '24px', fontWeight: '800', marginBottom: '6px' }}>
+                                    {deployed} <span style={{ fontSize: '14px', color: 'var(--text-secondary)', fontWeight: '500' }}>/ {capacity}</span>
+                                </div>
+                                <div class="mini-progress-bar" style={{ height: '6px', marginBottom: '6px' }}>
+                                    <div 
+                                        className="progress-fill" 
+                                        style={{ 
+                                            width: `${percentage}%`, 
+                                            backgroundColor: statusColor, 
+                                            background: 'none' 
+                                        }}
+                                    ></div>
+                                </div>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: 'var(--text-secondary)' }}>
+                                    <span>Deployed Level:</span>
+                                    <span style={{ fontWeight: '600' }}>{percentage}%</span>
+                                </div>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
 
