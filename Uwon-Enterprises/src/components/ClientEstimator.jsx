@@ -75,6 +75,261 @@ export default function ClientEstimator({ addClientRequest, defaultIndustry }) {
         setRequirements('');
     };
 
+    const handleDownloadProposal = () => {
+        if (!industry) return;
+
+        const printWindow = window.open('', '_blank', 'width=800,height=900');
+        if (!printWindow) {
+            alert("Please allow popups to download your proposal.");
+            return;
+        }
+
+        const dateStr = new Date().toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+        const quoteRef = `UWON-${Date.now().toString().slice(-6)}`;
+
+        const htmlContent = `
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>UWON Enterprises - Staffing Proposal ${quoteRef}</title>
+                <style>
+                    body {
+                        font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+                        color: #1e293b;
+                        line-height: 1.5;
+                        padding: 40px;
+                        background: #fff;
+                    }
+                    .header {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        border-bottom: 2px solid #10b981;
+                        padding-bottom: 20px;
+                        margin-bottom: 30px;
+                    }
+                    .logo-title {
+                        font-size: 24px;
+                        font-weight: 800;
+                        color: #0f172a;
+                        margin: 0;
+                    }
+                    .logo-accent {
+                        color: #f59e0b;
+                    }
+                    .doc-title {
+                        font-size: 28px;
+                        font-weight: 700;
+                        margin: 0 0 10px 0;
+                        color: #059669;
+                        text-align: right;
+                    }
+                    .meta-details {
+                        text-align: right;
+                        font-size: 14px;
+                        color: #64748b;
+                    }
+                    .client-box {
+                        background: #f8fafc;
+                        border: 1px solid #e2e8f0;
+                        border-radius: 8px;
+                        padding: 20px;
+                        margin-bottom: 30px;
+                    }
+                    .client-box h3 {
+                        margin: 0 0 12px 0;
+                        font-size: 16px;
+                        color: #334155;
+                        text-transform: uppercase;
+                        letter-spacing: 0.5px;
+                    }
+                    .details-grid {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 12px;
+                        font-size: 14px;
+                    }
+                    .detail-row span {
+                        font-weight: 600;
+                        color: #475569;
+                    }
+                    .specs-table {
+                        width: 100%;
+                        border-collapse: collapse;
+                        margin-bottom: 30px;
+                    }
+                    .specs-table th {
+                        background: #f1f5f9;
+                        border-bottom: 2px solid #cbd5e1;
+                        padding: 12px;
+                        text-align: left;
+                        font-size: 14px;
+                        font-weight: 700;
+                        color: #334155;
+                    }
+                    .specs-table td {
+                        border-bottom: 1px solid #e2e8f0;
+                        padding: 12px;
+                        font-size: 14px;
+                    }
+                    .total-section {
+                        display: flex;
+                        justify-content: flex-end;
+                        margin-bottom: 40px;
+                    }
+                    .total-box {
+                        background: #f0fdf4;
+                        border: 1px solid #bbf7d0;
+                        border-radius: 8px;
+                        padding: 20px;
+                        min-width: 300px;
+                    }
+                    .total-box div {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 8px;
+                        font-size: 14px;
+                        color: #475569;
+                    }
+                    .total-box .grand-total {
+                        font-size: 20px;
+                        font-weight: 700;
+                        color: #059669;
+                        border-top: 1px solid #bbf7d0;
+                        padding-top: 8px;
+                        margin-top: 8px;
+                        margin-bottom: 0;
+                    }
+                    .terms-box {
+                        font-size: 12px;
+                        color: #64748b;
+                        border-top: 1px solid #e2e8f0;
+                        padding-top: 20px;
+                    }
+                    .terms-box h4 {
+                        margin: 0 0 8px 0;
+                        color: #475569;
+                    }
+                    .terms-box ul {
+                        padding-left: 18px;
+                        margin: 0;
+                    }
+                    .terms-box li {
+                        margin-bottom: 4px;
+                    }
+                    .footer-note {
+                        text-align: center;
+                        font-size: 11px;
+                        color: #94a3b8;
+                        margin-top: 40px;
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="header">
+                    <div>
+                        <h1 class="logo-title">UWON <span class="logo-accent">Enterprises</span></h1>
+                        <div style="font-size: 13px; color: #64748b; margin-top: 4px;">Premium Manpower Supplying & Recruitment Agency</div>
+                    </div>
+                    <div>
+                        <div class="doc-title">Staffing Proposal</div>
+                        <div class="meta-details">
+                            <div><strong>Proposal Ref:</strong> ${quoteRef}</div>
+                            <div><strong>Date generated:</strong> ${dateStr}</div>
+                            <div><strong>Validity:</strong> 30 Days</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="client-box">
+                    <h3>Client Profile Details</h3>
+                    <div class="details-grid">
+                        <div class="detail-row">
+                            <span>Client Name: </span>${name || "N/A"}
+                        </div>
+                        <div class="detail-row">
+                            <span>Company Name: </span>${company || "N/A"}
+                        </div>
+                        <div class="detail-row">
+                            <span>Email Address: </span>${email || "N/A"}
+                        </div>
+                        <div class="detail-row">
+                            <span>Phone Number: </span>${phone || "N/A"}
+                        </div>
+                    </div>
+                </div>
+
+                <table class="specs-table">
+                    <thead>
+                        <tr>
+                            <th>Industry Sector</th>
+                            <th>Workers Needed</th>
+                            <th>Duration</th>
+                            <th>Est. Hours / Worker</th>
+                            <th>Hourly Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>${INDUSTRY_LABELS[industry]}</td>
+                            <td>${staffCount} personnel</td>
+                            <td>${duration} Weeks</td>
+                            <td>${duration * 40} Hours</td>
+                            <td>$${hourlyRate.toFixed(2)} / Hr</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="total-section">
+                    <div class="total-box">
+                        <div>
+                            <span>Total Estimated Hours:</span>
+                            <span>${totalJobHours.toLocaleString()} Hrs</span>
+                        </div>
+                        <div>
+                            <span>Workforce Compliance Fee:</span>
+                            <span>Included</span>
+                        </div>
+                        <div>
+                            <span>Liability Insurance:</span>
+                            <span>Included</span>
+                        </div>
+                        <div class="grand-total">
+                            <span>Estimated Total:</span>
+                            <span>$${estimatedInvoice.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="terms-box">
+                    <h4>Terms & Project Criteria:</h4>
+                    <ul>
+                        <li>The values detailed above represent budgetary guides. Standard agreements are subject to contract adjustments.</li>
+                        <li>Includes full compliance coverage: social security, ETF/EPF, local workers compensation, and health checks.</li>
+                        <li><strong>48-Hour Replacement Policy:</strong> If any worker supplied by UWON does not meet your site requirements, replacement will be supplied within 48 hours without administrative overhead.</li>
+                        <li>Workforce complies with national occupational health & safety regulations and is supplied with standard safety PPE.</li>
+                    </ul>
+                </div>
+
+                <div class="footer-note">
+                    Uwon Enterprises Manpower Supplier &bull; 45, Galle Road, Colombo 03, Sri Lanka &bull; info@uwonenterprises.lk
+                </div>
+
+                <script>
+                    window.onload = function() {
+                        window.print();
+                        setTimeout(function() { window.close(); }, 500);
+                    };
+                </script>
+            </body>
+            </html>
+        `;
+
+        printWindow.document.open();
+        printWindow.document.write(htmlContent);
+        printWindow.document.close();
+    };
+
     return (
         <div class="container py-5">
             <div class="layout-split">
@@ -246,6 +501,15 @@ export default function ClientEstimator({ addClientRequest, defaultIndustry }) {
                                 </span>
                             </div>
                             <p class="invoice-terms">* Includes social security, workforce insurance, safety gear, and payroll handling fee.</p>
+                            <button 
+                                type="button" 
+                                class="btn btn-outline btn-block" 
+                                onClick={handleDownloadProposal}
+                                style={{ marginTop: '16px' }}
+                                disabled={!industry}
+                            >
+                                <i class="fa-solid fa-file-pdf"></i> Download PDF Proposal
+                            </button>
                         </div>
 
                         <div class="calculator-perks">
