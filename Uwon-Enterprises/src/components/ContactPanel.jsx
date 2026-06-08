@@ -5,7 +5,7 @@ export default function ContactPanel({ showToast }) {
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
- 
+
     const handleSubmit = (e) => {
         e.preventDefault();
         showToast("Thank you for contacting UWON. We will reply to your message via email.", "success");
@@ -14,7 +14,7 @@ export default function ContactPanel({ showToast }) {
         setSubject('');
         setMessage('');
     };
- 
+
     return (
         <div class="container py-5">
             <div class="layout-split">
