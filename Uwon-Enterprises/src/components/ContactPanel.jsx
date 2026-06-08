@@ -46,7 +46,7 @@ export default function ContactPanel({ showToast }) {
                             <div>
                                 <h4>Headquarters</h4>
                                 <p>20-316/1,2nd floor Hassan Khan Street, Mittoor, Chittoor</p>
-                                <p>Mon - Fri: 8:00 AM - 5:30 PM</p>
+                                <p>Mon - Fri: 8:00 AM - 06:00 PM</p>
                             </div>
                         </div>
                     </div>
