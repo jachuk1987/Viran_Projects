@@ -122,12 +122,12 @@ export default function AdminDashboard({
                                     {deployed} <span style={{ fontSize: '14px', color: 'var(--text-secondary)', fontWeight: '500' }}>/ {capacity}</span>
                                 </div>
                                 <div class="mini-progress-bar" style={{ height: '6px', marginBottom: '6px' }}>
-                                    <div 
-                                        className="progress-fill" 
-                                        style={{ 
-                                            width: `${percentage}%`, 
-                                            backgroundColor: statusColor, 
-                                            background: 'none' 
+                                    <div
+                                        className="progress-fill"
+                                        style={{
+                                            width: `${percentage}%`,
+                                            backgroundColor: statusColor,
+                                            background: 'none'
                                         }}
                                     ></div>
                                 </div>
