@@ -53,10 +53,13 @@ export default function ContactPanel({ showToast }) {
 
                     {/* Mini map mockup */}
                     <div class="map-mockup">
-                        <div class="map-overlay">
+                        <a href="https://www.google.com/maps?q=Chittoor,+Andhra+Pradesh"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="map-overlay">
                             <i class="fa-solid fa-location-pin map-pin-icon"></i>
                             <span>Chittoor Headquarters Office</span>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
