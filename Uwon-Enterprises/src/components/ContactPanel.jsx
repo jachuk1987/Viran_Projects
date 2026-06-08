@@ -45,7 +45,7 @@ export default function ContactPanel({ showToast }) {
                             <div class="icon"><i class="fa-solid fa-map-location-dot"></i></div>
                             <div>
                                 <h4>Headquarters</h4>
-                                <p>45, Galle Road, Colombo 03, Sri Lanka</p>
+                                <p>20-316/1,2nd floor Hassan Khan Street, Mittoor, Chittoor</p>
                                 <p>Mon - Fri: 8:00 AM - 5:30 PM</p>
                             </div>
                         </div>
