@@ -55,7 +55,7 @@ export default function ContactPanel({ showToast }) {
                     <div class="map-mockup">
                         <div class="map-overlay">
                             <i class="fa-solid fa-location-pin map-pin-icon"></i>
-                            <span>Colombo Headquarters Office</span>
+                            <span>Chittoor Headquarters Office</span>
                         </div>
                     </div>
                 </div>
