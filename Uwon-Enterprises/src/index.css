@@ -1884,3 +1884,13 @@ button {
         grid-template-columns: 1fr;
     }
 }
+
+.map-overlay {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.map-overlay:hover {
+    opacity: 0.9;
+}
