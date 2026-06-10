@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
- 
+
 const INDUSTRY_HOURLY_RATES = {
     Construction: 28,
     Hospitality: 22,
@@ -501,9 +501,9 @@ export default function ClientEstimator({ addClientRequest, defaultIndustry }) {
                                 </span>
                             </div>
                             <p class="invoice-terms">* Includes social security, workforce insurance, safety gear, and payroll handling fee.</p>
-                            <button 
-                                type="button" 
-                                class="btn btn-outline btn-block" 
+                            <button
+                                type="button"
+                                class="btn btn-outline btn-block"
                                 onClick={handleDownloadProposal}
                                 style={{ marginTop: '16px' }}
                                 disabled={!industry}
