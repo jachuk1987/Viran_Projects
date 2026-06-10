@@ -30,7 +30,7 @@ export default function ContactPanel({ showToast }) {
                             <div>
                                 <h4>Phone Lines</h4>
                                 <p>+91 9885058859 (Hotline)</p>
-                                <p>+91 8217083919 (Emergency Placement)</p>
+                                <p>+91 9392064446 (Emergency Placement)</p>
                             </div>
                         </div>
                         <div class="method-card">
