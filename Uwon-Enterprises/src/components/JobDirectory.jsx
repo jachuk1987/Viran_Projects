@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
- 
+
 const DEFAULT_JOBS = [
     {
         id: "job-1",
@@ -381,13 +381,13 @@ export default function JobDirectory({ addJobApplication }) {
 
             {/* Career Sub-navigation */}
             <div class="sub-nav" style={{ marginBottom: '32px' }}>
-                <button 
+                <button
                     class={`sub-nav-btn ${activeSubTab === 'jobs' ? 'active' : ''}`}
                     onClick={() => setActiveSubTab('jobs')}
                 >
                     <i class="fa-solid fa-briefcase"></i> Browse Job Openings
                 </button>
-                <button 
+                <button
                     class={`sub-nav-btn ${activeSubTab === 'cv-builder' ? 'active' : ''}`}
                     onClick={() => setActiveSubTab('cv-builder')}
                 >
@@ -401,16 +401,16 @@ export default function JobDirectory({ addJobApplication }) {
                     <div class="filter-controls">
                         <div class="search-box">
                             <i class="fa-solid fa-magnifying-glass"></i>
-                            <input 
-                                type="text" 
+                            <input
+                                type="text"
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
-                                placeholder="Search job titles, skills, or locations..." 
+                                placeholder="Search job titles, skills, or locations..."
                             />
                         </div>
                         <div class="filter-buttons">
                             {['All', 'Construction', 'Hospitality', 'Logistics', 'Admin'].map(cat => (
-                                <button 
+                                <button
                                     key={cat}
                                     class={`filter-btn ${categoryFilter === cat ? 'active' : ''}`}
                                     onClick={() => setCategoryFilter(cat)}
@@ -462,7 +462,7 @@ export default function JobDirectory({ addJobApplication }) {
                     <div class="form-wrapper">
                         <h3>Build Your Professional CV</h3>
                         <p style={{ color: 'var(--text-secondary)', marginBottom: '24px', fontSize: '14px' }}>Fill in your credentials to instantly preview and download a formatted resume.</p>
-                        
+
                         <form class="interactive-form" onSubmit={(e) => e.preventDefault()}>
                             {/* Personal Info */}
                             <div class="form-row">
@@ -551,7 +551,7 @@ export default function JobDirectory({ addJobApplication }) {
                     <div class="calculator-panel">
                         <div class="glass-card sticky-panel" style={{ padding: '30px' }}>
                             <h3 style={{ fontSize: '18px', marginBottom: '20px' }}><i class="fa-solid fa-eye" style={{ color: 'var(--primary)' }}></i> Live Preview</h3>
-                            
+
                             <div style={{ backgroundColor: '#ffffff', color: '#1e293b', padding: '24px', borderRadius: 'var(--border-radius)', boxShadow: 'var(--shadow-md)', minHeight: '450px', fontSize: '13px', border: '1px solid var(--border-color)' }}>
                                 <div style={{ borderBottom: '2px solid var(--primary)', paddingBottom: '12px', marginBottom: '16px' }}>
                                     <h2 style={{ color: '#0f172a', margin: 0, fontSize: '20px' }}>{cvName || "YOUR NAME"}</h2>
