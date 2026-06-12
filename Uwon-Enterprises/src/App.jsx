@@ -262,6 +262,17 @@ export default function App() {
             </main>
 
             <Footer switchTab={switchTab} />
+
+            {/* Floating WhatsApp Contact Button */}
+            <a 
+                href="https://wa.me/919885058859" 
+                className="whatsapp-float" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Chat on WhatsApp"
+            >
+                <i className="fa-brands fa-whatsapp"></i>
+            </a>
         </div>
     );
 }

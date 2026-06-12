@@ -94,6 +94,7 @@ const DEFAULT_JOBS = [
 ];
 
 export default function JobDirectory({ addJobApplication }) {
+    const [activeSubTab, setActiveSubTab] = useState('jobs'); // 'jobs' or 'cv-builder'
     const [searchQuery, setSearchQuery] = useState('');
     const [categoryFilter, setCategoryFilter] = useState('All');
 
@@ -101,13 +102,27 @@ export default function JobDirectory({ addJobApplication }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedJob, setSelectedJob] = useState(null);
 
-    // Form fields states
+    // Modal Form fields states
     const [candName, setCandName] = useState('');
     const [candEmail, setCandEmail] = useState('');
     const [candPhone, setCandPhone] = useState('');
     const [candExp, setCandExp] = useState('Less than 1 year');
     const [candSkills, setCandSkills] = useState('');
     const [candMsg, setCandMsg] = useState('');
+
+    // CV Builder Form fields states
+    const [cvName, setCvName] = useState('');
+    const [cvEmail, setCvEmail] = useState('');
+    const [cvPhone, setCvPhone] = useState('');
+    const [cvSector, setCvSector] = useState('Construction');
+    const [cvDegree, setCvDegree] = useState('');
+    const [cvSchool, setCvSchool] = useState('');
+    const [cvEduYear, setCvEduYear] = useState('');
+    const [cvTitle, setCvTitle] = useState('');
+    const [cvCompany, setCvCompany] = useState('');
+    const [cvExpYears, setCvExpYears] = useState('');
+    const [cvExpDesc, setCvExpDesc] = useState('');
+    const [cvSkills, setCvSkills] = useState('');
 
     // Open/Close modal functions
     const openModal = (job) => {
@@ -162,6 +177,200 @@ export default function JobDirectory({ addJobApplication }) {
         closeModal();
     };
 
+    const handlePrintCV = () => {
+        if (!cvName || !cvTitle) return;
+
+        const printWindow = window.open('', '_blank', 'width=800,height=900');
+        if (!printWindow) {
+            alert("Please allow popups to download your CV.");
+            return;
+        }
+
+        const dateStr = new Date().toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+
+        const htmlContent = `
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>Curriculum Vitae - ${cvName}</title>
+                <style>
+                    body {
+                        font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+                        color: #1e293b;
+                        line-height: 1.6;
+                        padding: 50px;
+                        background: #fff;
+                    }
+                    .header {
+                        border-bottom: 3px solid #10b981;
+                        padding-bottom: 15px;
+                        margin-bottom: 25px;
+                    }
+                    .name {
+                        font-size: 32px;
+                        font-weight: 800;
+                        color: #0f172a;
+                        margin: 0;
+                        line-height: 1.1;
+                    }
+                    .profession {
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: #059669;
+                        margin-top: 5px;
+                    }
+                    .contact-grid {
+                        display: flex;
+                        gap: 20px;
+                        font-size: 13px;
+                        color: #64748b;
+                        margin-top: 10px;
+                        flex-wrap: wrap;
+                    }
+                    .section-title {
+                        font-size: 14px;
+                        font-weight: 800;
+                        text-transform: uppercase;
+                        letter-spacing: 0.5px;
+                        color: #334155;
+                        border-bottom: 2px solid #e2e8f0;
+                        padding-bottom: 5px;
+                        margin-top: 25px;
+                        margin-bottom: 15px;
+                    }
+                    .exp-block, .edu-block {
+                        margin-bottom: 15px;
+                    }
+                    .block-header {
+                        display: flex;
+                        justify-content: space-between;
+                        font-weight: 700;
+                        font-size: 15px;
+                        color: #334155;
+                    }
+                    .block-subhead {
+                        font-style: italic;
+                        color: #475569;
+                        font-size: 14px;
+                        margin-bottom: 5px;
+                    }
+                    .block-desc {
+                        font-size: 14px;
+                        color: #475569;
+                        margin: 0;
+                    }
+                    .skills-list {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 8px;
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+                    }
+                    .skill-badge {
+                        background: #f1f5f9;
+                        color: #475569;
+                        padding: 6px 12px;
+                        border-radius: 4px;
+                        font-size: 13px;
+                        font-weight: 600;
+                    }
+                    .footer-note {
+                        text-align: center;
+                        font-size: 11px;
+                        color: #94a3b8;
+                        margin-top: 50px;
+                        border-top: 1px solid #e2e8f0;
+                        padding-top: 15px;
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="header">
+                    <h1 class="name">${cvName}</h1>
+                    <div class="profession">${cvTitle}</div>
+                    <div class="contact-grid">
+                        <div><strong>Email:</strong> ${cvEmail || "N/A"}</div>
+                        <div><strong>Phone:</strong> ${cvPhone || "N/A"}</div>
+                    </div>
+                </div>
+
+                <div class="section-title">Work Experience</div>
+                <div class="exp-block">
+                    <div class="block-header">
+                        <span>${cvTitle}</span>
+                        <span style="font-weight:500; color:#64748b;">${cvExpYears || "N/A"}</span>
+                    </div>
+                    <div class="block-subhead">${cvCompany || "N/A"}</div>
+                    <p class="block-desc">${cvExpDesc || "No descriptions added."}</p>
+                </div>
+
+                <div class="section-title">Education & Qualifications</div>
+                <div class="edu-block">
+                    <div class="block-header">
+                        <span>${cvDegree || "N/A"}</span>
+                        <span style="font-weight:500; color:#64748b;">${cvEduYear || "N/A"}</span>
+                    </div>
+                    <div class="block-subhead">${cvSchool || "N/A"}</div>
+                </div>
+
+                <div class="section-title">Skills & Certifications</div>
+                <ul class="skills-list">
+                    ${cvSkills ? cvSkills.split(',').map(skill => `<li class="skill-badge">${skill.trim()}</li>`).join('') : '<li class="skill-badge">N/A</li>'}
+                </ul>
+
+                <div class="footer-note">
+                    Resume compiled via Uwon Enterprises Candidate Portal &bull; Generated: ${dateStr}
+                </div>
+
+                <script>
+                    window.onload = function() {
+                        window.print();
+                        setTimeout(function() { window.close(); }, 500);
+                    };
+                </script>
+            </body>
+            </html>
+        `;
+
+        printWindow.document.open();
+        printWindow.document.write(htmlContent);
+        printWindow.document.close();
+    };
+
+    const handleSubmitCVToDatabase = () => {
+        if (!cvName || !cvTitle) return;
+
+        const newApp = {
+            id: `app-${Date.now()}`,
+            jobId: "cv-builder-match",
+            jobName: `Roster Match - ${cvTitle}`,
+            name: cvName,
+            email: cvEmail,
+            phone: cvPhone,
+            experience: cvExpYears || "1-3 Years",
+            skills: cvSkills,
+            message: `Resume submitted via online CV Builder. Education: ${cvDegree} at ${cvSchool}. Previous Experience: ${cvExpDesc}`,
+            status: "pending",
+            date: new Date().toISOString().split('T')[0]
+        };
+
+        addJobApplication(newApp);
+
+        // Reset fields
+        setCvName('');
+        setCvEmail('');
+        setCvPhone('');
+        setCvDegree('');
+        setCvSchool('');
+        setCvEduYear('');
+        setCvTitle('');
+        setCvCompany('');
+        setCvExpYears('');
+        setCvExpDesc('');
+        setCvSkills('');
+    };
+
     return (
         <div class="container py-5">
             <div class="section-header text-center">
@@ -170,62 +379,239 @@ export default function JobDirectory({ addJobApplication }) {
                 <p class="section-desc text-center-margin">We supply leading companies with top-tier personnel. Apply to our database to get matched with active jobs immediately.</p>
             </div>
 
-            {/* Job Search & Filter */}
-            <div class="filter-controls">
-                <div class="search-box">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input
-                        type="text"
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                        placeholder="Search job titles, skills, or locations..."
-                    />
-                </div>
-                <div class="filter-buttons">
-                    {['All', 'Construction', 'Hospitality', 'Logistics', 'Admin'].map(cat => (
-                        <button
-                            key={cat}
-                            class={`filter-btn ${categoryFilter === cat ? 'active' : ''}`}
-                            onClick={() => setCategoryFilter(cat)}
-                        >
-                            {cat === 'All' ? 'All Jobs' : cat}
-                        </button>
-                    ))}
-                </div>
+            {/* Career Sub-navigation */}
+            <div class="sub-nav" style={{ marginBottom: '32px' }}>
+                <button 
+                    class={`sub-nav-btn ${activeSubTab === 'jobs' ? 'active' : ''}`}
+                    onClick={() => setActiveSubTab('jobs')}
+                >
+                    <i class="fa-solid fa-briefcase"></i> Browse Job Openings
+                </button>
+                <button 
+                    class={`sub-nav-btn ${activeSubTab === 'cv-builder' ? 'active' : ''}`}
+                    onClick={() => setActiveSubTab('cv-builder')}
+                >
+                    <i class="fa-solid fa-file-invoice"></i> Professional CV Builder
+                </button>
             </div>
 
-            {/* Job Catalog Grid */}
-            <div class="jobs-grid">
-                {filteredJobs.length === 0 ? (
-                    <div class="empty-results-box" style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '40px', border: '1px dashed var(--border-color)', borderRadius: 'var(--border-radius-lg)' }}>
-                        <i class="fa-solid fa-briefcase" style={{ fontSize: '40px', color: 'var(--text-muted)', marginBottom: '12px', display: 'block' }}></i>
-                        <p style={{ color: 'var(--text-secondary)' }}>No job positions found matching your selection.</p>
+            {activeSubTab === 'jobs' && (
+                <>
+                    {/* Job Search & Filter */}
+                    <div class="filter-controls">
+                        <div class="search-box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input 
+                                type="text" 
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
+                                placeholder="Search job titles, skills, or locations..." 
+                            />
+                        </div>
+                        <div class="filter-buttons">
+                            {['All', 'Construction', 'Hospitality', 'Logistics', 'Admin'].map(cat => (
+                                <button 
+                                    key={cat}
+                                    class={`filter-btn ${categoryFilter === cat ? 'active' : ''}`}
+                                    onClick={() => setCategoryFilter(cat)}
+                                >
+                                    {cat === 'All' ? 'All Jobs' : cat}
+                                </button>
+                            ))}
+                        </div>
                     </div>
-                ) : (
-                    filteredJobs.map(job => (
-                        <div class="job-card" key={job.id}>
-                            <div class="job-card-header">
-                                <span class="job-badge">{job.type}</span>
-                                <span class="job-category">{job.category}</span>
+
+                    {/* Job Catalog Grid */}
+                    <div class="jobs-grid">
+                        {filteredJobs.length === 0 ? (
+                            <div class="empty-results-box" style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '40px', border: '1px dashed var(--border-color)', borderRadius: 'var(--border-radius-lg)' }}>
+                                <i class="fa-solid fa-briefcase" style={{ fontSize: '40px', color: 'var(--text-muted)', marginBottom: '12px', display: 'block' }}></i>
+                                <p style={{ color: 'var(--text-secondary)' }}>No job positions found matching your selection.</p>
                             </div>
-                            <h3>{job.title}</h3>
-                            <p>{job.description.substring(0, 110)}...</p>
-                            <div class="job-meta">
-                                <div class="job-meta-item">
-                                    <i class="fa-solid fa-map-pin"></i>
-                                    <span>{job.location}</span>
+                        ) : (
+                            filteredJobs.map(job => (
+                                <div class="job-card" key={job.id}>
+                                    <div class="job-card-header">
+                                        <span class="job-badge">{job.type}</span>
+                                        <span class="job-category">{job.category}</span>
+                                    </div>
+                                    <h3>{job.title}</h3>
+                                    <p>{job.description.substring(0, 110)}...</p>
+                                    <div class="job-meta">
+                                        <div class="job-meta-item">
+                                            <i class="fa-solid fa-map-pin"></i>
+                                            <span>{job.location}</span>
+                                        </div>
+                                        <span class="job-salary">{job.salary.split(' ')[0]}/hr</span>
+                                    </div>
+                                    <div class="job-card-actions">
+                                        <button class="btn btn-outline btn-block" onClick={() => openModal(job)}>
+                                            Apply For Position
+                                        </button>
+                                    </div>
                                 </div>
-                                <span class="job-salary">{job.salary.split(' ')[0]}/hr</span>
+                            ))
+                        )}
+                    </div>
+                </>
+            )}
+
+            {activeSubTab === 'cv-builder' && (
+                <div class="layout-split">
+                    {/* CV Builder Form */}
+                    <div class="form-wrapper">
+                        <h3>Build Your Professional CV</h3>
+                        <p style={{ color: 'var(--text-secondary)', marginBottom: '24px', fontSize: '14px' }}>Fill in your credentials to instantly preview and download a formatted resume.</p>
+                        
+                        <form class="interactive-form" onSubmit={(e) => e.preventDefault()}>
+                            {/* Personal Info */}
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Full Name *</label>
+                                    <input type="text" value={cvName} onChange={(e) => setCvName(e.target.value)} placeholder="Jane Doe" required />
+                                </div>
+                                <div class="form-group">
+                                    <label>Profession / Target Role *</label>
+                                    <input type="text" value={cvTitle} onChange={(e) => setCvTitle(e.target.value)} placeholder="Forklift Operator / Web Developer" required />
+                                </div>
                             </div>
-                            <div class="job-card-actions">
-                                <button class="btn btn-outline btn-block" onClick={() => openModal(job)}>
-                                    Apply For Position
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Email Address *</label>
+                                    <input type="email" value={cvEmail} onChange={(e) => setCvEmail(e.target.value)} placeholder="jane@example.com" required />
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone Number *</label>
+                                    <input type="tel" value={cvPhone} onChange={(e) => setCvPhone(e.target.value)} placeholder="+91 9885058859" required />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Workplace Sector *</label>
+                                <select value={cvSector} onChange={(e) => setCvSector(e.target.value)} required>
+                                    <option value="Construction">Construction</option>
+                                    <option value="Hospitality">Hospitality</option>
+                                    <option value="Logistics">Logistics</option>
+                                    <option value="Admin">Admin Support</option>
+                                    <option value="Tech">IT & Technical</option>
+                                </select>
+                            </div>
+
+                            <hr class="calc-divider" />
+                            <h4 style={{ fontSize: '16px', color: 'var(--text-primary)' }}>Education & Qualifications</h4>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Degree / Certificate</label>
+                                    <input type="text" value={cvDegree} onChange={(e) => setCvDegree(e.target.value)} placeholder="High School Diploma / NVQ Level 4" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Institution / School</label>
+                                    <input type="text" value={cvSchool} onChange={(e) => setCvSchool(e.target.value)} placeholder="Colombo Technical College" />
+                                </div>
+                            </div>
+                            <div class="form-group" style={{ maxWidth: '150px' }}>
+                                <label>Year Completed</label>
+                                <input type="text" value={cvEduYear} onChange={(e) => setCvEduYear(e.target.value)} placeholder="2022" />
+                            </div>
+
+                            <hr class="calc-divider" />
+                            <h4 style={{ fontSize: '16px', color: 'var(--text-primary)' }}>Latest Work Experience</h4>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Previous Company</label>
+                                    <input type="text" value={cvCompany} onChange={(e) => setCvCompany(e.target.value)} placeholder="Apex Logistics Ltd" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Years of Service</label>
+                                    <input type="text" value={cvExpYears} onChange={(e) => setCvExpYears(e.target.value)} placeholder="3 Years (2023 - Present)" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Description of Key Duties</label>
+                                <textarea rows="3" value={cvExpDesc} onChange={(e) => setCvExpDesc(e.target.value)} placeholder="Responsible for operating forklifts, managing storage catalog scans, and leading shift handovers."></textarea>
+                            </div>
+
+                            <hr class="calc-divider" />
+                            <div class="form-group">
+                                <label>Skills & Certifications (Comma separated) *</label>
+                                <input type="text" value={cvSkills} onChange={(e) => setCvSkills(e.target.value)} placeholder="Forklift License, Safety Card, First Aid" required />
+                            </div>
+
+                            <div style={{ display: 'flex', gap: '12px', marginTop: '16px' }}>
+                                <button type="button" class="btn btn-primary" onClick={handlePrintCV} style={{ flexGrow: 1 }} disabled={!cvName || !cvTitle}>
+                                    <i class="fa-solid fa-file-pdf"></i> Download PDF CV
+                                </button>
+                                <button type="button" class="btn btn-outline" onClick={handleSubmitCVToDatabase} style={{ flexGrow: 1 }} disabled={!cvName || !cvTitle}>
+                                    <i class="fa-solid fa-cloud-upload"></i> Register as Candidate
                                 </button>
                             </div>
+                        </form>
+                    </div>
+
+                    {/* CV Live Preview */}
+                    <div class="calculator-panel">
+                        <div class="glass-card sticky-panel" style={{ padding: '30px' }}>
+                            <h3 style={{ fontSize: '18px', marginBottom: '20px' }}><i class="fa-solid fa-eye" style={{ color: 'var(--primary)' }}></i> Live Preview</h3>
+                            
+                            <div style={{ backgroundColor: '#ffffff', color: '#1e293b', padding: '24px', borderRadius: 'var(--border-radius)', boxShadow: 'var(--shadow-md)', minHeight: '450px', fontSize: '13px', border: '1px solid var(--border-color)' }}>
+                                <div style={{ borderBottom: '2px solid var(--primary)', paddingBottom: '12px', marginBottom: '16px' }}>
+                                    <h2 style={{ color: '#0f172a', margin: 0, fontSize: '20px' }}>{cvName || "YOUR NAME"}</h2>
+                                    <div style={{ color: 'var(--primary)', fontWeight: '700', fontSize: '14px', marginTop: '2px' }}>{cvTitle || "Target Profession / Role"}</div>
+                                    <div style={{ display: 'flex', gap: '12px', color: '#64748b', fontSize: '11px', marginTop: '6px', flexWrap: 'wrap' }}>
+                                        <span><i class="fa-solid fa-envelope"></i> {cvEmail || "email@example.com"}</span>
+                                        <span><i class="fa-solid fa-phone"></i> {cvPhone || "Phone Number"}</span>
+                                    </div>
+                                </div>
+
+                                <div style={{ marginBottom: '16px' }}>
+                                    <h4 style={{ color: '#334155', textTransform: 'uppercase', borderBottom: '1px solid #e2e8f0', paddingBottom: '4px', marginBottom: '8px', fontSize: '11px', fontWeight: '700' }}>Work Experience</h4>
+                                    {cvCompany || cvExpYears || cvExpDesc ? (
+                                        <div>
+                                            <div style={{ display: 'flex', justifyContent: 'space-between', fontWeight: '700', color: '#334155' }}>
+                                                <span>{cvTitle || "Role"}</span>
+                                                <span style={{ color: '#64748b', fontWeight: '500' }}>{cvExpYears || "Duration"}</span>
+                                            </div>
+                                            <div style={{ fontStyle: 'italic', color: '#475569', marginBottom: '4px' }}>{cvCompany || "Company Name"}</div>
+                                            <p style={{ color: '#64748b', margin: 0 }}>{cvExpDesc || "Duties and achievements..."}</p>
+                                        </div>
+                                    ) : (
+                                        <p style={{ color: '#94a3b8', fontStyle: 'italic' }}>No experience details added yet.</p>
+                                    )}
+                                </div>
+
+                                <div style={{ marginBottom: '16px' }}>
+                                    <h4 style={{ color: '#334155', textTransform: 'uppercase', borderBottom: '1px solid #e2e8f0', paddingBottom: '4px', marginBottom: '8px', fontSize: '11px', fontWeight: '700' }}>Education</h4>
+                                    {cvDegree || cvSchool || cvEduYear ? (
+                                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                            <div>
+                                                <div style={{ fontWeight: '700', color: '#334155' }}>{cvDegree || "Degree / Course"}</div>
+                                                <div style={{ color: '#475569' }}>{cvSchool || "School / University"}</div>
+                                            </div>
+                                            <span style={{ color: '#64748b', fontSize: '11px' }}>{cvEduYear || "Year Completed"}</span>
+                                        </div>
+                                    ) : (
+                                        <p style={{ color: '#94a3b8', fontStyle: 'italic' }}>No education details added yet.</p>
+                                    )}
+                                </div>
+
+                                <div>
+                                    <h4 style={{ color: '#334155', textTransform: 'uppercase', borderBottom: '1px solid #e2e8f0', paddingBottom: '4px', marginBottom: '8px', fontSize: '11px', fontWeight: '700' }}>Skills & Certifications</h4>
+                                    {cvSkills ? (
+                                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                                            {cvSkills.split(',').map((skill, i) => (
+                                                <span key={i} style={{ backgroundColor: '#f1f5f9', color: '#475569', padding: '4px 8px', borderRadius: '4px', fontSize: '11px', fontWeight: '600' }}>
+                                                    {skill.trim()}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    ) : (
+                                        <p style={{ color: '#94a3b8', fontStyle: 'italic' }}>No skills entered yet.</p>
+                                    )}
+                                </div>
+                            </div>
                         </div>
-                    ))
-                )}
-            </div>
+                    </div>
+                </div>
+            )}
 
             {/* Job Application Modal (Candidate Flow) */}
             {isModalOpen && selectedJob && (
