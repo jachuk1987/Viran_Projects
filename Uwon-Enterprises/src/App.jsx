@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Blog from './components/Blog';
 import Services from './components/Services';
 import ClientEstimator from './components/ClientEstimator';
 import JobDirectory from './components/JobDirectory';
@@ -223,6 +224,7 @@ export default function App() {
                 {currentTab === 'home-tab' && (
                     <div className="tab-panel active">
                         <Hero switchTab={switchTab} />
+                        <Blog />
                     </div>
                 )}
                 {currentTab === 'services-tab' && (

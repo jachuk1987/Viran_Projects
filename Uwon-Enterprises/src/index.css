@@ -1920,3 +1920,138 @@ button {
     background-color: #128c7e;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
 }
+
+/* Blog & Safety Guides Section Styles */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 48px;
+}
+
+.blog-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all var(--transition-normal);
+}
+
+.blog-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary);
+    box-shadow: var(--shadow-lg);
+}
+
+.blog-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.blog-category-badge {
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    letter-spacing: 0.5px;
+}
+
+.blog-category-badge.safety-guide {
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.blog-category-badge.career-advice {
+    color: #3b82f6;
+    background: rgba(59, 130, 246, 0.1);
+}
+
+.blog-category-badge.training-guide {
+    color: #f59e0b;
+    background: rgba(245, 158, 11, 0.1);
+}
+
+.blog-read-time {
+    font-size: 12px;
+    color: var(--text-secondary);
+    opacity: 0.8;
+}
+
+.blog-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    color: var(--text-primary);
+}
+
+.blog-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+.blog-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+    padding-top: 16px;
+    margin-top: auto;
+}
+
+.blog-date {
+    font-size: 12px;
+    color: var(--text-secondary);
+    opacity: 0.7;
+}
+
+.btn-link-arrow {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color var(--transition-fast);
+}
+
+.btn-link-arrow:hover {
+    color: var(--primary-dark);
+}
+
+.btn-link-arrow i {
+    transition: transform var(--transition-fast);
+}
+
+.btn-link-arrow:hover i {
+    transform: translateX(4px);
+}
+
+/* Responsive adjustments for Blog */
+@media (max-width: 1024px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+@media (max-width: 640px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
