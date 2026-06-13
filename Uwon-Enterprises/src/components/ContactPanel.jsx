@@ -14,7 +14,7 @@ export default function ContactPanel({ showToast }) {
         setSubject('');
         setMessage('');
     };
-
+ 
     return (
         <div class="container py-5">
             <div class="layout-split">
