@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
- 
+
 export default function ContactPanel({ showToast }) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -14,7 +14,7 @@ export default function ContactPanel({ showToast }) {
         setSubject('');
         setMessage('');
     };
- 
+
     return (
         <div class="container py-5">
             <div class="layout-split">
