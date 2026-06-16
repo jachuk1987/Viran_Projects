@@ -7,7 +7,7 @@ export default function Header({ currentTab, switchTab, theme, toggleTheme }) {
         switchTab(tabId);
         setMobileMenuOpen(false);
     };
- 
+
     return (
         <header className="main-header">
             <div class="header-container">
