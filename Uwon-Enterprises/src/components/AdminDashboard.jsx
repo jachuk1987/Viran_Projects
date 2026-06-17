@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+ 
 const INDUSTRY_LABELS = {
     Construction: "Construction & Civils",
     Hospitality: "Hospitality & Events",
