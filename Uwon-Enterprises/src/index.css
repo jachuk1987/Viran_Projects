@@ -443,6 +443,7 @@ button {
         opacity: 0;
         transform: translateY(20px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -1978,9 +1979,11 @@ button {
     0% {
         box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
     }
+
     70% {
         box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
     }
+
     100% {
         box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
     }
@@ -2145,9 +2148,9 @@ button {
     position: relative;
     overflow: hidden;
     transition: box-shadow var(--transition-normal);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.15), 
-                0 20px 25px -5px rgba(0, 0, 0, 0.3), 
-                0 30px 50px -10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.15),
+        0 20px 25px -5px rgba(0, 0, 0, 0.3),
+        0 30px 50px -10px rgba(0, 0, 0, 0.5);
 }
 
 /* Clipboard / Top clip effect */
@@ -2163,7 +2166,7 @@ button {
 
 [data-theme="light"] .resume-paper-preview {
     background-color: #ffffff;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 
-                0 10px 15px -3px rgba(0, 0, 0, 0.1), 
-                0 15px 25px -5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05),
+        0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 15px 25px -5px rgba(0, 0, 0, 0.15);
 }
