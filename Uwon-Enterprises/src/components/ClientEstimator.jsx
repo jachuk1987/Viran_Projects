@@ -420,6 +420,9 @@ export default function ClientEstimator({ addClientRequest, defaultIndustry }) {
                                         value={staffCount}
                                         onChange={(e) => setStaffCount(parseInt(e.target.value))}
                                         class="custom-slider"
+                                        style={{
+                                            background: `linear-gradient(to right, var(--primary) 0%, var(--primary) ${((staffCount - 1) / 99) * 100}%, var(--border-color) ${((staffCount - 1) / 99) * 100}%, var(--border-color) 100%)`
+                                        }}
                                     />
                                     <span id="staff-count-badge" class="slider-badge">
                                         {staffCount} {staffCount === 1 ? 'Worker' : 'Workers'}
@@ -437,6 +440,9 @@ export default function ClientEstimator({ addClientRequest, defaultIndustry }) {
                                         value={duration}
                                         onChange={(e) => setDuration(parseInt(e.target.value))}
                                         class="custom-slider"
+                                        style={{
+                                            background: `linear-gradient(to right, var(--primary) 0%, var(--primary) ${((duration - 1) / 51) * 100}%, var(--border-color) ${((duration - 1) / 51) * 100}%, var(--border-color) 100%)`
+                                        }}
                                     />
                                     <span id="duration-weeks-badge" class="slider-badge">
                                         {duration} {duration === 1 ? 'Week' : 'Weeks'}
