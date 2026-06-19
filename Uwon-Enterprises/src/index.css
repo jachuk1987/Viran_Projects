@@ -2103,3 +2103,38 @@ button {
         gap: 20px;
     }
 }
+
+/* Premium Resume Preview Paper Styling */
+.resume-paper-preview {
+    background-color: #fafafa;
+    color: #1e293b;
+    padding: 36px 30px;
+    border-radius: 4px;
+    min-height: 480px;
+    font-size: 13px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow var(--transition-normal);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.15), 
+                0 20px 25px -5px rgba(0, 0, 0, 0.3), 
+                0 30px 50px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* Clipboard / Top clip effect */
+.resume-paper-preview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-hover));
+}
+
+[data-theme="light"] .resume-paper-preview {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 
+                0 10px 15px -3px rgba(0, 0, 0, 0.1), 
+                0 15px 25px -5px rgba(0, 0, 0, 0.15);
+}

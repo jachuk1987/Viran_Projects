@@ -552,7 +552,7 @@ export default function JobDirectory({ addJobApplication }) {
                         <div class="glass-card sticky-panel" style={{ padding: '30px' }}>
                             <h3 style={{ fontSize: '18px', marginBottom: '20px' }}><i class="fa-solid fa-eye" style={{ color: 'var(--primary)' }}></i> Live Preview</h3>
 
-                            <div style={{ backgroundColor: '#ffffff', color: '#1e293b', padding: '24px', borderRadius: 'var(--border-radius)', boxShadow: 'var(--shadow-md)', minHeight: '450px', fontSize: '13px', border: '1px solid var(--border-color)' }}>
+                            <div className="resume-paper-preview">
                                 <div style={{ borderBottom: '2px solid var(--primary)', paddingBottom: '12px', marginBottom: '16px' }}>
                                     <h2 style={{ color: '#0f172a', margin: 0, fontSize: '20px' }}>{cvName || "YOUR NAME"}</h2>
                                     <div style={{ color: 'var(--primary)', fontWeight: '700', fontSize: '14px', marginTop: '2px' }}>{cvTitle || "Target Profession / Role"}</div>
