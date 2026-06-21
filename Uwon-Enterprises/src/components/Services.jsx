@@ -28,7 +28,7 @@ export default function Services({ openStaffingWizard }) {
                         </button>
                     </div>
                 </div>
-
+ 
                 {/* Hospitality */}
                 <div class="sector-card">
                     <div class="sector-image">
