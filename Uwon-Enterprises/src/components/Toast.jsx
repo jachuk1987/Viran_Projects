@@ -21,6 +21,6 @@ export default function Toast({ message, type, isVisible }) {
                 <span id="toast-message">{message}</span>
             </div>
         </div>
-    );
+    ); 
 } 
  
