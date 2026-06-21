@@ -2,7 +2,7 @@ import React from 'react';
  
 export default function Toast({ message, type, isVisible }) {
     if (!isVisible) return null;
-
+ 
     return (
         <div
             id="toast"
