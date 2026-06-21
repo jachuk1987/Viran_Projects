@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
  
 export default function Toast({ message, type, isVisible }) {
     if (!isVisible) return null;
