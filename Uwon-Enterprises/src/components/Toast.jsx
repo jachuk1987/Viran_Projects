@@ -22,5 +22,5 @@ export default function Toast({ message, type, isVisible }) {
             </div>
         </div>
     );
-}
+} 
  
