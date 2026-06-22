@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
- 
+
 export default function Header({ currentTab, switchTab, theme, toggleTheme }) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -7,7 +7,7 @@ export default function Header({ currentTab, switchTab, theme, toggleTheme }) {
         switchTab(tabId);
         setMobileMenuOpen(false);
     };
- 
+
     return (
         <header className="main-header">
             <div class="header-container">
@@ -82,4 +82,3 @@ export default function Header({ currentTab, switchTab, theme, toggleTheme }) {
         </header>
     );
 }
- 
