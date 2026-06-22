@@ -1,8 +1,8 @@
-import React from 'react'; 
- 
+import React from 'react';
+
 export default function Toast({ message, type, isVisible }) {
     if (!isVisible) return null;
- 
+
     return (
         <div
             id="toast"
@@ -21,6 +21,5 @@ export default function Toast({ message, type, isVisible }) {
                 <span id="toast-message">{message}</span>
             </div>
         </div>
-    ); 
-} 
- 
+    );
+}
