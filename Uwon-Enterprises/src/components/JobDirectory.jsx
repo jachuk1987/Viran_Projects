@@ -97,7 +97,7 @@ export default function JobDirectory({ addJobApplication }) {
     const [activeSubTab, setActiveSubTab] = useState('jobs'); // 'jobs' or 'cv-builder'
     const [searchQuery, setSearchQuery] = useState('');
     const [categoryFilter, setCategoryFilter] = useState('All');
-
+ 
     // Modal states
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedJob, setSelectedJob] = useState(null);
