@@ -101,7 +101,7 @@ export default function JobDirectory({ addJobApplication }) {
     // Modal states
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedJob, setSelectedJob] = useState(null);
-
+ 
     // Modal Form fields states
     const [candName, setCandName] = useState('');
     const [candEmail, setCandEmail] = useState('');
