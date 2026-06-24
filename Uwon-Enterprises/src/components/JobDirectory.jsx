@@ -92,7 +92,7 @@ const DEFAULT_JOBS = [
         description: "Design and implement web portals for cloud-based logistics databases. Responsibilities: Sourcing REST API endpoints with Java Spring Boot, designing dashboard components in React, and building relational database scripts (PostgreSQL). Requirements: 3+ years experience with Java & Javascript."
     }
 ]; 
-
+ 
 export default function JobDirectory({ addJobApplication }) {
     const [activeSubTab, setActiveSubTab] = useState('jobs'); // 'jobs' or 'cv-builder'
     const [searchQuery, setSearchQuery] = useState('');
