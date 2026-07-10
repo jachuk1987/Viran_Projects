@@ -2247,3 +2247,101 @@ button {
         gap: 10px;
     }
 }
+
+/* Multi-Step Wizard Stepper Styles */
+.wizard-stepper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 10px 0;
+    position: relative;
+}
+
+.wizard-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.wizard-step-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    transition: all var(--transition-normal);
+}
+
+.wizard-step-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    font-family: 'Outfit', sans-serif;
+    transition: color var(--transition-normal);
+}
+
+/* Active Step */
+.wizard-step.active .wizard-step-circle {
+    border-color: var(--primary);
+    background-color: var(--primary);
+    color: #ffffff;
+    box-shadow: 0 0 12px var(--primary-glow);
+}
+
+.wizard-step.active .wizard-step-label {
+    color: var(--primary);
+}
+
+/* Completed Step */
+.wizard-step.completed .wizard-step-circle {
+    border-color: var(--primary);
+    background-color: var(--primary-glow);
+    color: var(--primary);
+}
+
+.wizard-step.completed .wizard-step-label {
+    color: var(--text-primary);
+}
+
+/* Connecting Lines */
+.wizard-stepper::before {
+    content: '';
+    position: absolute;
+    top: 26px; /* Centered with circles */
+    left: 15%;
+    right: 15%;
+    height: 2px;
+    background-color: var(--border-color);
+    z-index: 1;
+}
+
+/* Sub-wizard navigation buttons block */
+.wizard-nav-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+}
+
+@media (max-width: 480px) {
+    .wizard-step-label {
+        font-size: 11px;
+    }
+    .wizard-stepper::before {
+        left: 20%;
+        right: 20%;
+    }
+}
