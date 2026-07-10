@@ -124,6 +124,11 @@ export default function JobDirectory({ addJobApplication }) {
     const [cvExpDesc, setCvExpDesc] = useState('');
     const [cvSkills, setCvSkills] = useState('');
 
+    // Multi-step CV Wizard
+    const [cvStep, setCvStep] = useState(1);
+    const nextStep = () => setCvStep(prev => Math.min(prev + 1, 3));
+    const prevStep = () => setCvStep(prev => Math.max(prev - 1, 1));
+
     // Open/Close modal functions
     const openModal = (job) => {
         setSelectedJob(job);
@@ -369,6 +374,7 @@ export default function JobDirectory({ addJobApplication }) {
         setCvExpYears('');
         setCvExpDesc('');
         setCvSkills('');
+        setCvStep(1);
     };
 
     return (
@@ -463,87 +469,129 @@ export default function JobDirectory({ addJobApplication }) {
                         <h3>Build Your Professional CV</h3>
                         <p style={{ color: 'var(--text-secondary)', marginBottom: '24px', fontSize: '14px' }}>Fill in your credentials to instantly preview and download a formatted resume.</p>
 
+                        {/* Wizard Stepper Header */}
+                        <div class="wizard-stepper">
+                            <div class={`wizard-step ${cvStep === 1 ? 'active' : cvStep > 1 ? 'completed' : ''}`}>
+                                <div class="wizard-step-circle">{cvStep > 1 ? <i class="fa-solid fa-check"></i> : '1'}</div>
+                                <span class="wizard-step-label">Personal Info</span>
+                            </div>
+                            <div class={`wizard-step ${cvStep === 2 ? 'active' : cvStep > 2 ? 'completed' : ''}`}>
+                                <div class="wizard-step-circle">{cvStep > 2 ? <i class="fa-solid fa-check"></i> : '2'}</div>
+                                <span class="wizard-step-label">Experience</span>
+                            </div>
+                            <div class={`wizard-step ${cvStep === 3 ? 'active' : ''}`}>
+                                <div class="wizard-step-circle">3</div>
+                                <span class="wizard-step-label">Education & Submit</span>
+                            </div>
+                        </div>
+
                         <form class="interactive-form" onSubmit={(e) => e.preventDefault()}>
-                            {/* Personal Info */}
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label>Full Name *</label>
-                                    <input type="text" value={cvName} onChange={(e) => setCvName(e.target.value)} placeholder="Jane Doe" required />
+                            {/* Step 1: Personal Info */}
+                            {cvStep === 1 && (
+                                <div class="wizard-step-content">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label>Full Name *</label>
+                                            <input type="text" value={cvName} onChange={(e) => setCvName(e.target.value)} placeholder="Jane Doe" required />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Profession / Target Role *</label>
+                                            <input type="text" value={cvTitle} onChange={(e) => setCvTitle(e.target.value)} placeholder="Forklift Operator / Web Developer" required />
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label>Email Address *</label>
+                                            <input type="email" value={cvEmail} onChange={(e) => setCvEmail(e.target.value)} placeholder="jane@example.com" required />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Phone Number *</label>
+                                            <input type="tel" value={cvPhone} onChange={(e) => setCvPhone(e.target.value)} placeholder="+91 9885058859" required />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Workplace Sector *</label>
+                                        <select value={cvSector} onChange={(e) => setCvSector(e.target.value)} required>
+                                            <option value="Construction">Construction</option>
+                                            <option value="Hospitality">Hospitality</option>
+                                            <option value="Logistics">Logistics</option>
+                                            <option value="Admin">Admin Support</option>
+                                            <option value="Tech">IT & Technical</option>
+                                        </select>
+                                    </div>
+                                    <div class="wizard-nav-actions">
+                                        <button type="button" class="btn btn-primary" style={{ marginLeft: 'auto' }} onClick={nextStep} disabled={!cvName || !cvTitle || !cvEmail || !cvPhone}>
+                                            Next Step <i class="fa-solid fa-arrow-right"></i>
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label>Profession / Target Role *</label>
-                                    <input type="text" value={cvTitle} onChange={(e) => setCvTitle(e.target.value)} placeholder="Forklift Operator / Web Developer" required />
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label>Email Address *</label>
-                                    <input type="email" value={cvEmail} onChange={(e) => setCvEmail(e.target.value)} placeholder="jane@example.com" required />
-                                </div>
-                                <div class="form-group">
-                                    <label>Phone Number *</label>
-                                    <input type="tel" value={cvPhone} onChange={(e) => setCvPhone(e.target.value)} placeholder="+91 9885058859" required />
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label>Workplace Sector *</label>
-                                <select value={cvSector} onChange={(e) => setCvSector(e.target.value)} required>
-                                    <option value="Construction">Construction</option>
-                                    <option value="Hospitality">Hospitality</option>
-                                    <option value="Logistics">Logistics</option>
-                                    <option value="Admin">Admin Support</option>
-                                    <option value="Tech">IT & Technical</option>
-                                </select>
-                            </div>
+                            )}
 
-                            <hr class="calc-divider" />
-                            <h4 style={{ fontSize: '16px', color: 'var(--text-primary)' }}>Education & Qualifications</h4>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label>Degree / Certificate</label>
-                                    <input type="text" value={cvDegree} onChange={(e) => setCvDegree(e.target.value)} placeholder="High School Diploma / NVQ Level 4" />
+                            {/* Step 2: Experience & Skills */}
+                            {cvStep === 2 && (
+                                <div class="wizard-step-content">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label>Previous Company</label>
+                                            <input type="text" value={cvCompany} onChange={(e) => setCvCompany(e.target.value)} placeholder="Apex Logistics Ltd" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Years of Service</label>
+                                            <input type="text" value={cvExpYears} onChange={(e) => setCvExpYears(e.target.value)} placeholder="3 Years (2023 - Present)" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Description of Key Duties</label>
+                                        <textarea rows="3" value={cvExpDesc} onChange={(e) => setCvExpDesc(e.target.value)} placeholder="Responsible for operating forklifts, managing storage catalog scans, and leading shift handovers."></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Skills & Certifications (Comma separated) *</label>
+                                        <input type="text" value={cvSkills} onChange={(e) => setCvSkills(e.target.value)} placeholder="Forklift License, Safety Card, First Aid" required />
+                                    </div>
+                                    <div class="wizard-nav-actions">
+                                        <button type="button" class="btn btn-outline" onClick={prevStep}>
+                                            <i class="fa-solid fa-arrow-left"></i> Previous
+                                        </button>
+                                        <button type="button" class="btn btn-primary" style={{ marginLeft: 'auto' }} onClick={nextStep} disabled={!cvSkills}>
+                                            Next Step <i class="fa-solid fa-arrow-right"></i>
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label>Institution / School</label>
-                                    <input type="text" value={cvSchool} onChange={(e) => setCvSchool(e.target.value)} placeholder="Colombo Technical College" />
-                                </div>
-                            </div>
-                            <div class="form-group" style={{ maxWidth: '150px' }}>
-                                <label>Year Completed</label>
-                                <input type="text" value={cvEduYear} onChange={(e) => setCvEduYear(e.target.value)} placeholder="2022" />
-                            </div>
+                            )}
 
-                            <hr class="calc-divider" />
-                            <h4 style={{ fontSize: '16px', color: 'var(--text-primary)' }}>Latest Work Experience</h4>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label>Previous Company</label>
-                                    <input type="text" value={cvCompany} onChange={(e) => setCvCompany(e.target.value)} placeholder="Apex Logistics Ltd" />
-                                </div>
-                                <div class="form-group">
-                                    <label>Years of Service</label>
-                                    <input type="text" value={cvExpYears} onChange={(e) => setCvExpYears(e.target.value)} placeholder="3 Years (2023 - Present)" />
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label>Description of Key Duties</label>
-                                <textarea rows="3" value={cvExpDesc} onChange={(e) => setCvExpDesc(e.target.value)} placeholder="Responsible for operating forklifts, managing storage catalog scans, and leading shift handovers."></textarea>
-                            </div>
+                            {/* Step 3: Education & Review */}
+                            {cvStep === 3 && (
+                                <div class="wizard-step-content">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label>Degree / Certificate</label>
+                                            <input type="text" value={cvDegree} onChange={(e) => setCvDegree(e.target.value)} placeholder="High School Diploma / NVQ Level 4" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Institution / School</label>
+                                            <input type="text" value={cvSchool} onChange={(e) => setCvSchool(e.target.value)} placeholder="Colombo Technical College" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group" style={{ maxWidth: '150px' }}>
+                                        <label>Year Completed</label>
+                                        <input type="text" value={cvEduYear} onChange={(e) => setCvEduYear(e.target.value)} placeholder="2022" />
+                                    </div>
 
-                            <hr class="calc-divider" />
-                            <div class="form-group">
-                                <label>Skills & Certifications (Comma separated) *</label>
-                                <input type="text" value={cvSkills} onChange={(e) => setCvSkills(e.target.value)} placeholder="Forklift License, Safety Card, First Aid" required />
-                            </div>
-
-                            <div style={{ display: 'flex', gap: '12px', marginTop: '16px' }}>
-                                <button type="button" class="btn btn-primary" onClick={handlePrintCV} style={{ flexGrow: 1 }} disabled={!cvName || !cvTitle}>
-                                    <i class="fa-solid fa-file-pdf"></i> Download PDF CV
-                                </button>
-                                <button type="button" class="btn btn-outline" onClick={handleSubmitCVToDatabase} style={{ flexGrow: 1 }} disabled={!cvName || !cvTitle}>
-                                    <i class="fa-solid fa-cloud-upload"></i> Register as Candidate
-                                </button>
-                            </div>
+                                    <div class="wizard-nav-actions">
+                                        <button type="button" class="btn btn-outline" onClick={prevStep}>
+                                            <i class="fa-solid fa-arrow-left"></i> Previous
+                                        </button>
+                                        <div style={{ display: 'flex', gap: '8px', marginLeft: 'auto' }}>
+                                            <button type="button" class="btn btn-primary" onClick={handlePrintCV} disabled={!cvName || !cvTitle}>
+                                                <i class="fa-solid fa-file-pdf"></i> Download PDF CV
+                                            </button>
+                                            <button type="button" class="btn btn-outline" onClick={handleSubmitCVToDatabase} disabled={!cvName || !cvTitle}>
+                                                <i class="fa-solid fa-cloud-upload"></i> Register as Candidate
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
                         </form>
                     </div>
 
