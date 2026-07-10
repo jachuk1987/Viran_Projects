@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
- 
+
 const DEFAULT_JOBS = [
     {
         id: "job-1",
@@ -91,17 +91,17 @@ const DEFAULT_JOBS = [
         type: "Full-Time",
         description: "Design and implement web portals for cloud-based logistics databases. Responsibilities: Sourcing REST API endpoints with Java Spring Boot, designing dashboard components in React, and building relational database scripts (PostgreSQL). Requirements: 3+ years experience with Java & Javascript."
     }
-]; 
- 
+];
+
 export default function JobDirectory({ addJobApplication }) {
     const [activeSubTab, setActiveSubTab] = useState('jobs'); // 'jobs' or 'cv-builder'
     const [searchQuery, setSearchQuery] = useState('');
     const [categoryFilter, setCategoryFilter] = useState('All');
- 
+
     // Modal states
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedJob, setSelectedJob] = useState(null);
- 
+
     // Modal Form fields states
     const [candName, setCandName] = useState('');
     const [candEmail, setCandEmail] = useState('');
@@ -784,4 +784,3 @@ export default function JobDirectory({ addJobApplication }) {
         </div>
     );
 }
- 
