@@ -82,4 +82,3 @@ export default function Header({ currentTab, switchTab, theme, toggleTheme }) {
         </header>
     );
 }
- 
