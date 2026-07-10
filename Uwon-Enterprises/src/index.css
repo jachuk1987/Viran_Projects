@@ -2319,7 +2319,8 @@ button {
 .wizard-stepper::before {
     content: '';
     position: absolute;
-    top: 26px; /* Centered with circles */
+    top: 26px;
+    /* Centered with circles */
     left: 15%;
     right: 15%;
     height: 2px;
@@ -2340,6 +2341,7 @@ button {
     .wizard-step-label {
         font-size: 11px;
     }
+
     .wizard-stepper::before {
         left: 20%;
         right: 20%;
