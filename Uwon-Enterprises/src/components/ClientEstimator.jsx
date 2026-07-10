@@ -391,21 +391,27 @@ export default function ClientEstimator({ addClientRequest, defaultIndustry }) {
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label htmlFor="client-industry">Workplace Sector / Industry *</label>
-                            <select
-                                id="client-industry"
-                                value={industry}
-                                onChange={(e) => setIndustry(e.target.value)}
-                                required
-                            >
-                                <option value="">-- Select Industry --</option>
-                                <option value="Construction">Construction & Civils</option>
-                                <option value="Hospitality">Hospitality & Events</option>
-                                <option value="Logistics">Logistics & Warehousing</option>
-                                <option value="Admin">Corporate & Office Admin</option>
-                                <option value="Tech">IT / Technical Support</option>
-                            </select>
+                        <div class="form-group" style={{ marginBottom: '24px' }}>
+                            <label style={{ display: 'block', marginBottom: '12px' }}>Workplace Sector / Industry *</label>
+                            <div class="estimator-sector-grid">
+                                {[
+                                    { id: 'Construction', label: 'Construction', icon: 'fa-helmet-safety' },
+                                    { id: 'Hospitality', label: 'Hospitality', icon: 'fa-bell-concierge' },
+                                    { id: 'Logistics', label: 'Logistics', icon: 'fa-truck-ramp-box' },
+                                    { id: 'Admin', label: 'Office Admin', icon: 'fa-keyboard' },
+                                    { id: 'Tech', label: 'IT & Tech', icon: 'fa-laptop-code' }
+                                ].map(sec => (
+                                    <button
+                                        key={sec.id}
+                                        type="button"
+                                        class={`estimator-sector-card ${industry === sec.id ? 'active' : ''}`}
+                                        onClick={() => setIndustry(sec.id)}
+                                    >
+                                        <i class={`fa-solid ${sec.icon}`}></i>
+                                        <span>{sec.label}</span>
+                                    </button>
+                                ))}
+                            </div>
                         </div>
 
                         <div class="form-row">

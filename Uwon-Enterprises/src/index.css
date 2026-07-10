@@ -2170,3 +2170,80 @@ button {
         0 10px 15px -3px rgba(0, 0, 0, 0.1),
         0 15px 25px -5px rgba(0, 0, 0, 0.15);
 }
+
+/* Estimator Sector Selector Cards */
+.estimator-sector-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.estimator-sector-card {
+    background-color: var(--card-bg-glass);
+    border: 1.5px solid var(--card-border-glass);
+    border-radius: var(--border-radius);
+    padding: 20px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    color: var(--text-secondary);
+    min-height: 105px;
+    backdrop-filter: blur(12px) saturate(120%);
+    -webkit-backdrop-filter: blur(12px) saturate(120%);
+}
+
+.estimator-sector-card i {
+    font-size: 28px;
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+    transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.estimator-sector-card span {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: 'Outfit', sans-serif;
+}
+
+.estimator-sector-card:hover {
+    border-color: var(--primary);
+    color: var(--text-primary);
+    transform: translateY(-3px);
+}
+
+.estimator-sector-card:hover i {
+    color: var(--primary);
+    transform: scale(1.1);
+}
+
+.estimator-sector-card.active {
+    background-color: var(--card-bg-glass);
+    border-color: var(--primary);
+    color: var(--primary);
+    box-shadow: 0 0 15px var(--primary-glow);
+}
+
+.estimator-sector-card.active i {
+    color: var(--primary);
+}
+
+/* Responsive styles for Sector Selector */
+@media (max-width: 900px) {
+    .estimator-sector-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .estimator-sector-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
