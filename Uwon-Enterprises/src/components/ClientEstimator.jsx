@@ -7,7 +7,7 @@ const INDUSTRY_HOURLY_RATES = {
     Admin: 30,
     Tech: 48
 };
-
+ 
 const INDUSTRY_LABELS = {
     Construction: "Construction & Civils",
     Hospitality: "Hospitality & Events",
