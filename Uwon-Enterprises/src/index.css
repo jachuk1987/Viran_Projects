@@ -2178,7 +2178,7 @@ button {
     gap: 16px;
     margin-top: 8px;
 }
-
+ 
 .estimator-sector-card {
     background-color: var(--card-bg-glass);
     border: 1.5px solid var(--card-border-glass);
