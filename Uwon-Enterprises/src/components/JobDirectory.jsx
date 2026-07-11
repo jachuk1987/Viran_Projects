@@ -784,3 +784,4 @@ export default function JobDirectory({ addJobApplication }) {
         </div>
     );
 }
+ 
