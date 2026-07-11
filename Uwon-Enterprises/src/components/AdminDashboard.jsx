@@ -7,7 +7,7 @@ const INDUSTRY_LABELS = {
     Admin: "Corporate & Office Admin",
     Tech: "IT / Technical Support"
 };
-
+ 
 export default function AdminDashboard({
     clientRequests,
     candidateApplications,
