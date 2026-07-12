@@ -1,5 +1,5 @@
 import React from 'react';
- 
+
 export default function Footer({ switchTab }) {
     return (
         <footer class="main-footer">
@@ -58,4 +58,3 @@ export default function Footer({ switchTab }) {
         </footer>
     );
 }
- 
