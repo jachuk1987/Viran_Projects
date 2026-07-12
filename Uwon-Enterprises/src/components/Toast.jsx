@@ -1,5 +1,5 @@
 import React from 'react';
- 
+
 export default function Toast({ message, type, isVisible }) {
     if (!isVisible) return null;
 
@@ -23,4 +23,3 @@ export default function Toast({ message, type, isVisible }) {
         </div>
     );
 }
- 
