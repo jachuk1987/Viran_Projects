@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
- 
+
 const DEFAULT_JOBS = [
     {
         id: "job-1",
@@ -784,4 +784,3 @@ export default function JobDirectory({ addJobApplication }) {
         </div>
     );
 }
- 
