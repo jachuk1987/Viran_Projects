@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
- 
+
 const INDUSTRY_LABELS = {
     Construction: "Construction & Civils",
     Hospitality: "Hospitality & Events",
@@ -7,7 +7,7 @@ const INDUSTRY_LABELS = {
     Admin: "Corporate & Office Admin",
     Tech: "IT / Technical Support"
 };
- 
+
 export default function AdminDashboard({
     clientRequests,
     candidateApplications,
@@ -303,4 +303,3 @@ export default function AdminDashboard({
         </div>
     );
 }
- 
