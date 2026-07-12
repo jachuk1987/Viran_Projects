@@ -1,5 +1,5 @@
 import React from 'react';
- 
+
 export default function Services({ openStaffingWizard }) {
     return (
         <div class="container py-5">
@@ -89,4 +89,3 @@ export default function Services({ openStaffingWizard }) {
         </div>
     );
 }
- 
