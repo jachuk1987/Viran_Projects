@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
- 
+
 const INDUSTRY_HOURLY_RATES = {
     Construction: 28,
     Hospitality: 22,
@@ -7,7 +7,7 @@ const INDUSTRY_HOURLY_RATES = {
     Admin: 30,
     Tech: 48
 };
- 
+
 const INDUSTRY_LABELS = {
     Construction: "Construction & Civils",
     Hospitality: "Hospitality & Events",
@@ -538,4 +538,3 @@ export default function ClientEstimator({ addClientRequest, defaultIndustry }) {
         </div>
     );
 }
- 
