@@ -46,4 +46,5 @@ outline: none;
 text-decoration: none;
 box-sizing: border-box;
 scrollbar-color: var(--color-primary) transparent;
+scrollbar-width: thin;
 }
