@@ -47,7 +47,8 @@
   scrollbar-width: thin;
 }
 
-html,body{
+html,
+body {
   min-height: 100vh;
   font-family: "Sora", sans-serif;
   color: var(--color-text);
@@ -56,7 +57,7 @@ html,body{
   background: var(--color-background-primary);
 }
 
-body{
+body {
   overflow: hidden;
   overflow-y: auto;
 }
