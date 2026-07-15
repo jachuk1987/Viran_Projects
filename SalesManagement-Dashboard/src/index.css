@@ -52,4 +52,5 @@ html,body{
   font-family: "Sora", sans-serif;
   color: var(--color-text);
   scroll-behavior: smooth;
+  overscroll-behavior: contain;
 }
