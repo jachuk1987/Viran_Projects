@@ -55,3 +55,7 @@ html,body{
   overscroll-behavior: contain;
   background: var(--color-background-primary);
 }
+
+body{
+  
+}
