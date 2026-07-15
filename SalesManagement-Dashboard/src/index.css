@@ -53,4 +53,5 @@ html,body{
   color: var(--color-text);
   scroll-behavior: smooth;
   overscroll-behavior: contain;
+  background: var(--color-background-primary);
 }
