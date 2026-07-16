@@ -60,4 +60,5 @@ body {
 body {
   overflow: hidden;
   overflow-y: auto;
+  max-width: 2000px;
 }
