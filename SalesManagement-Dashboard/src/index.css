@@ -126,4 +126,5 @@ input{
   overflow: hidden;
   background: transparent;
   padding: 0 10px;
+  color: var(--color-text);
 }
