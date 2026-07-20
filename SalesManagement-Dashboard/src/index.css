@@ -146,5 +146,5 @@ input{
 }
 
 .text__gradient{
-  background: ;
+  background: var(--gradient-1);
 }
