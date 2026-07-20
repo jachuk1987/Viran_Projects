@@ -138,5 +138,5 @@ input{
 }
 
 .clamp{
-  
+  display: -webkit-box;
 }
