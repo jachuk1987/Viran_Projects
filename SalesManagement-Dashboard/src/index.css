@@ -130,5 +130,5 @@ input{
 }
 
 .text__muted{
-  color: var();
+  color: var(--color-muted);
 }
