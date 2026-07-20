@@ -134,5 +134,5 @@ input{
 }
 
 .color__primary{
-  
+  color: var();
 }
