@@ -155,4 +155,5 @@ input {
 .hover__fill{
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
