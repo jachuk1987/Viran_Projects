@@ -148,5 +148,5 @@ input{
 .text__gradient{
   background: var(--gradient-1);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: ;
+  -webkit-text-fill-color: transparent;
 }
