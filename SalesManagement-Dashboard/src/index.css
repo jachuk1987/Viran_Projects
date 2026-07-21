@@ -114,14 +114,14 @@ p {
   line-height: 23px;
 }
 
-img{
+img {
   width: 100%;
   object-fit: cover;
   min-height: 100%;
   display: block;
 }
 
-input{
+input {
   height: 40px;
   overflow: hidden;
   background: transparent;
@@ -129,15 +129,15 @@ input{
   color: var(--color-text);
 }
 
-.text__muted{
+.text__muted {
   color: var(--color-muted);
 }
 
-.color__primary{
+.color__primary {
   color: var(--color-primary);
 }
 
-.clamp{
+.clamp {
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
@@ -145,7 +145,7 @@ input{
   text-overflow: ellipsis;
 }
 
-.text__gradient{
+.text__gradient {
   background: var(--gradient-1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
