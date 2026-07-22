@@ -170,3 +170,7 @@ input {
   z-index: -1;
   border-radius: inherit !important;
 }
+
+.hover__fill::hover::after{
+  
+}
