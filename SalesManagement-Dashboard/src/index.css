@@ -168,4 +168,5 @@ input {
   aspect-ratio: 1/1;
   background: var(--gradient-1);
   z-index: -1;
+  border-radius: inherit !important;
 }
