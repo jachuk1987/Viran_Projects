@@ -166,4 +166,5 @@ input {
   transform: translate(-50%,-50%);
   width: 0;
   aspect-ratio: 1/1;
+  background: var(--gradient-1);
 }
