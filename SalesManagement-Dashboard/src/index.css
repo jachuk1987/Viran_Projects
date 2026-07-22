@@ -160,4 +160,5 @@ input {
 
 .hover__fill::after{
   content: "";
+  position: absolute;
 }
