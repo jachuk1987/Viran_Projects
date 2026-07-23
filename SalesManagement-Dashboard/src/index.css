@@ -178,5 +178,7 @@ input {
 }
 
 @keyframes fillbox{
-  
+  0%{
+    width: 0;
+  }
 }
