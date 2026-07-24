@@ -200,4 +200,5 @@ input {
   max-width: 2.5rem;
   max-height: 2.5rem;
   font-size: 20px;
+  display: flex;
 }
