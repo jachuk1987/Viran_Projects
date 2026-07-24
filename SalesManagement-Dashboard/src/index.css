@@ -191,3 +191,7 @@ input {
 .hover__fill::hover{
   color: var(--color-white) !important;
 }
+
+.icon__container{
+  
+}
