@@ -206,5 +206,5 @@ input {
   border-radius: var(--radius-5);
   cursor: pointer;
   transition: var(--transition);
-  color: var();
+  color: var(--color-text);
 }
