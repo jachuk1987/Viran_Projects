@@ -205,5 +205,5 @@ input {
   justify-content: center;
   border-radius: var(--radius-5);
   cursor: pointer;
-  transition: ;
+  transition: var();
 }
