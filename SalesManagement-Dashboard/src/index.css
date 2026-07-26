@@ -207,5 +207,5 @@ input {
   cursor: pointer;
   transition: var(--transition);
   color: var(--color-text);
-  background: var();
+  background: var(--color-background-variant);
 }
