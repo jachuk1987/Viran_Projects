@@ -209,3 +209,7 @@ input {
   color: var(--color-text);
   background: var(--color-background-variant);
 }
+
+.icon__container:hover{
+  
+}
