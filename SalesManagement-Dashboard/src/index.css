@@ -224,4 +224,5 @@ input {
   max-height: 2rem;
   overflow: hidden;
   border-radius: var(--radius-5);
+  cursor: ;
 }
