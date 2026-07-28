@@ -236,4 +236,5 @@ input {
   width: 0.5rem;
   height: 0.5rem;
   min-width: 0.5rem;
+  min-height: 0.5rem;
 }
