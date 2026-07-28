@@ -227,3 +227,7 @@ input {
   cursor: pointer;
   transition: var(--transition);
 }
+
+.profile:hover{
+  
+}
