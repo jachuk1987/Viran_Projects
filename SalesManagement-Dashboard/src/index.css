@@ -245,5 +245,5 @@ input {
 }
 
 .count{
-  background: var();
+  background: var(--gradient-1);
 }
