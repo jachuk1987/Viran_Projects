@@ -258,5 +258,5 @@ input {
 
 .btn{
   padding: 15px 25px;
-  border-radius: var();
+  border-radius: var(--radius-2);
 }
