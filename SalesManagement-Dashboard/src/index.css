@@ -261,5 +261,5 @@ input {
   border-radius: var(--radius-2);
   font-weight: 500;
   font-size: 14px;
-  cursor: ;
+  cursor: pointer;
 }
