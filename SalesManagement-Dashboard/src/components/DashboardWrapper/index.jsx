@@ -1,6 +1,8 @@
 import React from 'react'
 
-const DashboardWrapper = () => {
+const DashboardWrapper = ({
+    children,
+}) => {
   return (
     <div>
       
