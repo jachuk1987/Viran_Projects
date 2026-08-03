@@ -6,7 +6,7 @@ const DashboardWrapper = ({
   return (
     <section>
       
-    </div>
+    </section>
   )
 }
 
