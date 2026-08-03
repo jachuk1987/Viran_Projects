@@ -2,6 +2,7 @@ import React from 'react'
 
 const DashboardWrapper = ({
     children,
+    contentClassName,
 }) => {
   return (
     <section className='dashboard__wrapper'>
