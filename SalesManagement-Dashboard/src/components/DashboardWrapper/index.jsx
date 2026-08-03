@@ -5,7 +5,9 @@ const DashboardWrapper = ({
 }) => {
   return (
     <section className='dashboard__wrapper'>
-      
+      <main>
+        
+      </main>
     </section>
   )
 }
