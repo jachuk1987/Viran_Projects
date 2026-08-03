@@ -9,7 +9,9 @@ const DashboardWrapper = ({
             <main>
                 <nav></nav>
                 <section
-                    className="content">{children}</section>
+                    className={`content ${contentClassName ? contentClassName:}`}>
+                    {children}
+                </section>
             </main>
         </section>
     )
