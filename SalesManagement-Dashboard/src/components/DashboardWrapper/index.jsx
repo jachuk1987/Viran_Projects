@@ -7,9 +7,13 @@ const DashboardWrapper = ({
     return (
         <section className='dashboard__wrapper'>
             <main>
-                <nav></nav>
+                <nav>
+                    <div className="user__container">
+                        
+                    </div>
+                </nav>
                 <section
-                    className={`content ${contentClassName ? contentClassName:}`}>
+                    className={`content ${contentClassName ? contentClassName:""}`}>
                     {children}
                 </section>
             </main>
