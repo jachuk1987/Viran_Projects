@@ -7,6 +7,7 @@ const DashboardWrapper = ({
     <section className='dashboard__wrapper'>
       <main>
         <nav></nav>
+        <section className="content"></section>
       </main>
     </section>
   )
