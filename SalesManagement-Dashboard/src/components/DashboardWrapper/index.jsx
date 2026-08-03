@@ -4,14 +4,15 @@ const DashboardWrapper = ({
     children,
     contentClassName,
 }) => {
-  return (
-    <section className='dashboard__wrapper'>
-      <main>
-        <nav></nav>
-        <section className="content">{children}</section>
-      </main>
-    </section>
-  )
+    return (
+        <section className='dashboard__wrapper'>
+            <main>
+                <nav></nav>
+                <section
+                    className="content">{children}</section>
+            </main>
+        </section>
+    )
 }
 
 export default DashboardWrapper;
