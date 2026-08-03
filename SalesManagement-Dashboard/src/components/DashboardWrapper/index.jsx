@@ -4,7 +4,7 @@ const DashboardWrapper = ({
     children,
 }) => {
   return (
-    <section className=''>
+    <section className='dashboard__wrapper'>
       
     </section>
   )
