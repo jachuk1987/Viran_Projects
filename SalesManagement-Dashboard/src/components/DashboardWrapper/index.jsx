@@ -20,7 +20,9 @@ const DashboardWrapper = ({
                     </div>
 
                     <div className="buttons__container">
-                        
+                        <div className="search__container">
+                            
+                        </div>
                     </div>
                 </nav>
                 <section
