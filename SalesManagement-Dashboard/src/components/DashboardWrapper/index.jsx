@@ -24,6 +24,9 @@ const DashboardWrapper = ({
                             <IoSearch/>
                             <input type="text" placeholder='Search item...' />
                         </div>
+                        <div className="icon__container hover__fill">
+                            
+                        </div>
                     </div>
                 </nav>
                 <section
