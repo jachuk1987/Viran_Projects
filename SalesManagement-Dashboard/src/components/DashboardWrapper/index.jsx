@@ -11,7 +11,7 @@ const DashboardWrapper = ({
                 <nav>
                     <div className="user__container">
                         <div className='profile'>
-                            <img src="" alt="" />
+                            <img src="{profile1}" alt="" />
                         </div>
                     </div>
                 </nav>
