@@ -18,6 +18,10 @@ const DashboardWrapper = ({
                             <small className="text__muted">Business</small>
                         </div>
                     </div>
+
+                    <div className="buttons__container">
+                        
+                    </div>
                 </nav>
                 <section
                     className={`content ${contentClassName ? contentClassName:""}`}>
