@@ -9,7 +9,9 @@ const DashboardWrapper = ({
             <main>
                 <nav>
                     <div className="user__container">
-                        
+                        <div className='profile'>
+
+                        </div>
                     </div>
                 </nav>
                 <section
