@@ -15,6 +15,7 @@ const DashboardWrapper = ({
                         </div>
                         <div className="details">
                             <h3 className='name'>Emmy</h3>
+                            <small className="text__muted">Business</small>
                         </div>
                     </div>
                 </nav>
