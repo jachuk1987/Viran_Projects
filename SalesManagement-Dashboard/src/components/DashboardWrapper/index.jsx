@@ -14,7 +14,7 @@ const DashboardWrapper = ({
                             <img src="{profile1}" alt="" />
                         </div>
                         <div className="details">
-                            
+                            <h3 className='name'>Emmy</h3>
                         </div>
                     </div>
                 </nav>
