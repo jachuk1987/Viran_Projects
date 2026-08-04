@@ -13,6 +13,9 @@ const DashboardWrapper = ({
                         <div className='profile'>
                             <img src="{profile1}" alt="" />
                         </div>
+                        <div className="details">
+                            
+                        </div>
                     </div>
                 </nav>
                 <section
