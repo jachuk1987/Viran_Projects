@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import {profile1} from "../../assets/images"
 
 const DashboardWrapper = ({
     children,
