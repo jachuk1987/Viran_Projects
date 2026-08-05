@@ -25,7 +25,7 @@ const DashboardWrapper = ({
                             <input type="text" placeholder='Search item...' />
                         </div>
                         <div className="icon__container hover__fill">
-                            
+                            <IoIosNotifications/>
                         </div>
                     </div>
                 </nav>
