@@ -30,7 +30,7 @@ const DashboardWrapper = ({
                             <IoIosNotifications/>
                         </div>
                         <div className="icon__container menu__btn">
-                            
+                            <TiThMenu/>
                         </div>
                     </div>
                 </nav>
