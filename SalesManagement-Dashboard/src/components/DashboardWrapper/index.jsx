@@ -29,6 +29,9 @@ const DashboardWrapper = ({
                         <div className="icon__container hover__fill">
                             <IoIosNotifications/>
                         </div>
+                        <div className="icon__container menu__btn">
+                            
+                        </div>
                     </div>
                 </nav>
                 <section
