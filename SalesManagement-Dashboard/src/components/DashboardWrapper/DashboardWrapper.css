@@ -2,3 +2,7 @@ main{
     padding-left: 250px;
     transition: var(--transition);
 }
+
+main >nav{
+    
+}
