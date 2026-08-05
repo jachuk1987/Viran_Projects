@@ -1,6 +1,7 @@
 import React from 'react';
 import {profile1} from "../../assets/images";
 import { IoIosNotifications } from 'react-icons/io';
+import { IoSearch } from 'react-icons/io'
 
 const DashboardWrapper = ({
     children,
