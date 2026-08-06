@@ -1,8 +1,8 @@
-main{
+main {
     padding-left: 250px;
     transition: var(--transition);
 }
 
-main >nav{
-    
+main>nav {
+    display: flex;
 }
