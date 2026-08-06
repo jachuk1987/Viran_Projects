@@ -9,5 +9,5 @@ main>nav {
     justify-content: space-between;
     gap: 20px;
     padding: 8px 20px;
-    background: var();
+    background: var(--color-background-secoundary);
 }
