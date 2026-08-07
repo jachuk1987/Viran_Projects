@@ -11,5 +11,5 @@ main>nav {
     padding: 8px 20px;
     background: var(--color-background-secoundary);
     position: sticky;
-    top: ;
+    top: 0;
 }
