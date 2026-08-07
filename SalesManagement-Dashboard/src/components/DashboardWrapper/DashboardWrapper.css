@@ -12,4 +12,5 @@ main>nav {
     background: var(--color-background-secoundary);
     position: sticky;
     top: 0;
+    z-index: ;
 }
