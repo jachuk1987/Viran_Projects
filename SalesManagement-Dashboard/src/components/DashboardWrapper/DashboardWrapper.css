@@ -10,5 +10,6 @@ main>nav {
     gap: 20px;
     padding: 8px 20px;
     background: var(--color-background-secoundary);
-    position: ;
+    position: sticky;
+    top: ;
 }
