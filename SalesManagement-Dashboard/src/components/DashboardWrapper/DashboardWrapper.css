@@ -16,5 +16,5 @@ main >nav {
 }
 
 main >nav .buttons__container{
-    display: ;
+    display: flex;
 }
