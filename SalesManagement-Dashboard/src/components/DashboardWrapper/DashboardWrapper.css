@@ -17,5 +17,5 @@ main >nav {
 
 main >nav .buttons__container{
     display: flex;
-    align-items: ;
+    align-items: center;
 }
