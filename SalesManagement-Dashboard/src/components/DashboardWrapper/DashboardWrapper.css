@@ -3,7 +3,7 @@ main {
     transition: var(--transition);
 }
 
-main>nav {
+main >nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -15,8 +15,9 @@ main>nav {
     z-index: 90;
 }
 
-main>nav .buttons__container {
+main >nav .buttons__container {
     display: flex;
     align-items: center;
     gap: 20px;
 }
+
