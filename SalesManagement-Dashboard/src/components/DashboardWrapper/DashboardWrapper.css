@@ -27,4 +27,5 @@ main >nav .search__container{
     border: var(--gray-border);
     border-width: 2px;
     padding: 0 15px;
+    border-radius: ;
 }
