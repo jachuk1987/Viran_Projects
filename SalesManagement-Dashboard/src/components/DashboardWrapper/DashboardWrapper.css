@@ -25,4 +25,5 @@ main >nav .search__container{
     display: flex;
     align-items: center;
     border: var(--gray-border);
+    border-width: ;
 }
