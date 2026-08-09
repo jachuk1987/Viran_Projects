@@ -29,4 +29,5 @@ main >nav .search__container{
     padding: 0 15px;
     border-radius: var(--radius-2);
     transition: var(--transition);
+    margin-left: ;
 }
