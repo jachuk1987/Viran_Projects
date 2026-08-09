@@ -31,3 +31,7 @@ main >nav .search__container{
     transition: var(--transition);
     margin-left: auto;
 }
+
+main >nav .search__container:hover{
+    
+}
