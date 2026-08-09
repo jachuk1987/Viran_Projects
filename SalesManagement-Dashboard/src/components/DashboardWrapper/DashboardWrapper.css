@@ -37,5 +37,5 @@ main >nav .search__container:hover{
 }
 
 main >nav .search__container .icon{
-    color: var();
+    color: var(--color-muted);
 }
