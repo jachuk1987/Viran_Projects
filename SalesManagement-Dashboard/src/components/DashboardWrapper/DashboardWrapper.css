@@ -33,5 +33,5 @@ main >nav .search__container{
 }
 
 main >nav .search__container:hover{
-    border-color: ;
+    border-color: var();
 }
