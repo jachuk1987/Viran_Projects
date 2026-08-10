@@ -39,3 +39,7 @@ main >nav .search__container:hover{
 main >nav .search__container .icon{
     transition: var(--transition);
 }
+
+main >nav .search__container:hover .icon{
+    
+}
