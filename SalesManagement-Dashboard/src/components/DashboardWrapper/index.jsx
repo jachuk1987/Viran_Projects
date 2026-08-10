@@ -3,6 +3,7 @@ import {profile1} from "../../assets/images";
 import { IoIosNotifications } from 'react-icons/io';
 import { IoSearch } from 'react-icons/io5';
 import { TiThMenu } from 'react-icons/ti'
+import "./DashboardWrapper.css";
 
 const DashboardWrapper = ({
     children,
