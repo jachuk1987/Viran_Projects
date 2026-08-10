@@ -24,7 +24,7 @@ const DashboardWrapper = ({
 
                     <div className="buttons__container">
                         <div className="search__container">
-                            <IoSearch/>
+                            <IoSearch className=''/>
                             <input type="text" placeholder='Search item...' />
                         </div>
                         <div className="icon__container hover__fill">
