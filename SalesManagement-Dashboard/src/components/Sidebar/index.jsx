@@ -3,7 +3,7 @@ import "./Sidebar.css"
 
 const Sidebar = ({
     show,
-    
+    onClose,
 }) => {
     return (
         <div>
