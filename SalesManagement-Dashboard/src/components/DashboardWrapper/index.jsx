@@ -4,6 +4,7 @@ import { IoIosNotifications } from 'react-icons/io';
 import { IoSearch } from 'react-icons/io5';
 import { TiThMenu } from 'react-icons/ti'
 import "./DashboardWrapper.css";
+import Sidebar from '../Sidebar';
 
 const DashboardWrapper = ({
     children,
