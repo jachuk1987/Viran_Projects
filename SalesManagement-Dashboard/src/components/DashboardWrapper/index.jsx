@@ -12,6 +12,7 @@ const DashboardWrapper = ({
 }) => {
     return (
         <section className='dashboard__wrapper'>
+            <Sidebar/>
             <main>
                 <nav>
                     <div className="user__container">
