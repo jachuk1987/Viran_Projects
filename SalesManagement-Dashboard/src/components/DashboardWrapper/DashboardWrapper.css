@@ -44,3 +44,7 @@ main >nav .search__container .icon{
 main >nav .search__container:hover .icon{
     color: var(--color-primary);
 }
+
+main >nav .search__container input{
+    
+}
