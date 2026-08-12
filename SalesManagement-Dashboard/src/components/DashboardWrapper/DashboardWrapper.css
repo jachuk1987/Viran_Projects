@@ -16,7 +16,8 @@ main >nav {
 }
 
 main >nav .user__conainer{
-    
+    display: flex;
+    gap: 10px;
 }
 
 main >nav .buttons__container {
