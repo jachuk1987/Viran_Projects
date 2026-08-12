@@ -1,5 +1,5 @@
 import React from 'react';
-import {profile1} from "../../assets/images";
+import { profile1 } from "../../assets/images";
 import { IoIosNotifications } from 'react-icons/io';
 import { IoSearch } from 'react-icons/io5';
 import { TiThMenu } from 'react-icons/ti'
@@ -12,12 +12,12 @@ const DashboardWrapper = ({
 }) => {
     return (
         <section className='dashboard__wrapper'>
-            {/* <Sidebar/> */}
+            <Sidebar />
             <main>
                 <nav>
                     <div className="user__containe">
                         <div className='profile'>
-                            <img src="{profile1}" alt="" />
+                            <img src={profile1} alt="Profile" />
                         </div>
                         <div className="details">
                             <h3 className='name'>Emmy</h3>
@@ -27,19 +27,19 @@ const DashboardWrapper = ({
 
                     <div className="buttons__container">
                         <div className="search__container">
-                            <IoSearch className='icon'/>
+                            <IoSearch className='icon' />
                             <input type="text" placeholder='Search item...' />
                         </div>
                         <div className="icon__container hover__fill">
-                            <IoIosNotifications/>
+                            <IoIosNotifications />
                         </div>
                         <div className="icon__container menu__btn">
-                            <TiThMenu/>
+                            <TiThMenu />
                         </div>
                     </div>
                 </nav>
                 <section
-                    className={`content ${contentClassName ? contentClassName:""}`}>
+                    className={`content ${contentClassName ? contentClassName : ""}`}>
                     {children}
                 </section>
             </main>
