@@ -47,4 +47,5 @@ main >nav .search__container:hover .icon{
 
 main >nav .search__container input{
     display: inline-block;
+    flex: ;
 }
