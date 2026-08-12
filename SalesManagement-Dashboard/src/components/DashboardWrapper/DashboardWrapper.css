@@ -49,3 +49,7 @@ main >nav .search__container input{
     display: inline-block;
     flex: 1;
 }
+
+main >nav .menu__btn{
+    
+}
