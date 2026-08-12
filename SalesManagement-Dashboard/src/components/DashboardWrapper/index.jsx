@@ -12,10 +12,10 @@ const DashboardWrapper = ({
 }) => {
     return (
         <section className='dashboard__wrapper'>
-            <Sidebar/>
+            {/* <Sidebar/> */}
             <main>
                 <nav>
-                    <div className="user__container">
+                    <div className="user__containe">
                         <div className='profile'>
                             <img src="{profile1}" alt="" />
                         </div>
