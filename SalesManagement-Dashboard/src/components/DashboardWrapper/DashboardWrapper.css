@@ -15,6 +15,10 @@ main >nav {
     z-index: 90;
 }
 
+main >nav .user__conainer{
+    
+}
+
 main >nav .buttons__container {
     display: flex;
     align-items: center;
