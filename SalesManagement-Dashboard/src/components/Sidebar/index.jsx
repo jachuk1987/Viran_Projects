@@ -1,5 +1,6 @@
 import React from "react";
-import "./Sidebar.css"
+import "./Sidebar.css";
+import { LiaShopware } from 'react-icons/lia';
 
 const Sidebar = ({
     show,
