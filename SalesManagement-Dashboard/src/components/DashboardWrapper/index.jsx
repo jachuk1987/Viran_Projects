@@ -10,14 +10,14 @@ const DashboardWrapper = ({
     children,
     contentClassName,
 }) => {
-    const[showSidebar,setShowSidebar] = useState(false);
-    
+    const [showSidebar, setShowSidebar] = useState(false);
+
     return (
         <section className='dashboard__wrapper'>
             <Sidebar
-            show={}
-            onClose={}
-             />
+                show={ }
+                onClose={ }
+            />
             <main>
                 <nav>
                     <div className="user__containe">
