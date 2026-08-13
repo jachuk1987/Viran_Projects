@@ -15,7 +15,7 @@ main >nav {
     z-index: 90;
 }
 
-main >nav .user__conainer{
+main >nav .user__container{
     display: flex;
     gap: 10px;
 }
