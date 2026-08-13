@@ -20,7 +20,7 @@ main >nav .user__container{
     gap: 10px;
 }
 
-main >nav .buttons__container {
+main >nav .buttons__container{
     display: flex;
     align-items: center;
     gap: 20px;
