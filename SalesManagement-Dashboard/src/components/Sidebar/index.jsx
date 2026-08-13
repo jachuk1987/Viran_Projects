@@ -8,7 +8,7 @@ const Sidebar = ({
     return (
         <aside className={`sidebar`}>
             <div className="top">
-                
+                <div className="logo__container"></div>
             </div>
             <div className="middle"></div>
         </aside>
