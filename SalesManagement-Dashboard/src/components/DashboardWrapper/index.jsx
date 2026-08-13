@@ -16,7 +16,7 @@ const DashboardWrapper = ({
         <section className='dashboard__wrapper'>
             <Sidebar
                 show={showSidebar}
-                onClose={ }
+                onClose={()=>}
             />
             <main>
                 <nav>
