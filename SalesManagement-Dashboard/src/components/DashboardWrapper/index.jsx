@@ -10,6 +10,7 @@ const DashboardWrapper = ({
     children,
     contentClassName,
 }) => {
+    const[]
     return (
         <section className='dashboard__wrapper'>
             <Sidebar
