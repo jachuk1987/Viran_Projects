@@ -6,9 +6,9 @@ const Sidebar = ({
     onClose,
 }) => {
     return (
-        <div>
+        <aside>
 
-        </div>
+        </aside>
     )
 }
 
