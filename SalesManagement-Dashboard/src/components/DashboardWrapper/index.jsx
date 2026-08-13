@@ -10,7 +10,7 @@ const DashboardWrapper = ({
     children,
     contentClassName,
 }) => {
-    const[showSidebar]
+    const[showSidebar,setShowSidebar]
     return (
         <section className='dashboard__wrapper'>
             <Sidebar
