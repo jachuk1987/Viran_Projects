@@ -6,7 +6,7 @@ const Sidebar = ({
     onClose,
 }) => {
     return (
-        <aside>
+        <aside className={`sidebar`}>
 
         </aside>
     )
