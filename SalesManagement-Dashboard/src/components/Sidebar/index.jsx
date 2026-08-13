@@ -7,7 +7,7 @@ const Sidebar = ({
 }) => {
     return (
         <aside className={`sidebar`}>
-
+            <div className="top"></div>
         </aside>
     )
 }
