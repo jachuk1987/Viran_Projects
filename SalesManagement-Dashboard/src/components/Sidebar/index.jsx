@@ -10,7 +10,7 @@ const Sidebar = ({
         <aside className={`sidebar`}>
             <div className="top">
                 <div className="logo__container">
-                    <LiaShopware/>
+                    <LiaShopware className="icon"/>
                 </div>
             </div>
             <div className="middle"></div>
