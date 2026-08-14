@@ -22,6 +22,7 @@ const Sidebar = ({
                 <div className="middle">
                     <button className="btn btn__primary">
                         <FaSquarePen/>
+                        <span>New Message</span>
                     </button>
                 </div>
             </aside>
