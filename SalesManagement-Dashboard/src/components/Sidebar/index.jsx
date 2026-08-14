@@ -19,7 +19,11 @@ const Sidebar = ({
                         <FaTimes />
                     </div>
                 </div>
-                <div className="middle"></div>
+                <div className="middle">
+                    <button className="btn btn__primary">
+                        
+                    </button>
+                </div>
             </aside>
         </>
     )
