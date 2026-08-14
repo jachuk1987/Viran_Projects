@@ -8,18 +8,20 @@ const Sidebar = ({
     onClose,
 }) => {
     return (
-        <aside className={`sidebar`}>
-            <div className="top">
-                <div className="logo__container">
-                    <LiaShopware className="icon"/>
-                    <span>Adinuba</span>
+        <>
+            <aside className={`sidebar`}>
+                <div className="top">
+                    <div className="logo__container">
+                        <LiaShopware className="icon" />
+                        <span>Adinuba</span>
+                    </div>
+                    <div className="icon__container cancel__btn" onClick={onClose}>
+                        <FaTimes />
+                    </div>
                 </div>
-                <div className="icon__container cancel__btn" onClick={onClose}>
-                    <FaTimes/>
-                </div>
-            </div>
-            <div className="middle"></div>
-        </aside>
+                <div className="middle"></div>
+            </aside>
+        </>
     )
 }
 
