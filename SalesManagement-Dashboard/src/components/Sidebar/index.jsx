@@ -13,7 +13,7 @@ const Sidebar = ({
                     <LiaShopware className="icon"/>
                     <span>Adinuba</span>
                 </div>
-                
+                <div className="icon__container cancel__btn"></div>
             </div>
             <div className="middle"></div>
         </aside>
