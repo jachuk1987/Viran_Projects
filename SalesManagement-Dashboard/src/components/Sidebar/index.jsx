@@ -11,7 +11,9 @@ const Sidebar = ({
             <div className="top">
                 <div className="logo__container">
                     <LiaShopware className="icon"/>
+                    <span>Adinuba</span>
                 </div>
+                
             </div>
             <div className="middle"></div>
         </aside>
