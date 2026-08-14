@@ -21,7 +21,7 @@ const Sidebar = ({
                 </div>
                 <div className="middle">
                     <button className="btn btn__primary">
-                        
+                        <FaSquarePen/>
                     </button>
                 </div>
             </aside>
