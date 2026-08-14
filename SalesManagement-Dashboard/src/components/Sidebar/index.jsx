@@ -26,6 +26,15 @@ const Sidebar = ({
                         <FaSquarePen/>
                         <span>New Message</span>
                     </button>
+                    <div className="tabs__container">
+                        {
+                            sidebar.map{(list,index)=>{
+                                <h3 className={`tab ${list.route === "/" ? 'active':''}`} key={index}>
+                                    
+                                </h3>
+                            }}
+                        }
+                    </div>
                 </div>
             </aside>
         </>
