@@ -14,7 +14,7 @@ const Sidebar = ({
                     <span>Adinuba</span>
                 </div>
                 <div className="icon__container cancel__btn" onClick={onClose}>
-                    
+                    <FaTimes/>
                 </div>
             </div>
             <div className="middle"></div>
