@@ -3,6 +3,7 @@ import "./Sidebar.css";
 import { LiaShopware } from 'react-icons/lia';
 import { FaTimes } from 'react-icons/fa';
 import { FaSquarePen } from 'react-icons/fa6';
+import {sidebar} from "../../source"
 
 const Sidebar = ({
     show,
